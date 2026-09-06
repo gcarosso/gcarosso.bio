@@ -218,3 +218,7 @@ code, kbd, pre, samp { font-family: "Helvetica Neue", Helvetica, Arial, sans-ser
 .pubs a { color: #2f7ad6; border-bottom-color: rgba(47,122,214,.4); }
 .pubs a:hover { border-bottom-color: #2f7ad6; }
 @media (prefers-color-scheme: dark) { .pubs a { color: #6da7ec; border-bottom-color: rgba(109,167,236,.45); } .pubs a:hover { border-bottom-color: #6da7ec; } }
+
+/* photo credit under the home slideshow: same size and colour as the footer */
+.credit { font-size: 13px; color: var(--mute); margin: 0 0 30px; }
+.credit a { color: var(--mute); }
