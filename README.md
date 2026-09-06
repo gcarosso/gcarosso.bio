@@ -47,7 +47,7 @@ site/                     the public repository = exactly what is served at gcar
   cv.html                 CV — generated from the 2026 CV in ../site-sources/cv/ (phone number omitted)
   notes/                  Notes — index.html, _template.html (copy to start a piece), example-post.html (layout demo)
   tools/index.html        Tools — one .item row per tool, Open + Source links (SAROS first)
-  adventures/index.html   Adventures — photo grids; web-sized images go in adventures/img/<trip>/
+  travels/index.html      Travels — photo grids; web-sized images go in travels/img/<trip>/
   library/index.html      Library — the bookshelf with hover cards, and other media
   assets/img/             site-wide images: home slideshow frames, SAROS mark, placeholders
   assets/plots/           custom plots (SVG preferred)
@@ -57,7 +57,7 @@ site/                     the public repository = exactly what is served at gcar
 
 ../site-sources/          NOT in the repo: raw material, one folder per page
   home/photos/            slideshow originals
-  adventures/<trip>/      camera originals and video, by trip — resize before anything goes in the repo
+  travels/<trip>/         camera originals and video, by trip — resize before anything goes in the repo
   notes/drafts/           essay drafts and the old-site archive
   learning/               notes toward the reading list
   about/, tools/          material for those pages
@@ -107,7 +107,7 @@ Dark mode is automatic via `prefers-color-scheme` and needs no toggle.
 
 **The nav is repeated in every page.** That's the cost of having no build step. If
 you add a section, update the `<nav>` block in each file — there are nine. Mark the
-current page with `aria-current="page"` so it highlights. Order: Home · About · Tools · Notes · Adventures · Library · CV.
+current page with `aria-current="page"` so it highlights. Order: Home · About · Tools · Notes · Travels · Library · CV.
 
 ---
 
