@@ -250,3 +250,7 @@ main > p.sub { font-style: italic; }
 .langs { display: flex; align-items: center; justify-content: space-between; margin: 26px 0 -6px; width: 42%; }
 .langs .bub { width: 18px; height: 18px; color: var(--mute); margin-right: 2px; }
 .langs svg:not(.bub) { width: 27px; height: 18px; display: block; border: 1px solid var(--rule); }
+/* reference links in body text and CV role heads: the same blue as publication links */
+a.ref { color: #2f7ad6; border-bottom-color: rgba(47,122,214,.4); }
+a.ref:hover { border-bottom-color: #2f7ad6; }
+@media (prefers-color-scheme: dark) { a.ref { color: #6da7ec; border-bottom-color: rgba(109,167,236,.45); } a.ref:hover { border-bottom-color: #6da7ec; } }
