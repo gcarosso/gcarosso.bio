@@ -1,0 +1,17 @@
+.DS_Store
+Thumbs.db
+# the SAROS project lives here on disk but is its own repository (see BUILD_PLAN.md §2)
+dashboard-trials/
+# never commit camera originals; resize first (sips -Z 1600)
+*.CR2
+*.NEF
+*.ARW
+*.heic
+*.HEIC
+originals/
+.claude/
+photos/
+*.mov
+*.MOV
+*.mp4
+*.MP4

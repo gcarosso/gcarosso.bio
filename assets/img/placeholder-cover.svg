@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 132" width="92" height="132">
+  <rect width="92" height="132" fill="#f0f0f0"/>
+  <rect x=".5" y=".5" width="91" height="131" fill="none" stroke="#cfcfcf"/>
+  <line x1="9" y1="0" x2="9" y2="132" stroke="#e0e0e0"/>
+  <text x="50" y="70" text-anchor="middle" font-family="Helvetica Neue,Helvetica,Arial"
+        font-size="9" fill="#a8a8a8">COVER</text>
+</svg>
