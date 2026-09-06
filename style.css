@@ -212,6 +212,7 @@ code, kbd, pre, samp { font-family: "Helvetica Neue", Helvetica, Arial, sans-ser
 
 /* SAROS: the mark's orange wherever the name appears, and on its Open / Source links */
 .saros, .links a { color: #FF6A1A; }
+.saros { font-weight: 700; }
 .links a { border-bottom-color: rgba(255,106,26,.45); }
 .links a:hover { border-bottom-color: #FF6A1A; }
 /* CV publication links: the SAROS dashboard's blue */
