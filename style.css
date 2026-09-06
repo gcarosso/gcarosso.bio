@@ -208,3 +208,4 @@ code, kbd, pre, samp { font-family: "Helvetica Neue", Helvetica, Arial, sans-ser
 .role ul { margin: 0; padding-left: 1.2em; }
 .role li { margin: 0 0 5px; font-size: 14px; line-height: 1.5; }
 .patents p { font-size: 13.5px; line-height: 1.5; margin: 0 0 8px; }
+.cards.one { grid-template-columns: 1fr; }
