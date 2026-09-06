@@ -222,3 +222,22 @@ code, kbd, pre, samp { font-family: "Helvetica Neue", Helvetica, Arial, sans-ser
 /* photo credit under the home slideshow: same size and colour as the footer */
 .credit { font-size: 13px; color: var(--mute); margin: 0 0 30px; }
 .credit a { color: var(--mute); }
+
+/* ---------- bookshelf hover cards: pure CSS, cover + info, shown on hover / keyboard focus ---------- */
+.books li { position: relative; }
+.books li .card-hover { display: none; position: absolute; left: 0; bottom: calc(100% + 6px); z-index: 5; width: 300px;
+  background: var(--bg); border: 1px solid var(--rule); box-shadow: 0 6px 24px rgba(0,0,0,.25); padding: 12px; gap: 12px; align-items: flex-start; }
+.books li:hover .card-hover, .books li:focus-within .card-hover { display: flex; }
+.books li .card-hover img { width: 84px; flex: none; background: var(--panel); }
+.books li .card-hover .ct { font-weight: 700; font-size: 14px; line-height: 1.3; }
+.books li .card-hover .ca { font-size: 12.5px; color: var(--mute); margin-top: 3px; }
+.books li .card-hover .cn { font-size: 12.5px; line-height: 1.45; margin-top: 8px; }
+.books li .card-hover .cs { font-size: 11.5px; color: var(--faint); margin-top: 6px; }
+.books li > .t { cursor: default; border-bottom: 1px dotted var(--rule); }
+@media (hover: none) { .books li .card-hover { display: none !important; } }
+/* bookshelf rows: title — author, year */
+.books li .a::before { content: " — "; color: var(--mute); }
+/* non-book media links: the same blue as the CV publication links */
+.books a.media { color: #2f7ad6; border-bottom-color: rgba(47,122,214,.4); }
+.books a.media:hover { border-bottom-color: #2f7ad6; }
+@media (prefers-color-scheme: dark) { .books a.media { color: #6da7ec; border-bottom-color: rgba(109,167,236,.45); } }
