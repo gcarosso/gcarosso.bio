@@ -48,7 +48,7 @@ site/                     the public repository = exactly what is served at gcar
   notes/                  Notes — index.html, _template.html (copy to start a piece), example-post.html (layout demo)
   tools/index.html        Tools — one .item row per tool, Open + Source links (SAROS first)
   adventures/index.html   Adventures — photo grids; web-sized images go in adventures/img/<trip>/
-  learning/index.html     Learning — .item rows with cover thumbnails
+  library/index.html      Library — the bookshelf with hover cards, and other media
   assets/img/             site-wide images: home slideshow frames, SAROS mark, placeholders
   assets/plots/           custom plots (SVG preferred)
   style.css               the entire design system
@@ -107,7 +107,7 @@ Dark mode is automatic via `prefers-color-scheme` and needs no toggle.
 
 **The nav is repeated in every page.** That's the cost of having no build step. If
 you add a section, update the `<nav>` block in each file — there are nine. Mark the
-current page with `aria-current="page"` so it highlights. Order: Home · About · Writing · Tools · CV · Adventures · Reading.
+current page with `aria-current="page"` so it highlights. Order: Home · About · Tools · Notes · Adventures · Library · CV.
 
 ---
 
