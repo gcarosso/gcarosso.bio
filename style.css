@@ -187,24 +187,15 @@ footer a { color: var(--mute); }
 
 @media print { .draftbar, .todo { display: none !important; } .ph { outline: 0; background: none; } }
 
-/* ---------- home slideshow: one box, frames shown one at a time in sequence, hard cuts, looping; no JavaScript ---------- */
-.slideshow { position: relative; aspect-ratio: 3 / 2; overflow: hidden; background: var(--panel); margin: 22px 0 6px; }
+/* ---------- home slideshow: one box, frames in sequence, each fading to black before the next; no JavaScript ---------- */
+.slideshow { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #000; margin: 22px 0 6px; }
 .slideshow img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0;
-  animation: slidecut 15s step-end infinite; }
+  animation: slidefade 18s infinite; }
 .slideshow img:nth-child(1) { animation-delay: 0s; }
-.slideshow img:nth-child(2) { animation-delay: 5s; }
-.slideshow img:nth-child(3) { animation-delay: 10s; }
-@keyframes slidecut { 0% { opacity: 1; } 33.333% { opacity: 0; } 100% { opacity: 0; } }
-.credit { font-size: 12.5px; color: var(--faint); margin: 0 0 30px; }
-
-/* ---------- Learning: compact shelf ---------- */
-.books { list-style: none; padding: 0; margin: 6px 0 26px; }
-.books li { padding: 7px 0; border-bottom: 1px solid var(--rule); font-size: 14.5px; line-height: 1.45; }
-.books li:first-child { border-top: 1px solid var(--rule); }
-.books .t { font-weight: 600; }
-.books .a { color: var(--mute); font-size: 13.5px; }
-.books .a::before { content: "— "; }
-
+.slideshow img:nth-child(2) { animation-delay: 6s; }
+.slideshow img:nth-child(3) { animation-delay: 12s; }
+/* 6 s per frame: 0.6 s fade in from black, 4.6 s hold, 0.8 s fade to black; frames never overlap */
+@keyframes slidefade { 0% { opacity: 0; } 3.3% { opacity: 1; } 28.9% { opacity: 1; } 33.3% { opacity: 0; } 100% { opacity: 0; } }
 /* everything in the one face, code included */
 code, kbd, pre, samp { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 /* contacts with platform marks */
