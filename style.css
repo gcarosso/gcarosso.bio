@@ -246,3 +246,7 @@ code, kbd, pre, samp { font-family: "Helvetica Neue", Helvetica, Arial, sans-ser
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 /* page subtitle: the line right under each page heading */
 main > h1 + p { font-style: italic; }
+/* languages row on About: a speech bubble, then flags; one line, tight */
+.langs { display: flex; align-items: center; gap: 10px; margin: 26px 0 -6px; }
+.langs .bub { width: 18px; height: 18px; color: var(--mute); margin-right: 2px; }
+.langs svg:not(.bub) { width: 27px; height: 18px; display: block; border: 1px solid var(--rule); }
