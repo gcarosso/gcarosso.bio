@@ -243,3 +243,5 @@ code, kbd, pre, samp { font-family: "Helvetica Neue", Helvetica, Arial, sans-ser
 @media (prefers-color-scheme: dark) { .books a.media { color: #6da7ec; border-bottom-color: rgba(109,167,236,.45); } }
 /* present in the text for scrapers and screen readers, clipped on screen */
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+/* page subtitle: the line right under each page heading */
+main > h1 + p { font-style: italic; }
