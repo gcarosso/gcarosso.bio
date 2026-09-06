@@ -44,7 +44,7 @@ class from those elements, delete the `.todo` blocks, and drop the `draft` class
 site/                     the public repository = exactly what is served at gcarosso.bio
   index.html              home — lede, bio paragraph, slideshow, section cards, contacts
   about.html              About
-  cv.html                 CV (blank for now)
+  cv.html                 CV — generated from the 2026 CV in ../site-sources/cv/ (phone number omitted)
   notes/                  Notes — index.html, _template.html (copy to start a piece), example-post.html (layout demo)
   tools/index.html        Tools — one .item row per tool, Open + Source links (SAROS first)
   adventures/index.html   Adventures — photo grids; web-sized images go in adventures/img/<trip>/
