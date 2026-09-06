@@ -210,3 +210,9 @@ code, kbd, pre, samp { font-family: "Helvetica Neue", Helvetica, Arial, sans-ser
 /* contacts with platform marks */
 .contacts a { display: inline-flex; align-items: center; gap: 6px; margin-right: 18px; border-bottom: 0; }
 .contacts svg { width: 15px; height: 15px; fill: currentColor; flex: none; }
+
+/* CV publications */
+.pubs { padding-left: 1.2em; }
+.pubs li { margin: 0 0 8px; font-size: 13.5px; line-height: 1.5; }
+.role ul { margin: 0; padding-left: 1.2em; }
+.role li { margin: 0 0 5px; font-size: 14px; line-height: 1.5; }
