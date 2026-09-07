@@ -278,3 +278,5 @@ a.ref:hover { border-bottom-color: #2f7ad6; }
 @media (max-width: 640px) { .trips { grid-template-columns: repeat(2, 1fr); } .slide .nav { opacity: .35; width: 22%; } }
 /* the gallery must open with the page still in place: fragment jumps are intercepted by making the target an overlay */
 html { scroll-behavior: smooth; }
+/* video slides in the travel gallery */
+.slide video { max-width: 100%; max-height: 100%; background: #000; }
