@@ -280,3 +280,6 @@ a.ref:hover { border-bottom-color: #2f7ad6; }
 html { scroll-behavior: smooth; }
 /* video slides in the travel gallery */
 .slide video { max-width: 100%; max-height: 100%; background: #000; }
+/* About portrait: floats beside the opening paragraph; stacks above the text on narrow screens */
+.portrait { float: right; width: 240px; aspect-ratio: 1; object-fit: cover; object-position: 60% 15%; margin: 4px 0 14px 22px; }
+@media (max-width: 560px) { .portrait { float: none; width: 100%; aspect-ratio: 4 / 3; margin: 0 0 18px; } }
