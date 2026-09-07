@@ -50,7 +50,7 @@
   {
    "key": "yucatan",
    "name": "Yucatán",
-   "count": 15,
+   "count": 10,
    "sources": [
     "yucatan/684eafc6-4812-4421-bc0b-9748d8931d89.jpg",
     "yucatan/GPTempDownload 2.jpg",
@@ -59,11 +59,6 @@
     "yucatan/b8867b18-240f-44dc-9580-fd7f20ea8cbd.jpg",
     "yucatan/IMG_2521.PNG",
     "yucatan/57dc0e02-df8d-49b3-ae48-c0ca73ab7d10.jpg",
-    "yucatan/IMG_2601.PNG",
-    "yucatan/IMG_2545.PNG",
-    "yucatan/IMG_2548.PNG",
-    "yucatan/IMG_2631.PNG",
-    "yucatan/GPTempDownload.jpg",
     "cozumel/GPTempDownload 2.jpg",
     "cozumel/GPTempDownload.jpg",
     "cozumel/IMG_2386.jpeg"
@@ -114,16 +109,46 @@
      "mb": 12.1
     },
     {
-     "name": "vid-20260106-123239-024-17-13",
-     "mb": 35.4
-    },
-    {
      "name": "zapote",
      "mb": 12.2
     },
     {
      "name": "zapote2",
      "mb": 26.8
+    }
+   ]
+  },
+  {
+   "key": "tulum",
+   "name": "Tulum",
+   "count": 5,
+   "sources": [
+    "yucatan/IMG_2601.PNG",
+    "yucatan/IMG_2545.PNG",
+    "yucatan/IMG_2548.PNG",
+    "yucatan/IMG_2631.PNG",
+    "yucatan/GPTempDownload.jpg"
+   ],
+   "clips": [
+    {
+     "name": "vid-20260106-123239-024-17-13",
+     "mb": 35.4
+    },
+    {
+     "name": "636bb9dd-47fd-4e80-ac38-",
+     "mb": 9.8
+    },
+    {
+     "name": "48152a48-279f-4d98-a360-",
+     "mb": 9.0
+    },
+    {
+     "name": "8a2ce39c-7e66-4e18-bf01-",
+     "mb": 5.5
+    },
+    {
+     "name": "vid-20260107-134824-032-",
+     "mb": 50.1
     }
    ]
   },

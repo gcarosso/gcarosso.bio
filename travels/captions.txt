@@ -25,11 +25,13 @@ yucatan 7:
 yucatan 8:
 yucatan 9:
 yucatan 10:
-yucatan 11:
-yucatan 12:
-yucatan 13:
-yucatan 14:
-yucatan 15:
+
+## Tulum
+tulum 1:
+tulum 2:
+tulum 3:
+tulum 4:
+tulum 5:
 
 ## Baja
 baja 1:
