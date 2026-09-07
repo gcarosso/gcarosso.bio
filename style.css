@@ -303,3 +303,11 @@ h2 .count { font-size: 11px; letter-spacing: .06em; color: var(--faint); font-we
 .slide .play:hover { background-color: rgba(0,0,0,.75); }
 .slide.playing .play { display: none; }
 .trip video.hover { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; background: #000; }
+/* full-bleed slot for self-contained modules: escapes the 680px measure, caps at 1180px, no padding of its own */
+.bleed { position: relative; left: 50%; transform: translateX(-50%); width: min(1180px, calc(100vw - 32px)); margin: 44px 0 0; }
+/* the ancestry module shares class names with the site (h2, .cards, .card): give it back its own look */
+.bleed .anc h2, .bleed .anc h3, .bleed .anc h4 { border: 0; padding: 0; text-transform: none; letter-spacing: normal; }
+.bleed .anc h2.t { font-size: clamp(27px, 3.6vw, 38px); line-height: 1.04; font-weight: 660; letter-spacing: -.026em; margin: 0 0 18px; }
+.bleed .anc .cards { display: grid; grid-template-columns: none; gap: 0; background: none; border: 0; }
+.bleed .anc .card { background: none; padding: 0; border: 0; }
+.bleed .anc .card:hover { background: none; }
