@@ -58,7 +58,7 @@ SCRIPT='''  <script>
       });
     }
     vids.forEach(function(v){ v.addEventListener('pause',function(){v.closest('.slide').classList.remove('playing');}); v.addEventListener('play',function(){v.closest('.slide').classList.add('playing');}); });
-    window.addEventListener('hashchange',sync); sync();
+    window.addEventListener('hashchange',sync); document.addEventListener('visibilitychange',function(){ if(!document.hidden) sync(); }); sync();
     document.querySelectorAll('.trip video.hover').forEach(function(v){
       var a=v.closest('.trip');
       a.addEventListener('mouseenter',function(){ v.play().catch(function(){}); });
