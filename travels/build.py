@@ -39,7 +39,7 @@ for t in P['trips']:
         else:
             cap=clipmap[ref].get('caption',''); text=html.escape(n)+f' · {pos} / {T}'+(' — '+html.escape(cap) if cap else '')+' · video'
             media=f'<video controls preload="none" playsinline poster="img/{k}/{ref}.jpg"><source src="{MEDIA}/travels/{k}/{ref}.mp4" type="video/mp4"></video>'
-        slides+=f'      <figure class="slide" id="{k}-{pos}"><a class="nav prev" href="#{k}-{prev}" aria-label="previous">‹</a>{media}<a class="nav next" href="#{k}-{nxt}" aria-label="next">›</a><figcaption>{text}</figcaption></figure>\n'
+        slides+=f'      <figure class="slide{" video" if kind=="v" else ""}" id="{k}-{pos}"><a class="nav prev" href="#{k}-{prev}" aria-label="previous">‹</a>{media}<a class="nav next" href="#{k}-{nxt}" aria-label="next">›</a><figcaption>{text}</figcaption></figure>\n'
     ov+=f'  <section class="gallery" id="{k}">\n    <a class="close" href="#travels" aria-label="close">×</a>\n    <div class="strip">\n{slides}    </div>\n  </section>\n'
 p=os.path.join(HERE,'index.html'); s=open(p,encoding='utf-8').read()
 main=f'<main id="travels">\n\n  <h1>Travels</h1>\n  <p class="sub">Assorted swashbucklings.</p>\n\n  <div class="trips">\n{cards}  </div>\n\n{ov}</main>'
