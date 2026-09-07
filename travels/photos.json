@@ -288,7 +288,8 @@
      "name": "dam",
      "mb": 14.8
     }
-   ]
+   ],
+   "hover_clip": "dam"
   },
   {
    "key": "alps",

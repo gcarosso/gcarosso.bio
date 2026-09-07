@@ -302,3 +302,5 @@ h2 .count { font-size: 11px; letter-spacing: .06em; color: var(--faint); font-we
   border: 2px solid rgba(255,255,255,.85); pointer-events: none; transition: opacity .2s; }
 .slide.video:hover::after { opacity: .25; }
 .slide.video:has(video:playing)::after { display: none; }
+.slide.playing::after { display: none; }
+.trip video.hover { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; background: #000; }

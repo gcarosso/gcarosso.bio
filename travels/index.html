@@ -17,7 +17,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://gcarosso.bio/assets/img/og-home.jpg">
-<link rel="stylesheet" href="../style.css?v=32">
+<link rel="stylesheet" href="../style.css?v=33">
 </head>
 
 <body>
@@ -49,7 +49,7 @@
     <a class="trip" href="#bolivia"><img src="img/bolivia/01.jpg" alt="" loading="lazy"><span class="tn">Bolivia</span><span class="tc">14 photos</span></a>
     <a class="trip" href="#puglia"><img src="img/puglia/01.jpg" alt="" loading="lazy"><span class="tn">Puglia</span><span class="tc">10 photos</span></a>
     <a class="trip" href="#dolomites"><img src="img/dolomites/01.jpg" alt="" loading="lazy"><span class="tn">Dolomites</span><span class="tc">10 photos</span></a>
-    <a class="trip" href="#verzasca"><img src="img/verzasca/dam.jpg" alt="" loading="lazy"><span class="tn">Verzasca</span><span class="tc">1 video</span></a>
+    <a class="trip" href="#verzasca"><video class="hover" muted loop playsinline preload="none" poster="img/verzasca/dam.jpg"><source src="https://media.gcarosso.bio/travels/verzasca/dam.mp4" type="video/mp4"></video><span class="tn">Verzasca</span><span class="tc">1 video</span></a>
     <a class="trip" href="#alps"><img src="img/alps/01.jpg" alt="" loading="lazy"><span class="tn">Alps</span><span class="tc">8 photos</span></a>
     <a class="trip" href="#monaco-monza"><img src="img/monaco-monza/01.jpg" alt="" loading="lazy"><span class="tn">Monaco, Monza, Berlin, Brussels</span><span class="tc">7 photos · 3 videos</span></a>
     <a class="trip" href="#usa-west"><img src="img/usa-west/01.jpg" alt="" loading="lazy"><span class="tn">USA West</span><span class="tc">12 photos</span></a>
@@ -269,6 +269,28 @@
       <figure class="slide" id="san-francisco-10"><a class="nav prev" href="#san-francisco-9" aria-label="previous">‹</a><img src="img/san-francisco/10.jpg" alt="" loading="lazy"><a class="nav next" href="#san-francisco-1" aria-label="next">›</a><figcaption>San Francisco · 10 / 10</figcaption></figure>
     </div>
   </section>
+  <script>
+  // The site's one script, confined to this page: play the open slide's clip (muted, as browsers require),
+  // pause the others, and let a card's cover clip play on hover.
+  (function(){
+    var vids=document.querySelectorAll('.slide video');
+    function sync(){
+      var open=document.querySelector('.slide:target');
+      vids.forEach(function(v){
+        var fig=v.closest('.slide');
+        if(fig===open){ v.muted=true; v.play().then(function(){fig.classList.add('playing');}).catch(function(){}); }
+        else { v.pause(); fig.classList.remove('playing'); }
+      });
+    }
+    vids.forEach(function(v){ v.addEventListener('pause',function(){v.closest('.slide').classList.remove('playing');}); v.addEventListener('play',function(){v.closest('.slide').classList.add('playing');}); });
+    window.addEventListener('hashchange',sync); sync();
+    document.querySelectorAll('.trip video.hover').forEach(function(v){
+      var a=v.closest('.trip');
+      a.addEventListener('mouseenter',function(){ v.play().catch(function(){}); });
+      a.addEventListener('mouseleave',function(){ v.pause(); v.currentTime=0; });
+    });
+  })();
+  </script>
 </main>
 
 <footer>
