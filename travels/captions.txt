@@ -90,7 +90,7 @@ alps 6:
 alps 7:
 alps 8:
 
-## Monaco & Monza
+## Monaco, Monza, Berlin, Brussels
 monaco-monza 1:
 monaco-monza 2:
 monaco-monza 3:
