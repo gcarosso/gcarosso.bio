@@ -275,7 +275,7 @@
   (function(){
     var vids=[].slice.call(document.querySelectorAll('.slide video'));
     function stop(v){ v.pause(); v.closest('.slide').classList.remove('playing'); }
-    function start(v){ v.muted=true; var p=v.play(); if(p&&p.catch) p.catch(function(){}); }
+    function start(v){ v.muted=true; v.setAttribute('data-autoplay','1'); var p=v.play(); if(p&&p.catch) p.catch(function(){}); }
     function galleryOpen(el){ var g=el.closest('.gallery'); return g && getComputedStyle(g).display!=='none'; }
     var io=new IntersectionObserver(function(entries){
       entries.forEach(function(e){ var v=e.target.querySelector('video'); if(!v) return;
