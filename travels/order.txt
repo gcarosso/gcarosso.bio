@@ -12,7 +12,7 @@ cover: 1
 order: 1 2 3 4 5 6 7 8 9 10 angelita angelita2 dosojos dosojos2 gx011168 gx011179 gx011197 gx011240 gx011242 gx011259 nurseshark zapote zapote2
 
 ## Tulum  [tulum]
-cover: 1
+cover: 4
 order: 1 2 3 4 5 vid-20260106-123239-024-17-13 636bb9dd-47fd-4e80-ac38- 48152a48-279f-4d98-a360- 8a2ce39c-7e66-4e18-bf01- vid-20260107-134824-032-
 
 ## Baja  [baja]
