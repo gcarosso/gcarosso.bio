@@ -9,7 +9,7 @@ order: gx010046-43 1 2 3 4 5 6 7 8 9 10 gx010005-43 gx010120-43 gx010148-43 gx01
 
 ## Yucatán  [yucatan]
 cover: 1
-order: 1 2 3 4 5 6 7 8 9 nurseshark-43 angelita-43 angelita2-43 dosojos-43 dosojos2-43 gx011168-43 gx011179-43 gx011197-43 gx011240-43 gx011242-43 gx011259-43 zapote-43 zapote2-43
+order: gx011259-43 1 2 3 4 5 6 7 8 9 nurseshark-43 angelita-43 angelita2-43 dosojos-43 dosojos2-43 gx011168-43 gx011179-43 gx011197-43 gx011240-43 gx011242-43 zapote-43 zapote2-43
 
 ## Tulum  [tulum]
 cover: 4
