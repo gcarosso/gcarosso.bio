@@ -47,7 +47,8 @@ site/                     the public repository = exactly what is served at gcar
   cv.html                 CV — generated from the 2026 CV in ../site-sources/cv/ (phone number omitted)
   notes/                  Notes — index.html, _template.html (copy to start a piece), example-post.html (layout demo)
   tools/index.html        Tools — one .item row per tool, Open + Source links (SAROS first)
-  travels/index.html      Travels — photo grids; web-sized images go in travels/img/<trip>/
+  travels/index.html      Travels — generated: edit travels/captions.txt, run `python3 travels/build.py`
+  travels/captions.txt    your caption per photo ("bali 3: …"); photos.json lists the trips
   library/index.html      Library — the bookshelf with hover cards, and other media
   assets/img/             site-wide images: home slideshow frames, SAROS mark, placeholders
   assets/plots/           custom plots (SVG preferred)
@@ -72,6 +73,8 @@ site/                     the public repository = exactly what is served at gcar
 2. Edit the four tagged lines in `<head>` (title, description, og:title, og:description)
 3. Write the body
 4. Add an `.entry` row to `notes/index.html`, and optionally to Recent on the homepage
+
+**Caption a travel photo.** Open `travels/captions.txt`, find the line for the photo (the gallery shows its number, e.g. "Bali · 3 / 10" is `bali 3`), write the caption after the colon, then run `python3 travels/build.py` and commit. Captions appear under the photo in the gallery.
 
 **Add an image**
 ```html

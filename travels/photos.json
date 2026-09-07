@@ -1,0 +1,193 @@
+{
+ "trips": [
+  {
+   "key": "bali",
+   "name": "Bali",
+   "count": 10,
+   "sources": [
+    "bali/GPTempDownload 2.jpg",
+    "bali/GPTempDownload 3.jpg",
+    "bali/GPTempDownload 7.jpg",
+    "bali/GPTempDownload.jpg",
+    "bali/GPTempDownload 6.jpg",
+    "bali/IMG_5106.jpeg",
+    "bali/IMG_6334.jpeg",
+    "bali/IMG_4992.jpeg",
+    "bali/IMG_6126.jpeg",
+    "bali/IMG_5078.jpeg"
+   ]
+  },
+  {
+   "key": "yucatan",
+   "name": "Yucatán",
+   "count": 15,
+   "sources": [
+    "yucatan/684eafc6-4812-4421-bc0b-9748d8931d89.jpg",
+    "yucatan/GPTempDownload 2.jpg",
+    "yucatan/GPTempDownload 5.jpg",
+    "yucatan/IMG_2511.PNG",
+    "yucatan/b8867b18-240f-44dc-9580-fd7f20ea8cbd.jpg",
+    "yucatan/IMG_2521.PNG",
+    "yucatan/57dc0e02-df8d-49b3-ae48-c0ca73ab7d10.jpg",
+    "yucatan/IMG_2601.PNG",
+    "yucatan/IMG_2545.PNG",
+    "yucatan/IMG_2548.PNG",
+    "yucatan/IMG_2631.PNG",
+    "yucatan/GPTempDownload.jpg",
+    "cozumel/GPTempDownload 2.jpg",
+    "cozumel/GPTempDownload.jpg",
+    "cozumel/IMG_2386.jpeg"
+   ]
+  },
+  {
+   "key": "baja",
+   "name": "Baja",
+   "count": 7,
+   "sources": [
+    "baja/GPTempDownload 2.jpg",
+    "baja/GPTempDownload.jpg",
+    "baja/GPTempDownload 3.jpg",
+    "baja/GPTempDownload 4.jpg",
+    "baja/IMG_8570.jpeg",
+    "kauai/GPTempDownload.jpg",
+    "kauai/IMG_0178.jpeg"
+   ]
+  },
+  {
+   "key": "bolivia",
+   "name": "Bolivia",
+   "count": 14,
+   "sources": [
+    "bolivia/IMG_8470.JPG",
+    "bolivia/IMG_8463.JPG",
+    "bolivia/371edc92-c4b1-431a-8b42-ceab22f84d91.jpg",
+    "bolivia/IMG_0111.JPG",
+    "bolivia/IMG_0107.JPG",
+    "bolivia/IMG_0430.PNG",
+    "bolivia/IMG_9775.JPG",
+    "bolivia/db4b0f20-0801-4fa4-a56b-734b9bd835e2.jpg",
+    "bolivia/IMG_8091.JPG",
+    "bolivia/IMG_7090.JPG",
+    "bolivia/IMG_5799.jpeg",
+    "bolivia/IMG_5668.jpeg",
+    "bolivia/IMG_5612.jpeg",
+    "bolivia/IMG_5341.jpeg"
+   ]
+  },
+  {
+   "key": "puglia",
+   "name": "Puglia",
+   "count": 10,
+   "sources": [
+    "europe/puglia/CD038DA4-EDD3-4D21-A793-7D02E3EB8C84.jpg",
+    "europe/puglia/F7C58D94-7E8A-429F-BAE2-39DFF177806F.jpg",
+    "europe/puglia/IMG_2938.jpeg",
+    "europe/puglia/IMG_2990.jpeg",
+    "europe/puglia/IMG_3001.jpeg",
+    "europe/puglia/IMG_3204.jpeg",
+    "europe/puglia/IMG_3241.jpeg",
+    "europe/portofino/IMG_2094.JPG",
+    "europe/portofino/IMG_2643.JPG",
+    "europe/portofino/IMG_2241.JPG"
+   ]
+  },
+  {
+   "key": "dolomites",
+   "name": "Dolomites",
+   "count": 10,
+   "sources": [
+    "europe/cortina-lugano/IMG_1810.JPG",
+    "europe/cortina-lugano/IMG_1467.JPG",
+    "europe/cortina-lugano/IMG_1518.JPG",
+    "europe/cortina-lugano/IMG_1095.JPG",
+    "europe/cortina-lugano/IMG_1164.JPG",
+    "europe/cortina-lugano/IMG_1655.JPG",
+    "europe/cortina-lugano/IMG_1502.JPG",
+    "europe/cortina-lugano/IMG_1645.JPG",
+    "europe/cortina-lugano/IMG_1885.JPG",
+    "europe/cortina-lugano/IMG_2652.JPG"
+   ]
+  },
+  {
+   "key": "alps",
+   "name": "Alps",
+   "count": 8,
+   "sources": [
+    "europe/Courmayeur, Verbier, Bolzano, Turin/IMG_1871.jpeg",
+    "europe/Courmayeur, Verbier, Bolzano, Turin/IMG_1906.jpeg",
+    "europe/Courmayeur, Verbier, Bolzano, Turin/IMG_8242.jpeg",
+    "europe/Courmayeur, Verbier, Bolzano, Turin/IMG_9939.jpeg",
+    "europe/Courmayeur, Verbier, Bolzano, Turin/IMG_2697.jpeg",
+    "europe/Courmayeur, Verbier, Bolzano, Turin/da5ab1e2-8d1f-4266-94e6-bdbf70498b71.jpg",
+    "europe/Courmayeur, Verbier, Bolzano, Turin/IMG_3343.jpeg",
+    "europe/Courmayeur, Verbier, Bolzano, Turin/IMG_2109.jpeg"
+   ]
+  },
+  {
+   "key": "monaco-monza",
+   "name": "Monaco & Monza",
+   "count": 7,
+   "sources": [
+    "europe/F1-Monaco-Monza/IMG_7582.JPG",
+    "europe/F1-Monaco-Monza/IMG_7448.JPG",
+    "europe/F1-Monaco-Monza/IMG_5585.JPG",
+    "europe/F1-Monaco-Monza/IMG_5499.JPG",
+    "europe/berlin-brussels/IMG_2692.jpeg",
+    "europe/berlin-brussels/IMG_2789.jpeg",
+    "europe/berlin-brussels/IMG_2802.jpeg"
+   ]
+  },
+  {
+   "key": "usa-west",
+   "name": "USA West",
+   "count": 12,
+   "sources": [
+    "US/arizona/IMG_1468.JPG",
+    "US/arizona/IMG_1686.JPG",
+    "US/black-canyon/IMG_2525.JPG",
+    "US/black-canyon/IMG_2701.JPG",
+    "US/nevada/IMG_5138.JPG",
+    "US/nevada/IMG_5190.JPG",
+    "US/nevada/IMG_5085.JPG",
+    "US/nevada/IMG_5039.JPG",
+    "US/nevada/IMG_5237.JPG",
+    "US/tahoe/IMG_0933.jpeg",
+    "US/tahoe/IMG_0782.jpeg",
+    "US/joshua-tree/IMG_8890.JPG"
+   ]
+  },
+  {
+   "key": "california-coast",
+   "name": "California Coast",
+   "count": 9,
+   "sources": [
+    "US/catalina/GPTempDownload 5.jpg",
+    "US/catalina/GPTempDownload.jpg",
+    "US/carmel/GPTempDownload (1).jpg",
+    "US/carmel/GPTempDownload.jpg",
+    "US/big-sur/IMG_3953.jpeg",
+    "US/big-sur/IMG_3995.jpeg",
+    "US/santa-barbara/IMG_3872.jpeg",
+    "US/sea-ranch/IMG_3746.jpeg",
+    "US/sea-ranch/IMG_3815.jpeg"
+   ]
+  },
+  {
+   "key": "san-francisco",
+   "name": "San Francisco",
+   "count": 10,
+   "sources": [
+    "US/SF/IMG_0023.jpeg",
+    "US/SF/IMG_0127.jpeg",
+    "US/SF/IMG_0167.jpeg",
+    "US/SF/IMG_0066.jpeg",
+    "US/SF/IMG_6557.jpeg",
+    "US/SF/IMG_2395.jpeg",
+    "US/SF/IMG_0009.jpeg",
+    "US/SF/IMG_0153.jpeg",
+    "US/SF/IMG_0142.jpeg",
+    "US/SF/IMG_0802.jpeg"
+   ]
+  }
+ ]
+}

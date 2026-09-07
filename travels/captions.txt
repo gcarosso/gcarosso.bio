@@ -1,0 +1,137 @@
+# Travels captions — one line per photo: "trip number: caption". Leave a line blank for no caption.
+# Numbers match the counter shown in the gallery (e.g. "Bali · 3 / 10" is bali 3).
+# After editing, run:  python3 travels/build.py   then commit and push.
+
+## Bali
+bali 1:
+bali 2:
+bali 3:
+bali 4:
+bali 5:
+bali 6:
+bali 7:
+bali 8:
+bali 9:
+bali 10:
+
+## Yucatán
+yucatan 1:
+yucatan 2:
+yucatan 3:
+yucatan 4:
+yucatan 5:
+yucatan 6:
+yucatan 7:
+yucatan 8:
+yucatan 9:
+yucatan 10:
+yucatan 11:
+yucatan 12:
+yucatan 13:
+yucatan 14:
+yucatan 15:
+
+## Baja
+baja 1:
+baja 2:
+baja 3:
+baja 4:
+baja 5:
+baja 6:
+baja 7:
+
+## Bolivia
+bolivia 1:
+bolivia 2:
+bolivia 3:
+bolivia 4:
+bolivia 5:
+bolivia 6:
+bolivia 7:
+bolivia 8:
+bolivia 9:
+bolivia 10:
+bolivia 11:
+bolivia 12:
+bolivia 13:
+bolivia 14:
+
+## Puglia
+puglia 1:
+puglia 2:
+puglia 3:
+puglia 4:
+puglia 5:
+puglia 6:
+puglia 7:
+puglia 8:
+puglia 9:
+puglia 10:
+
+## Dolomites
+dolomites 1:
+dolomites 2:
+dolomites 3:
+dolomites 4:
+dolomites 5:
+dolomites 6:
+dolomites 7:
+dolomites 8:
+dolomites 9:
+dolomites 10:
+
+## Alps
+alps 1:
+alps 2:
+alps 3:
+alps 4:
+alps 5:
+alps 6:
+alps 7:
+alps 8:
+
+## Monaco & Monza
+monaco-monza 1:
+monaco-monza 2:
+monaco-monza 3:
+monaco-monza 4:
+monaco-monza 5:
+monaco-monza 6:
+monaco-monza 7:
+
+## USA West
+usa-west 1:
+usa-west 2:
+usa-west 3:
+usa-west 4:
+usa-west 5:
+usa-west 6:
+usa-west 7:
+usa-west 8:
+usa-west 9:
+usa-west 10:
+usa-west 11:
+usa-west 12:
+
+## California Coast
+california-coast 1:
+california-coast 2:
+california-coast 3:
+california-coast 4:
+california-coast 5:
+california-coast 6:
+california-coast 7:
+california-coast 8:
+california-coast 9:
+
+## San Francisco
+san-francisco 1:
+san-francisco 2:
+san-francisco 3:
+san-francisco 4:
+san-francisco 5:
+san-francisco 6:
+san-francisco 7:
+san-francisco 8:
+san-francisco 9:
+san-francisco 10:
