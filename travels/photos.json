@@ -15,6 +15,36 @@
     "bali/IMG_4992.jpeg",
     "bali/IMG_6126.jpeg",
     "bali/IMG_5078.jpeg"
+   ],
+   "clips": [
+    {
+     "name": "gx010005",
+     "mb": 12.9
+    },
+    {
+     "name": "gx010046",
+     "mb": 5.6
+    },
+    {
+     "name": "gx010120",
+     "mb": 17.9
+    },
+    {
+     "name": "gx010148",
+     "mb": 10.9
+    },
+    {
+     "name": "gx010149",
+     "mb": 8.3
+    },
+    {
+     "name": "gx010167",
+     "mb": 19.8
+    },
+    {
+     "name": "np",
+     "mb": 6.6
+    }
    ]
   },
   {
@@ -37,6 +67,64 @@
     "cozumel/GPTempDownload 2.jpg",
     "cozumel/GPTempDownload.jpg",
     "cozumel/IMG_2386.jpeg"
+   ],
+   "clips": [
+    {
+     "name": "angelita",
+     "mb": 15.4
+    },
+    {
+     "name": "angelita2",
+     "mb": 10.0
+    },
+    {
+     "name": "dosojos",
+     "mb": 31.2
+    },
+    {
+     "name": "dosojos2",
+     "mb": 15.4
+    },
+    {
+     "name": "gx011168",
+     "mb": 12.0
+    },
+    {
+     "name": "gx011179",
+     "mb": 21.1
+    },
+    {
+     "name": "gx011197",
+     "mb": 10.0
+    },
+    {
+     "name": "gx011240",
+     "mb": 10.8
+    },
+    {
+     "name": "gx011242",
+     "mb": 27.8
+    },
+    {
+     "name": "gx011259",
+     "mb": 7.3
+    },
+    {
+     "name": "nurseshark",
+     "mb": 12.1
+    },
+    {
+     "name": "vid-20260106-123239-024-17-13",
+     "mb": 35.4
+    },
+    {
+     "name": "zapote",
+     "mb": 12.2
+    },
+    {
+     "name": "zapote2",
+     "mb": 26.8
+    }
    ]
   },
   {
@@ -51,6 +139,32 @@
     "baja/IMG_8570.jpeg",
     "kauai/GPTempDownload.jpg",
     "kauai/IMG_0178.jpeg"
+   ],
+   "clips": [
+    {
+     "name": "381736dd-9cf7-416d-86ed-ba963252e8a2",
+     "mb": 1.4
+    },
+    {
+     "name": "gx010685",
+     "mb": 13.9
+    },
+    {
+     "name": "gx010715",
+     "mb": 10.6
+    },
+    {
+     "name": "gx010849",
+     "mb": 9.2
+    },
+    {
+     "name": "gx010856",
+     "mb": 12.3
+    },
+    {
+     "name": "gx010892",
+     "mb": 6.3
+    }
    ]
   },
   {
@@ -106,6 +220,12 @@
     "europe/cortina-lugano/IMG_1645.JPG",
     "europe/cortina-lugano/IMG_1885.JPG",
     "europe/cortina-lugano/IMG_2652.JPG"
+   ],
+   "clips": [
+    {
+     "name": "dam",
+     "mb": 14.8
+    }
    ]
   },
   {
@@ -135,6 +255,20 @@
     "europe/berlin-brussels/IMG_2692.jpeg",
     "europe/berlin-brussels/IMG_2789.jpeg",
     "europe/berlin-brussels/IMG_2802.jpeg"
+   ],
+   "clips": [
+    {
+     "name": "gp",
+     "mb": 8.6
+    },
+    {
+     "name": "img-7010",
+     "mb": 5.1
+    },
+    {
+     "name": "lh-trim",
+     "mb": 2.8
+    }
    ]
   },
   {
@@ -170,6 +304,12 @@
     "US/santa-barbara/IMG_3872.jpeg",
     "US/sea-ranch/IMG_3746.jpeg",
     "US/sea-ranch/IMG_3815.jpeg"
+   ],
+   "clips": [
+    {
+     "name": "gx010499",
+     "mb": 5.5
+    }
    ]
   },
   {
