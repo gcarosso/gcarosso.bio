@@ -121,8 +121,9 @@ current page with `aria-current="page"` so it highlights. Order: Home · About �
   peaks. Wider looks more impressive and reads worse.
 - **Same system as your CV and resume** — Helvetica Neue, black, hairline rules,
   en-dash bullets. Consistency across the three is itself a signal.
-- **No JavaScript, no web fonts, no analytics.** Pages are a few KB and render
-  instantly. This matters more than it sounds when someone opens your link between
+- **No web fonts, no analytics, and one script** — the Travels page carries a few lines that
+  autoplay a clip when its slide opens (muted, as browsers require) and play the Verzasca cover on
+  hover. Everything else is static HTML and CSS. Pages are a few KB and render instantly. This matters more than it sounds when someone opens your link between
   meetings on hotel wifi.
 
 ---
