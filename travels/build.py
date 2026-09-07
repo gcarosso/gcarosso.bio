@@ -42,6 +42,6 @@ for t in P['trips']:
         slides+=f'      <figure class="slide" id="{k}-{pos}"><a class="nav prev" href="#{k}-{prev}" aria-label="previous">‹</a>{media}<a class="nav next" href="#{k}-{nxt}" aria-label="next">›</a><figcaption>{text}</figcaption></figure>\n'
     ov+=f'  <section class="gallery" id="{k}">\n    <a class="close" href="#travels" aria-label="close">×</a>\n    <div class="strip">\n{slides}    </div>\n  </section>\n'
 p=os.path.join(HERE,'index.html'); s=open(p,encoding='utf-8').read()
-main=f'<main id="travels">\n\n  <h1>Travels</h1>\n  <p class="sub">Assorted adventures &amp; swashbucklings.</p>\n\n  <div class="trips">\n{cards}  </div>\n\n{ov}</main>'
+main=f'<main id="travels">\n\n  <h1>Travels</h1>\n  <p class="sub">Assorted swashbucklings.</p>\n\n  <div class="trips">\n{cards}  </div>\n\n{ov}</main>'
 s=re.sub(r'<main id="travels">.*?</main>',main,s,count=1,flags=re.S); open(p,'w',encoding='utf-8').write(s)
 print(f"travels/index.html rebuilt: {len(P['trips'])} trips, {sum(t['count'] for t in P['trips'])} photos, {len(caps)} captions")
