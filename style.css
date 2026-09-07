@@ -285,3 +285,6 @@ html { scroll-behavior: smooth; }
 @media (max-width: 560px) { .portrait { float: none; width: 100%; aspect-ratio: 4 / 3; margin: 0 0 18px; } }
 .portrait.left { float: left; aspect-ratio: auto; object-fit: contain; margin: 6px 22px 12px 0; clear: both; }
 @media (max-width: 560px) { .portrait.left { float: none; width: 100%; margin: 0 0 18px; } }
+/* full-width, uncropped photo between paragraphs */
+figure.wide { margin: 8px 0 22px; clear: both; }
+figure.wide img { width: 100%; height: auto; display: block; }
