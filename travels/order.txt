@@ -25,7 +25,11 @@ order: 1 2 3 4 5 6 7 8 9 10
 
 ## Dolomites  [dolomites]
 cover: 1
-order: 1 2 3 4 5 6 7 8 9 10 dam
+order: 1 2 3 4 5 6 7 8 9 10
+
+## Verzasca Dam  [verzasca]
+cover: dam
+order: dam
 
 ## Alps  [alps]
 cover: 1

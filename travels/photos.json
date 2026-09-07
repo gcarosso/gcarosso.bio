@@ -221,6 +221,13 @@
     "europe/cortina-lugano/IMG_1885.JPG",
     "europe/cortina-lugano/IMG_2652.JPG"
    ],
+   "clips": []
+  },
+  {
+   "key": "verzasca",
+   "name": "Verzasca Dam",
+   "count": 0,
+   "sources": [],
    "clips": [
     {
      "name": "dam",

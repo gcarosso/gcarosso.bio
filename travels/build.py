@@ -25,11 +25,11 @@ for t in P['trips']:
     k,n,N=t['key'],t['name'],t['count']
     o=order.get(k,{}); photo_ids=[int(x) for x in o.get('photos',[str(i) for i in range(1,N+1)])]
     clipmap={c['name']:c for c in t.get('clips',[])}; clip_names=[c for c in o.get('clips',list(clipmap)) if c in clipmap]
-    cover=int(o.get('cover',['1'])[0])
+    cv=o.get('cover',['1'])[0]; cover_src=f'img/{k}/{int(cv):02d}.jpg' if cv.isdigit() else f'img/{k}/{cv}.jpg'
     if 'order' in o: items=[('p',int(x)) if x.isdigit() else ('v',x) for x in o['order'] if x.isdigit() or x in clipmap]
     else: items=[('p',i) for i in photo_ids]+[('v',c) for c in clip_names]
     photo_ids=[r for kind,r in items if kind=='p']; clip_names=[r for kind,r in items if kind=='v']; T=len(items)
-    nc=len(clip_names); cards+=f'    <a class="trip" href="#{k}"><img src="img/{k}/{cover:02d}.jpg" alt="" loading="lazy"><span class="tn">{html.escape(n)}</span><span class="tc">{len(photo_ids)} photos'+(f' · {nc} video'+('s' if nc>1 else '') if nc else '')+'</span></a>\n'
+    nc=len(clip_names); cards+=f'    <a class="trip" href="#{k}"><img src="{cover_src}" alt="" loading="lazy"><span class="tn">{html.escape(n)}</span><span class="tc">'+' · '.join(x for x in [(f'{len(photo_ids)} photo'+('s' if len(photo_ids)!=1 else '') if photo_ids else ''),(f'{nc} video'+('s' if nc>1 else '') if nc else '')] if x)+'</span></a>\n'
     slides=''
     for pos,(kind,ref) in enumerate(items,1):
         prev=pos-1 if pos>1 else T; nxt=pos+1 if pos<T else 1
