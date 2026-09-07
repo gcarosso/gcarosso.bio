@@ -49,6 +49,7 @@ site/                     the public repository = exactly what is served at gcar
   tools/index.html        Tools — one .item row per tool, Open + Source links (SAROS first)
   travels/index.html      Travels — generated: edit travels/captions.txt, run `python3 travels/build.py`
   travels/captions.txt    your caption per photo ("bali 3: …"); photos.json lists the trips
+  travels/order.txt       display order of photos and clips per trip, and the card cover
   library/index.html      Library — the bookshelf with hover cards, and other media
   assets/img/             site-wide images: home slideshow frames, SAROS mark, placeholders
   assets/plots/           custom plots (SVG preferred)
