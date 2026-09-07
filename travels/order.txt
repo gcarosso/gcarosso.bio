@@ -1,54 +1,48 @@
-# Travels order — one block per trip. Reorder freely; delete an entry to hide it; "cover:" picks the card thumbnail.
-#   photos: the photo numbers (they are file names, so they never change when you reorder)
-#   clips:  the video names (see travels/img/<trip>/ for their poster frames)
-# Captions in captions.txt use the same photo numbers. After editing:  python3 travels/build.py
+# Travels order — one block per trip. "order:" is the sequence shown in the popup: photo numbers and clip names, mixed as you like.
+# Photo numbers are file names, so they never change when you reorder; captions.txt uses the same numbers.
+# Delete an entry to hide it. "cover:" is the card thumbnail and is independent of the order.
+# After editing:  python3 travels/build.py
 
 ## Bali  [bali]
 cover: 1
-photos: 1 2 3 4 5 6 7 8 9 10
-clips: gx010046 gx010005 gx010120 gx010148 gx010149 gx010167 np
+order: gx010046 1 2 3 4 5 6 7 8 9 10 gx010005 gx010120 gx010148 gx010149 gx010167 np
 
 ## Yucatán  [yucatan]
 cover: 1
-photos: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
-clips: angelita angelita2 dosojos dosojos2 gx011168 gx011179 gx011197 gx011240 gx011242 gx011259 nurseshark vid-20260106-123239-024-17-13 zapote zapote2
+order: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 angelita angelita2 dosojos dosojos2 gx011168 gx011179 gx011197 gx011240 gx011242 gx011259 nurseshark vid-20260106-123239-024-17-13 zapote zapote2
 
 ## Baja  [baja]
 cover: 1
-photos: 1 2 3 4 5 6 7
-clips: 381736dd-9cf7-416d-86ed-ba963252e8a2 gx010685 gx010715 gx010849 gx010856 gx010892
+order: 1 2 3 4 5 6 7 381736dd-9cf7-416d-86ed-ba963252e8a2 gx010685 gx010715 gx010849 gx010856 gx010892
 
 ## Bolivia  [bolivia]
 cover: 1
-photos: 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+order: 1 2 3 4 5 6 7 8 9 10 11 12 13 14
 
 ## Puglia  [puglia]
 cover: 1
-photos: 1 2 3 4 5 6 7 8 9 10
+order: 1 2 3 4 5 6 7 8 9 10
 
 ## Dolomites  [dolomites]
 cover: 1
-photos: 1 2 3 4 5 6 7 8 9 10
-clips: dam
+order: 1 2 3 4 5 6 7 8 9 10 dam
 
 ## Alps  [alps]
 cover: 1
-photos: 1 2 3 4 5 6 7 8
+order: 1 2 3 4 5 6 7 8
 
 ## Monaco, Monza, Berlin, Brussels  [monaco-monza]
 cover: 1
-photos: 1 2 3 4 5 6 7
-clips: gp-wide img-7010 lh-trim
+order: 1 2 3 4 5 6 7 gp-wide img-7010 lh-trim
 
 ## USA West  [usa-west]
 cover: 1
-photos: 1 2 3 4 5 6 7 8 9 10 11 12
+order: 1 2 3 4 5 6 7 8 9 10 11 12
 
 ## California Coast  [california-coast]
 cover: 1
-photos: 1 2 3 4 5 6 7 8 9
-clips: gx010499
+order: 1 2 3 4 5 6 7 8 9 gx010499
 
 ## San Francisco  [san-francisco]
 cover: 1
-photos: 1 2 3 4 5 6 7 8 9 10
+order: 1 2 3 4 5 6 7 8 9 10
