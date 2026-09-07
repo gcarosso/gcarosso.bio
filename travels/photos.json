@@ -57,7 +57,7 @@
   {
    "key": "yucatan",
    "name": "Yucatán",
-   "count": 10,
+   "count": 9,
    "sources": [
     "yucatan/684eafc6-4812-4421-bc0b-9748d8931d89.jpg",
     "yucatan/GPTempDownload 2.jpg",
@@ -67,10 +67,14 @@
     "yucatan/IMG_2521.PNG",
     "yucatan/57dc0e02-df8d-49b3-ae48-c0ca73ab7d10.jpg",
     "cozumel/GPTempDownload 2.jpg",
-    "cozumel/GPTempDownload.jpg",
-    "cozumel/IMG_2386.jpeg"
+    "cozumel/GPTempDownload.jpg"
    ],
    "clips": [
+    {
+     "name": "nurseshark-43",
+     "mb": 12.1,
+     "frame": "4:3"
+    },
     {
      "name": "angelita-43",
      "mb": 11.2,
@@ -119,11 +123,6 @@
     {
      "name": "gx011259-43",
      "mb": 6.9,
-     "frame": "4:3"
-    },
-    {
-     "name": "nurseshark-43",
-     "mb": 12.1,
      "frame": "4:3"
     },
     {

@@ -24,7 +24,6 @@ yucatan 6:
 yucatan 7:
 yucatan 8:
 yucatan 9:
-yucatan 10:
 
 ## Tulum
 tulum 1:
