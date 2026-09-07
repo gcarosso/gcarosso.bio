@@ -283,3 +283,5 @@ html { scroll-behavior: smooth; }
 /* About portrait: floats beside the opening paragraph; stacks above the text on narrow screens */
 .portrait { float: right; width: 240px; aspect-ratio: 1; object-fit: cover; object-position: 60% 15%; margin: 4px 0 14px 22px; }
 @media (max-width: 560px) { .portrait { float: none; width: 100%; aspect-ratio: 4 / 3; margin: 0 0 18px; } }
+.portrait.left { float: left; aspect-ratio: auto; object-fit: contain; margin: 6px 22px 12px 0; clear: both; }
+@media (max-width: 560px) { .portrait.left { float: none; width: 100%; margin: 0 0 18px; } }
