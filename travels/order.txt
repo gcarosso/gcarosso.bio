@@ -27,7 +27,7 @@ order: 1 2 3 4 5 6 7 8 9 10
 cover: 1
 order: 1 2 3 4 5 6 7 8 9 10
 
-## Verzasca Dam  [verzasca]
+## Verzasca  [verzasca]
 cover: dam
 order: dam
 
