@@ -9,8 +9,9 @@ caps={}
 for line in open(os.path.join(HERE,'captions.txt'),encoding='utf-8'):
     line=line.rstrip()
     if not line or line.startswith('#'): continue
-    m=re.match(r'([a-z0-9-]+)\s+(\d+):\s*(.*)$',line)
-    if m and m.group(3).strip(): caps[(m.group(1),int(m.group(2)))]=m.group(3).strip()
+    m=re.match(r'([a-z0-9-]+)\s+([A-Za-z0-9-]+):\s*(.*)$',line)
+    if m and m.group(3).strip():
+        ref=m.group(2); caps[(m.group(1),int(ref) if ref.isdigit() else ref)]=m.group(3).strip()
 # order.txt: per-trip display order of photo ids and clip names, and the cover photo
 order={}
 cur=None
@@ -39,7 +40,7 @@ for t in P['trips']:
             cap=caps.get((k,ref),''); text=html.escape(n)+f' · {pos} / {T}'+(' — '+html.escape(cap) if cap else '')
             media=f'<img src="img/{k}/{ref:02d}.jpg" alt="{html.escape(cap)}" loading="lazy">'
         else:
-            cap=clipmap[ref].get('caption',''); text=html.escape(n)+f' · {pos} / {T}'+(' — '+html.escape(cap) if cap else '')+' · video'
+            cap=caps.get((k,ref)) or clipmap[ref].get('caption',''); text=html.escape(n)+f' · {pos} / {T}'+(' — '+html.escape(cap) if cap else '')+' · video'
             media=f'<video controls preload="none" playsinline poster="img/{k}/{ref}.jpg"><source src="{MEDIA}/travels/{k}/{ref}.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play"></button>'
         slides+=f'      <figure class="slide{" video" if kind=="v" else ""}" id="{k}-{pos}"><a class="nav prev" href="#{k}-{prev}" aria-label="previous">‹</a>{media}<a class="nav next" href="#{k}-{nxt}" aria-label="next">›</a><figcaption>{text}</figcaption></figure>\n'
     ov+=f'  <section class="gallery" id="{k}">\n    <a class="close" href="#travels" aria-label="close">×</a>\n    <div class="strip">\n{slides}    </div>\n  </section>\n'

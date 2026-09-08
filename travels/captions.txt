@@ -1,5 +1,5 @@
-# Travels captions — one line per photo: "trip number: caption". Leave a line blank for no caption.
-# Numbers match the counter shown in the gallery (e.g. "Bali · 3 / 10" is bali 3).
+# Travels captions — one line per photo or video: "trip number: caption" or "trip clipname: caption". Leave a line blank for no caption.
+# Photo numbers are file names (img/<trip>/03.jpg is 3) and stay fixed when you reorder; clip names are the ones used in order.txt.
 # After editing, run:  python3 travels/build.py   then commit and push.
 
 ## Bali
@@ -13,6 +13,13 @@ bali 7:
 bali 8:
 bali 9:
 bali 10:
+bali gx010046-43:
+bali gx010005-43:
+bali gx010120-43:
+bali gx010148-43:
+bali gx010149-43:
+bali gx010167-43:
+bali np-43:
 
 ## Yucatán
 yucatan 1:
@@ -24,6 +31,19 @@ yucatan 6:
 yucatan 7:
 yucatan 8:
 yucatan 9:
+yucatan nurseshark-43:
+yucatan angelita-43:
+yucatan angelita2-43:
+yucatan dosojos-43:
+yucatan dosojos2-43:
+yucatan gx011168-43:
+yucatan gx011179-43:
+yucatan gx011197-43:
+yucatan gx011240-43:
+yucatan gx011242-43:
+yucatan gx011259-43:
+yucatan zapote-43:
+yucatan zapote2-43:
 
 ## Tulum
 tulum 1:
@@ -31,6 +51,11 @@ tulum 2:
 tulum 3:
 tulum 4:
 tulum 5:
+tulum vid-20260106-123239-024-17-13-43:
+tulum 636bb9dd-47fd-4e80-ac38-43:
+tulum 48152a48-279f-4d98-a360-43:
+tulum 8a2ce39c-7e66-4e18-bf01-43:
+tulum vid-20260107-134824-032-43:
 
 ## Baja
 baja 1:
@@ -40,6 +65,12 @@ baja 4:
 baja 5:
 baja 6:
 baja 7:
+baja 381736dd-9cf7-416d-86ed-ba963252e8a2-43:
+baja gx010685-43:
+baja gx010715-43:
+baja gx010849-43:
+baja gx010856-43:
+baja gx010892-43:
 
 ## Bolivia
 bolivia 1:
@@ -99,6 +130,9 @@ monaco-monza 4:
 monaco-monza 5:
 monaco-monza 6:
 monaco-monza 7:
+monaco-monza gp-wide-43:
+monaco-monza img-7010-43:
+monaco-monza lh-trim-43:
 
 ## USA West
 usa-west 1:
@@ -124,6 +158,7 @@ california-coast 6:
 california-coast 7:
 california-coast 8:
 california-coast 9:
+california-coast gx010499-43:
 
 ## San Francisco
 san-francisco 1:
@@ -136,3 +171,6 @@ san-francisco 7:
 san-francisco 8:
 san-francisco 9:
 san-francisco 10:
+
+## Verzasca
+verzasca dam:
