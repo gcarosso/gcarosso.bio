@@ -315,3 +315,5 @@ h2 .count { font-size: 11px; letter-spacing: .06em; color: var(--faint); font-we
 .aside-left { display: flow-root; }
 .aside-left p { margin-bottom: 18px; }
 @media (max-width: 560px) { .aside-left { display: flex; flex-direction: column; } .aside-left p { order: 0; } .aside-left .portrait.left { order: 1; float: none; width: 100%; margin: 0 0 18px; } }
+.bleed .anc a.saros { color: #FF6A1A; font-weight: 700; text-decoration: none; }
+.bleed .anc a.saros:hover { text-decoration: underline; }
