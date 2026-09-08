@@ -44,6 +44,38 @@ for t in P['trips']:
             media=f'<video controls preload="none" playsinline poster="img/{k}/{ref}.jpg"><source src="{MEDIA}/travels/{k}/{ref}.mp4" type="video/mp4"></video><button class="play" type="button" aria-label="Play"></button>'
         slides+=f'      <figure class="slide{" video" if kind=="v" else ""}" id="{k}-{pos}"><a class="nav prev" href="#{k}-{prev}" aria-label="previous">‹</a>{media}<a class="nav next" href="#{k}-{nxt}" aria-label="next">›</a><figcaption>{text}</figcaption></figure>\n'
     ov+=f'  <section class="gallery" id="{k}">\n    <a class="close" href="#travels" aria-label="close">×</a>\n    <div class="strip">\n{slides}    </div>\n  </section>\n'
+# ---- contact sheet for ordering: travels/contact.html (noindex; every item with its key, in current order) ----
+sheet=''
+for t in P['trips']:
+    k=t['key']; n=t['name']; N=t['count']; o=order.get(k,{}); clipmap={c['name']:c for c in t.get('clips',[])}
+    if 'order' in o: items=[('p',int(x)) if x.isdigit() else ('v',x) for x in o['order'] if x.isdigit() or x in clipmap]
+    else: items=[('p',i) for i in range(1,N+1)]+[('v',c) for c in clipmap]
+    cv=o.get('cover',['1'])[0]; shown={r for _,r in items}
+    hidden=[('p',i) for i in range(1,N+1) if i not in shown]+[('v',c) for c in clipmap if c not in shown]
+    def cell(kind,ref,pos=None,dim=False):
+        src=f'img/{k}/{ref:02d}.jpg' if kind=='p' else f'img/{k}/{ref}.jpg'
+        key=str(ref); cap=caps.get((k,ref),'') or (clipmap[ref].get('caption','') if kind=='v' else '')
+        tag=('<b>cover</b> ' if key==cv else '')+(f'<span class="pos">{pos}</span> ' if pos else '')+html.escape(key)+(' &#9654;' if kind=='v' else '')
+        return f'<figure{" class=dim" if dim else ""}><img src="{src}" loading="lazy"><figcaption>{tag}'+(f'<i>{html.escape(cap)}</i>' if cap else '')+'</figcaption></figure>'
+    cells=''.join(cell(kd,r,i) for i,(kd,r) in enumerate(items,1))
+    hid=''.join(cell(kd,r,dim=True) for kd,r in hidden)
+    sheet+=f'<section><h2>{html.escape(n)} <code>[{k}]</code> <span class="cnt">{len(items)} shown'+(f', {len(hidden)} hidden' if hidden else '')+'</span></h2>\n<pre>cover: '+html.escape(cv)+'\norder: '+html.escape(' '.join(str(r) for _,r in items))+f'</pre>\n<div class="grid">{cells}</div>\n'+(f'<div class="grid hidden"><span class="lbl">not in order.txt</span>{hid}</div>\n' if hidden else '')+'</section>\n'
+SHEET_HEAD='<!DOCTYPE html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">\n<title>Travels contact sheet</title>\n<style>\n' \
+ 'body{background:#000;color:#ddd;font:14px/1.4 "Helvetica Neue",Helvetica,Arial,sans-serif;margin:0;padding:24px}\n' \
+ 'h1{font-size:20px;margin:0 0 4px}p.hint{color:#888;margin:0 0 28px}\n' \
+ 'h2{font-size:16px;margin:32px 0 6px;color:#fff}h2 code{color:#FF6A1A;font-weight:400;font-size:13px}h2 .cnt{color:#888;font-weight:400;font-size:13px;margin-left:8px}\n' \
+ 'pre{margin:0 0 10px;padding:8px 10px;background:#111;border:1px solid #222;color:#bbb;font-size:12px;white-space:pre-wrap;word-break:break-all;user-select:all}\n' \
+ '.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}\n' \
+ '.grid.hidden{margin-top:10px;padding-top:10px;border-top:1px dashed #333}.grid .lbl{grid-column:1/-1;color:#777;font-size:12px}\n' \
+ 'figure{margin:0}figure img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#111;border-radius:3px}\n' \
+ 'figure.dim img{opacity:.35}\n' \
+ 'figcaption{font-size:12px;color:#aaa;margin-top:4px;word-break:break-all}figcaption .pos{display:inline-block;min-width:18px;padding:0 4px;border-radius:3px;background:#FF6A1A;color:#000;font-weight:700;text-align:center}\n' \
+ 'figcaption b{color:#fff}figcaption i{display:block;color:#777;font-style:normal}\n' \
+ '</style></head><body>\n<h1>Travels contact sheet</h1>\n' \
+ '<p class="hint">Every item in its current order, with the key to use in order.txt (photo number, or clip name marked &#9654;). Orange badge = position. Dimmed = in the album but not shown. Edit travels/order.txt and captions.txt, then run python3 travels/build.py.</p>\n'
+open(os.path.join(HERE,'contact.html'),'w',encoding='utf-8').write(SHEET_HEAD+sheet+'</body></html>\n')
+print("travels/contact.html rebuilt")
+
 p=os.path.join(HERE,'index.html'); s=open(p,encoding='utf-8').read()
 SCRIPT='''  <script>
   // The site's one script, confined to this page: whichever video slide is on screen plays (muted, as browsers
