@@ -3,7 +3,6 @@
 # After editing, run:  python3 travels/build.py   then commit and push.
 
 ## Bali
-bali 1:
 bali 2:
 bali 3:
 bali 4:
