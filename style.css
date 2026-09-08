@@ -124,6 +124,10 @@ figcaption b { color: var(--ink); font-weight: 700; }
 .item .cover { flex: 0 0 46px; height: 66px; background: var(--panel);
                border: 1px solid var(--rule); object-fit: cover; }
 .item .body { flex: 1; }
+.item.pinned { position: relative; border: 2px solid var(--ink); border-radius: 8px; padding: 14px 40px 14px 14px; margin: 14px 0 12px; }
+.item.pinned:first-of-type { border-top: 2px solid var(--ink); }
+.item.pinned + .item { border-top: 1px solid var(--rule); }
+.item .pin { position: absolute; top: 10px; right: 10px; width: 18px; height: 18px; color: #FF6A1A; transform: rotate(30deg); }
 .item .t { font-weight: 700; font-size: 15.5px; }
 .item .a { font-size: 13px; color: var(--mute); }
 .item .n { font-size: 13.5px; color: var(--mute); margin-top: 5px; line-height: 1.5; }
