@@ -52,7 +52,8 @@
      "mb": 6.6,
      "frame": "4:3"
     }
-   ]
+   ],
+   "hover_clip": "gx010148-43"
   },
   {
    "key": "yucatan",
@@ -135,7 +136,8 @@
      "mb": 22.5,
      "frame": "4:3"
     }
-   ]
+   ],
+   "hover_clip": "gx011259-43"
   },
   {
    "key": "tulum",
