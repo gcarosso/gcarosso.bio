@@ -297,7 +297,6 @@ figure.wide img { width: 100%; height: auto; display: block; }
 /* Bookshelf as a scroll box: the list scrolls within itself; hover cards open inside it, to the right of the title */
 h2 .count { font-size: 11px; letter-spacing: .06em; color: var(--faint); font-weight: 500; margin-left: 10px; }
 .shelf { max-height: 440px; overflow-y: auto; border: 1px solid var(--rule); padding: 6px 14px; margin: 8px 0 30px; overscroll-behavior: contain; }
-.shelf .books li .t { font-style: italic; }
 .shelf .books li .card-hover { bottom: auto; top: -8px; left: 55%; }
 .shelf .books li:nth-last-child(-n+4) .card-hover { top: auto; bottom: -8px; }
 /* video slides: a real play button over the poster; hidden while the clip plays */
