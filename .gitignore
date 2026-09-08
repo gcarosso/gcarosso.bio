@@ -15,3 +15,5 @@ photos/
 *.MOV
 *.mp4
 *.MP4
+# wrangler CLI cache (account/project ids), never site content
+.wrangler/
