@@ -69,7 +69,6 @@ baja 381736dd-9cf7-416d-86ed-ba963252e8a2-43:
 baja gx010685-43:
 baja gx010715-43:
 baja gx010849-43:
-baja gx010856-43:
 baja gx010892-43:
 
 ## Bolivia
@@ -110,7 +109,6 @@ dolomites 6:
 dolomites 7:
 dolomites 8:
 dolomites 9:
-dolomites 10:
 
 ## Alps
 alps 1:
@@ -126,7 +124,6 @@ alps 8:
 monaco-monza 1:
 monaco-monza 2:
 monaco-monza 3:
-monaco-monza 4:
 monaco-monza 5:
 monaco-monza 6:
 monaco-monza 7:
@@ -173,4 +170,5 @@ san-francisco 9:
 san-francisco 10:
 
 ## Verzasca
+verzasca 1:
 verzasca dam:

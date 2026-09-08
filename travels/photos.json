@@ -211,11 +211,6 @@
      "frame": "4:3"
     },
     {
-     "name": "gx010856-43",
-     "mb": 12.2,
-     "frame": "4:3"
-    },
-    {
      "name": "gx010892-43",
      "mb": 6.3,
      "frame": "4:3"
@@ -263,7 +258,7 @@
   {
    "key": "dolomites",
    "name": "Dolomites",
-   "count": 10,
+   "count": 9,
    "sources": [
     "europe/cortina-lugano/IMG_1810.JPG",
     "europe/cortina-lugano/IMG_1467.JPG",
@@ -273,16 +268,17 @@
     "europe/cortina-lugano/IMG_1655.JPG",
     "europe/cortina-lugano/IMG_1502.JPG",
     "europe/cortina-lugano/IMG_1645.JPG",
-    "europe/cortina-lugano/IMG_1885.JPG",
-    "europe/cortina-lugano/IMG_2652.JPG"
+    "europe/cortina-lugano/IMG_1885.JPG"
    ],
    "clips": []
   },
   {
    "key": "verzasca",
    "name": "Verzasca",
-   "count": 0,
-   "sources": [],
+   "count": 1,
+   "sources": [
+    "europe/cortina-lugano/IMG_2652.JPG"
+   ],
    "clips": [
     {
      "name": "dam",
@@ -309,12 +305,11 @@
   {
    "key": "monaco-monza",
    "name": "Monaco, Monza, Berlin, Brussels",
-   "count": 7,
+   "count": 6,
    "sources": [
     "europe/F1-Monaco-Monza/IMG_7582.JPG",
     "europe/F1-Monaco-Monza/IMG_7448.JPG",
     "europe/F1-Monaco-Monza/IMG_5585.JPG",
-    "europe/F1-Monaco-Monza/IMG_5499.JPG",
     "europe/berlin-brussels/IMG_2692.jpeg",
     "europe/berlin-brussels/IMG_2789.jpeg",
     "europe/berlin-brussels/IMG_2802.jpeg"

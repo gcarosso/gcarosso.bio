@@ -51,7 +51,7 @@ for t in P['trips']:
     if 'order' in o: items=[('p',int(x)) if x.isdigit() else ('v',x) for x in o['order'] if x.isdigit() or x in clipmap]
     else: items=[('p',i) for i in range(1,N+1)]+[('v',c) for c in clipmap]
     cv=o.get('cover',['1'])[0]; shown={r for _,r in items}
-    hidden=[('p',i) for i in range(1,N+1) if i not in shown]+[('v',c) for c in clipmap if c not in shown]
+    hidden=[('p',i) for i in range(1,N+1) if i not in shown and os.path.exists(os.path.join(HERE,'img',k,f'{i:02d}.jpg'))]+[('v',c) for c in clipmap if c not in shown]
     def cell(kind,ref,pos=None,dim=False):
         src=f'img/{k}/{ref:02d}.jpg' if kind=='p' else f'img/{k}/{ref}.jpg'
         key=str(ref); cap=caps.get((k,ref),'') or (clipmap[ref].get('caption','') if kind=='v' else '')
