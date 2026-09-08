@@ -289,10 +289,16 @@
     function resync(){ vids.forEach(function(v){ var s=v.closest('.slide'); if(!galleryOpen(s)) stop(v); }); io.disconnect(); vids.forEach(function(v){ io.observe(v.closest('.slide')); }); }
     window.addEventListener('hashchange',function(){ setTimeout(resync,50); });
     document.addEventListener('visibilitychange',function(){ if(!document.hidden) resync(); });
+    var noHover=window.matchMedia('(hover: none)').matches;
     document.querySelectorAll('.trip video.hover').forEach(function(v){
-      var a=v.closest('.trip');
-      a.addEventListener('mouseenter',function(){ var p=v.play(); if(p&&p.catch) p.catch(function(){}); });
-      a.addEventListener('mouseleave',function(){ v.pause(); v.currentTime=0; });
+      var a=v.closest('.trip'); v.muted=true;
+      if(noHover){
+        // phones and tablets: no hover, so the cover clip plays by itself while the card is on screen
+        new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting&&e.intersectionRatio>=0.5){ var p=v.play(); if(p&&p.catch) p.catch(function(){}); } else { v.pause(); } }); },{threshold:[0,0.5]}).observe(a);
+      } else {
+        a.addEventListener('mouseenter',function(){ var p=v.play(); if(p&&p.catch) p.catch(function(){}); });
+        a.addEventListener('mouseleave',function(){ v.pause(); v.currentTime=0; });
+      }
     });
   })();
   </script>
