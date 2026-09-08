@@ -23,7 +23,7 @@ order: 1 2 3 4 5 6 7 381736dd-9cf7-416d-86ed-ba963252e8a2-43 gx010685-43 gx01071
 cover: 1
 order: 1 2 3 4 5 6 7 8 9 10 11 12 13 14
 
-## Puglia  [puglia]
+## Puglia, Portofino  [puglia]
 cover: 1
 order: 1 2 3 4 5 6 7 8 9 10
 
