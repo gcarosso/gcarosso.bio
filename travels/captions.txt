@@ -25,7 +25,7 @@ yucatan gx011259-43: Cenote Kin Ha
 yucatan 1: Cenote Dos Ojos
 yucatan 2: Cenote Dos Ojos
 yucatan 3: Cenote Dos Ojos
-yucatan dosojos-43: Cenote Dos Ojos
+yucatan dosojos-long-43: Cenote Dos Ojos
 yucatan dosojos2-43: Cenote Dos Ojos
 yucatan 4: Cenote Carwash
 yucatan 5: Cenote Kin Ha
