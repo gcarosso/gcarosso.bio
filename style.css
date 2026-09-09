@@ -232,14 +232,17 @@ code, kbd, pre, samp { font-family: "Helvetica Neue", Helvetica, Arial, sans-ser
 .books li { position: relative; }
 .books li .card-hover { display: none; position: absolute; left: 0; bottom: calc(100% + 6px); z-index: 5; width: 300px;
   background: var(--bg); border: 1px solid var(--rule); box-shadow: 0 6px 24px rgba(0,0,0,.25); padding: 12px; gap: 12px; align-items: flex-start; }
-.books li:hover .card-hover, .books li:focus-within .card-hover { display: flex; }
+.books li:hover .card-hover, .books li:focus-within .card-hover, .books li.open .card-hover { display: flex; }
 .books li .card-hover img { width: 84px; flex: none; background: var(--panel); }
 .books li .card-hover .ct { font-weight: 700; font-size: 14px; line-height: 1.3; }
 .books li .card-hover .ca { font-size: 12.5px; color: var(--mute); margin-top: 3px; }
 .books li .card-hover .cn { font-size: 12.5px; line-height: 1.45; margin-top: 8px; }
 .books li .card-hover .cs { font-size: 11.5px; color: var(--faint); margin-top: 6px; }
 .books li > .t { cursor: default; border-bottom: 1px dotted var(--rule); }
-@media (hover: none) { .books li .card-hover { display: none !important; } }
+.books button.t { font: inherit; color: inherit; background: none; border: 0; border-bottom: 1px dotted var(--rule); padding: 0; text-align: left; cursor: pointer; }
+.books button.t:focus-visible { outline: 2px solid #FF6A1A; outline-offset: 2px; }
+.books li.open > button.t { border-bottom-color: var(--ink); }
+@media (hover: none) { .books li .card-hover { display: none; } .books li.open .card-hover { display: flex; } }
 /* bookshelf rows: title — author, year */
 .books li .a::before { content: " — "; color: var(--mute); }
 /* non-book media links: the same blue as the CV publication links */
@@ -324,3 +327,11 @@ h2 .count { font-size: 11px; letter-spacing: .06em; color: var(--faint); font-we
 h2.title { font-size: 27px; line-height: 1.25; font-weight: 700; margin: 56px 0 12px; letter-spacing: -.01em; text-transform: none; padding: 0; border: 0; }
 a.saros { border-bottom-color: rgba(255,106,26,.45); }
 a.saros:hover { border-bottom-color: #FF6A1A; }
+/* page-level H1 on the home page (the header brand is a link, not a heading) */
+h1.home { font-size: 15px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase; color: var(--mute); margin: 0 0 10px; }
+/* contact line under the professional pages */
+.contact { font-size: 14px; color: var(--mute); margin: 34px 0 0; padding-top: 16px; border-top: 1px solid var(--rule); }
+.contact a { color: #FF6A1A; border-bottom-color: rgba(255,106,26,.45); }
+.contact a:hover { border-bottom-color: #FF6A1A; }
+/* tools: what the tool is for and what it demonstrates */
+.item .n.job { color: var(--mute); font-style: italic; }

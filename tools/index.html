@@ -21,55 +21,110 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://gcarosso.bio/assets/img/og-tools.png">
-<link rel="stylesheet" href="../style.css?v=44">
+<link rel="stylesheet" href="../style.css?v=45">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": "https://gcarosso.bio/#person",
-  "name": "Giovanni Carosso",
-  "alternateName": [
-    "Giovanni A. Carosso",
-    "Carosso GA",
-    "Gio Carosso"
-  ],
-  "honorificSuffix": "PhD",
-  "url": "https://gcarosso.bio/",
-  "email": "mailto:gacarosso@gmail.com",
-  "jobTitle": "Bioengineer",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "San Francisco",
-    "addressRegion": "CA",
-    "addressCountry": "US"
-  },
-  "alumniOf": [
+  "@graph": [
     {
-      "@type": "CollegeOrUniversity",
-      "name": "Johns Hopkins University School of Medicine"
-    }
-  ],
-  "knowsAbout": [
-    "Epigenetics",
-    "Chromatin biology",
-    "Gene regulation",
-    "High-throughput screening",
-    "Protein engineering",
-    "Machine learning for biology"
-  ],
-  "identifier": [
+      "@type": "Person",
+      "@id": "https://gcarosso.bio/#person",
+      "name": "Giovanni Carosso",
+      "alternateName": [
+        "Giovanni A. Carosso",
+        "Carosso GA",
+        "Gio Carosso"
+      ],
+      "honorificSuffix": "PhD",
+      "url": "https://gcarosso.bio/",
+      "email": "mailto:gacarosso@gmail.com",
+      "jobTitle": "Bioengineer",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "San Francisco",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      },
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Johns Hopkins University School of Medicine"
+        }
+      ],
+      "knowsAbout": [
+        "Epigenetics",
+        "Chromatin biology",
+        "Gene regulation",
+        "High-throughput screening",
+        "Protein engineering",
+        "Machine learning for biology"
+      ],
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "ORCID",
+          "value": "0000-0002-9142-8525"
+        }
+      ],
+      "sameAs": [
+        "https://orcid.org/0000-0002-9142-8525",
+        "https://scholar.google.com/citations?user=bf1VuecAAAAJ",
+        "https://www.linkedin.com/in/giovannicarosso",
+        "https://github.com/gcarosso",
+        "https://x.com/gcarosso"
+      ]
+    },
     {
-      "@type": "PropertyValue",
-      "propertyID": "ORCID",
-      "value": "0000-0002-9142-8525"
+      "@type": "SoftwareSourceCode",
+      "@id": "https://gcarosso.bio/tools/#saros",
+      "name": "SAROS",
+      "description": "Clinical trial readout calendar, 2026–2028: industry Phase 1–3 trials on ClinicalTrials.gov joined to public records about their sponsors. Public sources only, refreshed weekly.",
+      "codeRepository": "https://github.com/gcarosso/saros",
+      "url": "https://saros.gcarosso.bio/",
+      "programmingLanguage": [
+        "Python",
+        "JavaScript"
+      ],
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "runtimePlatform": "Web browser",
+      "author": {
+        "@id": "https://gcarosso.bio/#person"
+      },
+      "isAccessibleForFree": true
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://gcarosso.bio/tools/#deep-ancestry",
+      "name": "deep-ancestry",
+      "description": "Reads a raw consumer genotype file in the browser and produces an embeddable ancestry module: composition, haplogroups and deep-time context. Nothing is uploaded.",
+      "codeRepository": "https://github.com/gcarosso/deep-ancestry",
+      "url": "https://gcarosso.github.io/deep-ancestry/",
+      "programmingLanguage": "JavaScript",
+      "license": "https://opensource.org/licenses/MIT",
+      "runtimePlatform": "Web browser",
+      "author": {
+        "@id": "https://gcarosso.bio/#person"
+      },
+      "isAccessibleForFree": true
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://gcarosso.bio/tools/#pileup",
+      "name": "Pileup",
+      "description": "An X-ray for Claude Code sessions: every tool call, subagent, error, retry, compaction and token on a time axis, read from the transcripts Claude Code already writes. Read-only, offline.",
+      "codeRepository": "https://github.com/gcarosso/pileup",
+      "url": "https://github.com/gcarosso/pileup#readme",
+      "programmingLanguage": [
+        "Python",
+        "HTML"
+      ],
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "runtimePlatform": "Web browser",
+      "author": {
+        "@id": "https://gcarosso.bio/#person"
+      },
+      "isAccessibleForFree": true
     }
-  ],
-  "sameAs": [
-    "https://orcid.org/0000-0002-9142-8525",
-    "https://scholar.google.com/citations?user=bf1VuecAAAAJ",
-    "https://www.linkedin.com/in/giovannicarosso",
-    "https://github.com/gcarosso",
-    "https://x.com/gcarosso"
   ]
 }
 </script>
@@ -82,12 +137,12 @@
   <a class="sitename" href="../">Giovanni Carosso, PhD</a>
   <nav>
     <a href=".././">Home</a>
-    <a href="../about.html">About</a>
+    <a href="/about">About</a>
     <a href="./" aria-current="page">Tools</a>
     <a href="../notes/">Notes</a>
     <a href="../travels/">Travels</a>
     <a href="../library/">Library</a>
-    <a href="../cv.html">CV</a>
+    <a href="/cv">CV</a>
   </nav>
 </header>
 
@@ -102,6 +157,7 @@
     <div class="body">
       <div class="t"><span class="saros">SAROS</span></div>
       <div class="n">Navigate today's <b>clinical trials</b> landscape, mapped to the money around it.<br>Horizon spans 2026–2028. Public sources only, refreshed weekly.</div>
+      <div class="n job">The job: turn a registered trial date into a question about the sponsor. What it shows: how I read trial evidence against the money behind it, and where the public record stops.</div>
       <div class="a">Built by Giovanni Carosso · © 2026 · source released under Apache-2.0</div>
       <div class="n links"><a href="https://saros.gcarosso.bio/" target="_blank" rel="noopener"><b>Open</b> the SAROS clinical-trial readout calendar ↗</a> &nbsp;·&nbsp; <a href="https://saros.gcarosso.bio/method" target="_blank" rel="noopener">Method ↗</a> &nbsp;·&nbsp; <a href="https://github.com/gcarosso/saros" target="_blank" rel="noopener">Source ↗</a></div>
     </div>
@@ -112,6 +168,7 @@
     <div class="body">
       <div class="t"><span class="saros">deep-ancestry</span></div>
       <div class="n">Read your own raw DNA file, in your own browser, and get an embeddable ancestry module for your site.<br>Runs of homozygosity and maternal haplogroup computed locally; nothing is uploaded. No server, no build, no dependencies.</div>
+      <div class="n job">The job: read a raw genotype file without sending it anywhere. What it shows: how far consumer chip data can be pushed, and where its interpretation has to stop.</div>
       <div class="a">Built by Giovanni Carosso · © 2026 · source released under MIT</div>
       <div class="n links"><a href="https://gcarosso.github.io/deep-ancestry/" target="_blank" rel="noopener"><b>Open</b> ↗</a> &nbsp;·&nbsp; <a href="https://github.com/gcarosso/deep-ancestry" target="_blank" rel="noopener">Source ↗</a></div>
     </div>
@@ -122,10 +179,13 @@
     <div class="body">
       <div class="t"><span class="saros">Pileup</span></div>
       <div class="n">An X-ray for Claude Code: see what the code is doing as you work, live.<br>Every tool call, subagent, error, retry, compaction and token on a time axis, drawn from the transcripts Claude Code already writes. One Python file, one HTML file, standard library only; nothing installed or hooked, read-only and offline.</div>
+      <div class="n job">The job: see what an AI coding agent actually did. What it shows: instrumenting a black box from the traces it already leaves, with nothing installed.</div>
       <div class="a">Built by Giovanni Carosso · © 2026 · source released under Apache-2.0</div>
       <div class="n links"><a href="https://github.com/gcarosso/pileup#readme" target="_blank" rel="noopener"><b>Open</b> ↗</a> &nbsp;·&nbsp; <a href="https://github.com/gcarosso/pileup" target="_blank" rel="noopener">Source ↗</a></div>
     </div>
   </div>
+  <p class="contact"><b>Discuss a project:</b> <!--email_off--><a href="mailto:gacarosso@gmail.com?subject=Investor%20diligence">Investor diligence</a><!--/email_off--> &nbsp;·&nbsp; <!--email_off--><a href="mailto:gacarosso@gmail.com?subject=Scientific%20AI">Scientific AI</a><!--/email_off--> &nbsp;·&nbsp; <!--email_off--><a href="mailto:gacarosso@gmail.com">anything else</a><!--/email_off-->. Say the decision, the subject area and the deadline. Research-leadership and scientific-AI roles are welcome too.</p>
+
 </main>
 
 <footer>
