@@ -1,24 +1,34 @@
 /* ============================================================================
-   giovannicarosso.com — design system
-   Same language as the CV and resume: Helvetica Neue, black, hairline rules.
-   Edit the variables below to retune the whole site at once.
+   gcarosso.bio — design system
+   IBM Plex Sans (self-hosted, OFL), a warm near-black in dark mode and a warm
+   off-white in light mode, hairline rules, one orange accent.
+   Edit the tokens below to retune the whole site at once.
    ========================================================================== */
 
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("assets/fonts/IBMPlexSans-Regular.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Sans"; font-style: italic; font-weight: 400; font-display: swap; src: url("assets/fonts/IBMPlexSans-Italic.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 500; font-display: swap; src: url("assets/fonts/IBMPlexSans-Medium.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 600; font-display: swap; src: url("assets/fonts/IBMPlexSans-SemiBold.woff2") format("woff2"); }
+
 :root {
-  --ink:   #000;        /* body text                */
-  --mute:  #6b6b6b;     /* secondary text, captions */
-  --faint: #9b9b9b;     /* tertiary                 */
-  --rule:  #dcdcdc;     /* hairlines                */
-  --bg:    #fff;
-  --panel: #f7f7f7;     /* card / figure background */
-  --accent:#000;        /* set a colour here if you ever want one */
-  --max:   680px;       /* text measure             */
-  --wide:  1040px;      /* galleries and wide media */
+  /* light mode: warm off-white ground */
+  --bg:    #fbfaf7;
+  --panel: #f2f1ec;     /* surface: cards, figures, the featured entry */
+  --head:  #1b1a17;     /* headings and important labels               */
+  --ink:   #3a3935;     /* body text                                    */
+  --mute:  #6b6963;     /* dates, licenses, secondary nav, footer       */
+  --faint: #74726b;     /* tertiary labels                              */
+  --rule:  #dedcd5;     /* hairlines                                    */
+  --accent:#a8401b;     /* links and selected accents (AA on --bg)      */
+  --brand: #b9450a;     /* the SAROS wordmark orange, darkened for light */
+  --blue:  #1f63b8;     /* reference / publication links                */
+  --max:   700px;       /* text measure                                 */
+  --wide:  1040px;      /* galleries and wide media                     */
 }
 
 @media (prefers-color-scheme: dark) {
-  :root { --ink:#f1f1f1; --mute:#9d9d9d; --faint:#777; --rule:#2e2e2e;
-          --bg:#0c0c0c; --panel:#161616; --accent:#f1f1f1; }
+  :root { --bg:#111110; --panel:#191917; --head:#efede7; --ink:#c3c0b8; --mute:#96938b; --faint:#807e77;
+          --rule:#343430; --accent:#f59a62; --brand:#FF6A1A; --blue:#6da7ec; }
 }
 
 * { box-sizing: border-box; }
@@ -27,9 +37,9 @@ html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 body {
   margin: 0;
   padding: 0 24px 110px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 16px;
-  line-height: 1.62;
+  line-height: 1.6;
   color: var(--ink);
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
@@ -39,38 +49,44 @@ body {
 .wrap-wide { max-width: var(--wide); margin: 0 auto; }
 
 /* ---------------------------------------------------------------- header */
-header { padding: 74px 0 0; }
+header { padding: 64px 0 0; }
 
 .sitename {
-  font-size: 19px; font-weight: 700; letter-spacing: .13em;
-  margin: 0 0 14px; display: inline-block;
+  font-size: 20px; font-weight: 600; letter-spacing: .03em; line-height: 1.3; color: var(--head);
+  margin: 0 0 12px; display: inline-block;
   border: 0;
 }
 
-nav { margin: 0 0 34px; padding-bottom: 22px; border-bottom: 1.5px solid var(--ink); }
+nav { margin: 0 0 32px; padding-bottom: 20px; border-bottom: 1px solid var(--head); }
 nav a {
-  font-size: 13px; letter-spacing: .04em; margin-right: 20px;
+  font-size: 14px; font-weight: 500; letter-spacing: .01em; line-height: 1.5; margin-right: 20px;
   color: var(--mute); border: 0; display: inline-block; padding: 3px 0;
 }
-nav a:hover, nav a[aria-current="page"] { color: var(--ink); }
-nav a[aria-current="page"] { border-bottom: 1px solid var(--ink); }
+nav a:hover, nav a[aria-current="page"] { color: var(--head); }
+nav a[aria-current="page"] { border-bottom: 1px solid var(--head); }
+nav a:focus-visible, a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 /* ---------------------------------------------------------------- type */
-h1 { font-size: 27px; line-height: 1.25; font-weight: 700; margin: 0 0 12px; letter-spacing: -.01em; }
+h1, h2, h3, h4 { color: var(--head); }
+h1 { font-size: 28px; line-height: 1.2; font-weight: 600; margin: 0 0 12px; letter-spacing: -.01em; }
 h2 {
-  font-size: 12px; font-weight: 700; letter-spacing: .17em; text-transform: uppercase;
-  margin: 56px 0 18px; padding-bottom: 7px; border-bottom: 1px solid var(--rule);
+  font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+  margin: 48px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--rule);
 }
-h3 { font-size: 17px; font-weight: 700; margin: 30px 0 6px; }
-h4 { font-size: 15px; font-weight: 700; margin: 22px 0 4px; }
+h3 { font-size: 18px; font-weight: 600; line-height: 1.3; margin: 32px 0 8px; }
+h4 { font-size: 15px; font-weight: 600; margin: 24px 0 4px; }
+b, strong { font-weight: 600; color: var(--head); }
 
-p { margin: 0 0 18px; }
-.lede { font-size: 19px; line-height: 1.5; margin-bottom: 26px; }
-.small { font-size: 13.5px; }
+p { margin: 0 0 16px; }
+.lede { font-size: 19px; line-height: 1.5; color: var(--head); margin-bottom: 24px; }
+.small { font-size: 13px; line-height: 1.5; }
 .muted { color: var(--mute); }
 
-a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rule); }
-a:hover { border-bottom-color: var(--ink); }
+a { color: var(--head); text-decoration: none; border-bottom: 1px solid var(--rule); }
+a:hover { border-bottom-color: var(--head); }
+/* links inside prose carry the accent; navigation, footer and contact rows stay quiet */
+main p:not(.contacts):not(.credit) a:not(.ref):not(.saros), main li a:not(.ref):not(.media) { color: var(--accent); border-bottom-color: color-mix(in srgb, var(--accent) 45%, transparent); }
+main p:not(.contacts):not(.credit) a:not(.ref):not(.saros):hover, main li a:not(.ref):not(.media):hover { border-bottom-color: var(--accent); }
 
 hr { border: 0; border-top: 1px solid var(--rule); margin: 46px 0; }
 
@@ -85,23 +101,23 @@ ul.dash li::before { content: "–"; position: absolute; left: 0; }
 .card { background: var(--bg); padding: 22px 20px 20px; display: block; border: 0; }
 .card:hover { background: var(--panel); }
 .card .k { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--faint); }
-.card .t { font-size: 17px; font-weight: 700; margin: 5px 0 4px; }
-.card .d { font-size: 13.5px; color: var(--mute); line-height: 1.5; }
+.card .t { font-size: 18px; font-weight: 600; margin: 4px 0 4px; }
+.card .d { font-size: 15px; color: var(--ink); line-height: 1.55; }
 
 /* ---------------------------------------------------------------- index rows */
 .entry { padding: 17px 0; border-bottom: 1px solid var(--rule); }
 .entry:first-of-type { border-top: 1px solid var(--rule); }
 .entry .date  { font-size: 12.5px; color: var(--faint); letter-spacing: .04em; }
-.entry .title { font-weight: 700; display: block; font-size: 16.5px; margin: 2px 0 3px; border: 0; }
+.entry .title { font-weight: 600; display: block; font-size: 18px; line-height: 1.3; margin: 2px 0 3px; border: 0; }
 .entry a.title:hover { border-bottom: 1px solid var(--ink); display: inline-block; }
-.entry .dek   { font-size: 14px; color: var(--mute); line-height: 1.5; }
+.entry .dek   { font-size: 15px; color: var(--ink); line-height: 1.55; }
 
 /* ---------------------------------------------------------------- figures */
 figure { margin: 34px 0; }
 figure img, figure svg, figure .plot { width: 100%; height: auto; display: block;
   background: var(--panel); border: 1px solid var(--rule); }
 figcaption { font-size: 13px; color: var(--mute); margin-top: 9px; line-height: 1.5; }
-figcaption b { color: var(--ink); font-weight: 700; }
+figcaption b { color: var(--head); font-weight: 600; }
 
 /* pull a figure wider than the text column on big screens */
 @media (min-width: 900px) {
@@ -119,23 +135,28 @@ figcaption b { color: var(--ink); font-weight: 700; }
 @media (max-width: 460px) { .grid, .grid.two { grid-template-columns: 1fr; } }
 
 /* ---------------------------------------------------------------- reading list */
-.item { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--rule); }
+.item { display: flex; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
 .item:first-of-type { border-top: 1px solid var(--rule); }
 .item .cover { flex: 0 0 46px; height: 66px; background: var(--panel);
                border: 1px solid var(--rule); object-fit: cover; }
-.item .body { flex: 1; }
-.item.pinned { position: relative; border: 2px solid var(--ink); border-radius: 8px; padding: 14px 40px 14px 14px; margin: 14px -16px 12px; } /* -16px = border + padding, so the cover and text line up with the unpinned items */
-.item.pinned:first-of-type { border-top: 2px solid var(--ink); }
+.item .cover.blank { visibility: hidden; }   /* keeps the title column aligned when an entry has no legible mark */
+.item .body { flex: 1; min-width: 0; }
+/* featured entry: the surface colour and a thin accent left edge; -16px = edge + padding, so its text lines up with the other entries */
+.item.pinned { position: relative; background: var(--panel); border: 0; border-left: 2px solid var(--accent); border-radius: 0 6px 6px 0;
+               padding: 16px 40px 16px 14px; margin: 12px -16px 12px; }
+.item.pinned:first-of-type { border-top: 0; }
 .item.pinned + .item { border-top: 1px solid var(--rule); }
-.item .pin { position: absolute; top: 10px; right: 10px; width: 18px; height: 18px; color: #FF6A1A; transform: rotate(30deg); }
-.item .t { font-weight: 700; font-size: 15.5px; }
-.item .a { font-size: 13px; color: var(--mute); }
-.item .n { font-size: 13.5px; color: var(--mute); margin-top: 5px; line-height: 1.5; }
+.item .pin { position: absolute; top: 12px; right: 12px; width: 15px; height: 15px; color: var(--accent); transform: rotate(30deg); }
+.item .t { font-weight: 600; font-size: 18px; line-height: 1.3; color: var(--head); }
+.item .a { font-size: 13px; color: var(--mute); line-height: 1.5; margin-top: 4px; }
+.item .n { font-size: 16px; color: var(--ink); margin-top: 6px; line-height: 1.6; }
+.item .n.links { font-size: 15px; margin-top: 10px; }
+.item .lic { font-size: 13px; color: var(--mute); margin-left: 6px; }
 
 /* ---------------------------------------------------------------- CV blocks */
 .role { margin-bottom: 26px; }
 .role-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
-.role-head .org { font-weight: 700; }
+.role-head .org { font-weight: 600; color: var(--head); }
 .role-head .when { font-size: 13px; color: var(--mute); white-space: nowrap; }
 .role .sub { font-size: 13.5px; color: var(--mute); margin-bottom: 8px; }
 @media (max-width: 560px) {
@@ -144,12 +165,12 @@ figcaption b { color: var(--ink); font-weight: 700; }
 }
 
 /* ---------------------------------------------------------------- footer */
-footer { margin-top: 70px; padding-top: 20px; border-top: 1px solid var(--rule);
-         font-size: 13px; color: var(--mute); }
+footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--rule);
+         font-size: 13px; line-height: 1.5; color: var(--mute); }
 footer a { color: var(--mute); }
 
 .back { font-size: 13px; color: var(--mute); display: inline-block; margin-bottom: 30px; border: 0; }
-.back:hover { color: var(--ink); }
+.back:hover { color: var(--head); }
 
 /* ============================================================================
    DRAFT MODE
@@ -201,7 +222,14 @@ footer a { color: var(--mute); }
 /* 6 s per frame: 0.6 s fade in from black, 4.6 s hold, 0.8 s fade to black; frames never overlap */
 @keyframes slidefade { 0% { opacity: 0; } 3.3% { opacity: 1; } 28.9% { opacity: 1; } 33.3% { opacity: 0; } 100% { opacity: 0; } }
 /* everything in the one face, code included */
-code, kbd, pre, samp { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+code, kbd, pre, samp { font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+/* reduced motion: the slideshow holds its first frame and nothing scrolls smoothly */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  .slideshow img { animation: none; }
+  .slideshow img:first-child { opacity: 1; }
+  .slide .nav { transition: none; }
+}
 /* contacts with platform marks */
 .contacts a { display: inline-flex; align-items: center; gap: 6px; margin-right: 18px; border-bottom: 0; }
 .contacts svg { width: 15px; height: 15px; fill: currentColor; flex: none; }
@@ -215,14 +243,16 @@ code, kbd, pre, samp { font-family: "Helvetica Neue", Helvetica, Arial, sans-ser
 .cards.one { grid-template-columns: 1fr; }
 
 /* SAROS: the mark's orange wherever the name appears, and on its Open / Source links */
-.saros, .links a { color: #FF6A1A; }
-.saros { font-weight: 700; }
-.links a { border-bottom-color: rgba(255,106,26,.45); }
-.links a:hover { border-bottom-color: #FF6A1A; }
+.saros { color: var(--brand); font-weight: 600; }
+/* project links: Open is the primary action; Method and Source read as secondary */
+.links a { color: var(--ink); border-bottom-color: var(--rule); }
+.links a:hover { border-bottom-color: var(--head); }
+.links a.open { color: var(--accent); font-weight: 600; border-bottom-color: color-mix(in srgb, var(--accent) 45%, transparent); }
+.links a.open:hover { border-bottom-color: var(--accent); }
+.links .sep { color: var(--faint); margin: 0 8px; }
 /* CV publication links: the SAROS dashboard's blue */
-.pubs a { color: #2f7ad6; border-bottom-color: rgba(47,122,214,.4); }
-.pubs a:hover { border-bottom-color: #2f7ad6; }
-@media (prefers-color-scheme: dark) { .pubs a { color: #6da7ec; border-bottom-color: rgba(109,167,236,.45); } .pubs a:hover { border-bottom-color: #6da7ec; } }
+.pubs a { color: var(--blue); border-bottom-color: color-mix(in srgb, var(--blue) 40%, transparent); }
+.pubs a:hover { border-bottom-color: var(--blue); }
 
 /* photo credit under the home slideshow: same size and colour as the footer */
 .credit { font-size: 13px; color: var(--mute); margin: 0 0 30px; }
@@ -234,39 +264,37 @@ code, kbd, pre, samp { font-family: "Helvetica Neue", Helvetica, Arial, sans-ser
   background: var(--bg); border: 1px solid var(--rule); box-shadow: 0 6px 24px rgba(0,0,0,.25); padding: 12px; gap: 12px; align-items: flex-start; }
 .books li:hover .card-hover, .books li:focus-within .card-hover, .books li.open .card-hover { display: flex; }
 .books li .card-hover img { width: 84px; flex: none; background: var(--panel); }
-.books li .card-hover .ct { font-weight: 700; font-size: 14px; line-height: 1.3; }
+.books li .card-hover .ct { font-weight: 600; font-size: 14px; line-height: 1.3; color: var(--head); }
 .books li .card-hover .ca { font-size: 12.5px; color: var(--mute); margin-top: 3px; }
 .books li .card-hover .cn { font-size: 12.5px; line-height: 1.45; margin-top: 8px; }
 .books li .card-hover .cs { font-size: 11.5px; color: var(--faint); margin-top: 6px; }
 .books li > .t { cursor: default; border-bottom: 1px dotted var(--rule); }
 .books button.t { font: inherit; color: inherit; background: none; border: 0; border-bottom: 1px dotted var(--rule); padding: 0; text-align: left; cursor: pointer; }
-.books button.t:focus-visible { outline: 2px solid #FF6A1A; outline-offset: 2px; }
-.books li.open > button.t { border-bottom-color: var(--ink); }
+.books button.t:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.books li.open > button.t { border-bottom-color: var(--head); }
 @media (hover: none) { .books li .card-hover { display: none; } .books li.open .card-hover { display: flex; } }
 /* bookshelf rows: title — author, year */
 .books li .a::before { content: " — "; color: var(--mute); }
 /* non-book media links: the same blue as the CV publication links */
-.books a.media { color: #2f7ad6; border-bottom-color: rgba(47,122,214,.4); }
-.books a.media:hover { border-bottom-color: #2f7ad6; }
-@media (prefers-color-scheme: dark) { .books a.media { color: #6da7ec; border-bottom-color: rgba(109,167,236,.45); } }
+.books a.media { color: var(--blue); border-bottom-color: color-mix(in srgb, var(--blue) 40%, transparent); }
+.books a.media:hover { border-bottom-color: var(--blue); }
 /* present in the text for scrapers and screen readers, clipped on screen */
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 /* page subtitle: the line right under each page heading */
-main > p.sub { font-style: italic; }
+main > p.sub { font-style: normal; font-size: 16.5px; color: var(--mute); margin: -4px 0 24px; }
 /* languages row on About: a speech bubble, then flags; one line, tight */
 .langs { display: flex; align-items: center; justify-content: space-between; margin: 26px 0 -6px; width: 42%; }
 .langs .bub { width: 18px; height: 18px; color: var(--mute); margin-right: 2px; }
 .langs svg:not(.bub) { width: 27px; height: 18px; display: block; border: 1px solid var(--rule); }
 /* reference links in body text and CV role heads: the same blue as publication links */
-a.ref { color: #2f7ad6; border-bottom-color: rgba(47,122,214,.4); }
-a.ref:hover { border-bottom-color: #2f7ad6; }
-@media (prefers-color-scheme: dark) { a.ref { color: #6da7ec; border-bottom-color: rgba(109,167,236,.45); } a.ref:hover { border-bottom-color: #6da7ec; } }
+a.ref { color: var(--blue); border-bottom-color: color-mix(in srgb, var(--blue) 40%, transparent); }
+a.ref:hover { border-bottom-color: var(--blue); }
 
 /* ---------- Travels: trip cards → in-page gallery, pure CSS (fragment-driven), swipe / scroll-snap / arrow links ---------- */
 .trips { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 8px 0 30px; }
 .trip { display: block; position: relative; border: 0; }
 .trip img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; background: var(--panel); }
-.trip .tn { display: block; font-weight: 700; margin-top: 8px; }
+.trip .tn { display: block; font-weight: 600; color: var(--head); margin-top: 8px; }
 .trip .tc { display: block; font-size: 12.5px; color: var(--mute); }
 .trip:hover img { opacity: .9; }
 .gallery { display: none; position: fixed; inset: 0; background: #000; z-index: 20; }
@@ -322,10 +350,10 @@ h2 .count { font-size: 11px; letter-spacing: .06em; color: var(--faint); font-we
 .aside-left { display: flow-root; }
 .aside-left p { margin-bottom: 18px; }
 @media (max-width: 560px) { .aside-left { display: flex; flex-direction: column; } .aside-left p { order: 0; } .aside-left .portrait.left { order: 1; float: none; width: 100%; margin: 0 0 18px; } }
-.bleed .anc a.saros { color: #FF6A1A; font-weight: 700; text-decoration: none; border-bottom: 0; }
+.bleed .anc a.saros { color: #FF6A1A; font-weight: 600; text-decoration: none; border-bottom: 0; }   /* the module paints its own dark ground, so the full brand orange stays */
 .bleed .anc a.saros:hover { text-decoration: underline; }
-h2.title { font-size: 27px; line-height: 1.25; font-weight: 700; margin: 56px 0 12px; letter-spacing: -.01em; text-transform: none; padding: 0; border: 0; }
-a.saros { border-bottom-color: rgba(255,106,26,.45); }
-a.saros:hover { border-bottom-color: #FF6A1A; }
+h2.title { font-size: 28px; line-height: 1.2; font-weight: 600; margin: 48px 0 12px; letter-spacing: -.01em; text-transform: none; padding: 0; border: 0; }
+a.saros { border-bottom-color: color-mix(in srgb, var(--brand) 45%, transparent); }
+a.saros:hover { border-bottom-color: var(--brand); }
 /* page-level H1 on the home page (the header brand is a link, not a heading) */
-h1.home { font-size: 15px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase; color: var(--mute); margin: 0 0 10px; }
+h1.home { font-size: 13px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--mute); margin: 0 0 8px; }
