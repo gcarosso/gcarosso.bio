@@ -148,10 +148,10 @@ figcaption b { color: var(--head); font-weight: 600; }
 .item.pinned + .item { border-top: 1px solid var(--rule); }
 .item .pin { position: absolute; top: 12px; right: 12px; width: 15px; height: 15px; color: var(--accent); transform: rotate(30deg); }
 .item .t { font-weight: 600; font-size: 18px; line-height: 1.3; color: var(--head); }
-.item .a { font-size: 13px; color: var(--mute); line-height: 1.5; margin-top: 4px; }
+.item .a { font-size: 14px; font-weight: 500; color: var(--head); line-height: 1.5; margin-top: 10px; }   /* authorship, explicit on every entry */
 .item .n { font-size: 16px; color: var(--ink); margin-top: 6px; line-height: 1.6; }
-.item .n.links { font-size: 15px; margin-top: 10px; }
-.item .lic { font-size: 13px; color: var(--mute); margin-left: 6px; }
+.item .n.links { font-size: 15px; margin-top: 2px; }
+.item .lic { font-size: 14px; color: var(--mute); }
 
 /* ---------------------------------------------------------------- CV blocks */
 .role { margin-bottom: 26px; }
