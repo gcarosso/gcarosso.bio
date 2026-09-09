@@ -327,3 +327,5 @@ h2 .count { font-size: 11px; letter-spacing: .06em; color: var(--faint); font-we
 h2.title { font-size: 27px; line-height: 1.25; font-weight: 700; margin: 56px 0 12px; letter-spacing: -.01em; text-transform: none; padding: 0; border: 0; }
 a.saros { border-bottom-color: rgba(255,106,26,.45); }
 a.saros:hover { border-bottom-color: #FF6A1A; }
+/* page-level H1 on the home page (the header brand is a link, not a heading) */
+h1.home { font-size: 15px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase; color: var(--mute); margin: 0 0 10px; }
