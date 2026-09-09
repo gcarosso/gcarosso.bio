@@ -124,8 +124,8 @@ if __name__ == "__main__":
     card(
         IMG / "og-card.png",
         "Giovanni Carosso",
-        "Bioengineer and biotech operator. Tools for epigenetic medicine, "
-        "and for where biotech meets capital.",
+        "Building modality platforms for epigenetic medicine and  "
+        "nalytical tools connecting biological evidence to investment decisions.",
         "gcarosso.bio",
     )
     card(
