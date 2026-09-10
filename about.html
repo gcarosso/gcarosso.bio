@@ -233,8 +233,10 @@
 .anc .cards .card { font-size: 15px; color: var(--ink); line-height: 1.6; max-width: none; }
 .anc .cards .card-def { color: var(--mute); }
 .anc .card i { color: var(--mute); } .anc .hint { color: var(--faint); font-size: 12px; }
-.anc .tlsvg .eb { font-size: 11px; font-weight: 600; letter-spacing: .1em; } .anc .tlsvg .vl { font-size: 14px; font-weight: 600; }
-@media (max-width: 640px) { .anc .tlsvg { min-width: 760px; } .anc .tlsvg .eb { font-size: 14px; } .anc .tlsvg .vl { font-size: 19px; } .anc .tlsvg .tk, .anc .tlsvg .axcap, .anc .tlsvg .pcl { font-size: 13px; } }
+/* the timeline is drawn at 1040 units and shown at ~700px, so sizes here are ~1.5× the on-screen size */
+.anc .tlsvg .eb { font-size: 11px; font-weight: 600; letter-spacing: .08em; } .anc .tlsvg .vl { font-size: 16px; font-weight: 600; }
+.anc .tlsvg .tk { font-size: 17px; font-weight: 500; } .anc .tlsvg .tknow { font-size: 17px; font-weight: 600; } .anc .tlsvg .axcap { font-size: 15px; font-weight: 500; } .anc .tlsvg .pcl { font-size: 14px; font-weight: 500; }
+@media (max-width: 640px) { .anc .tlsvg { min-width: 760px; } .anc .tlsvg .eb { font-size: 13px; } .anc .tlsvg .vl { font-size: 20px; } .anc .tlsvg .tk, .anc .tlsvg .tknow { font-size: 19px; } .anc .tlsvg .axcap { font-size: 16px; } .anc .tlsvg .pcl { font-size: 16px; } }
 .anc .pulse { animation: ancpulse 2.4s ease-out infinite; }
 @keyframes ancpulse { 0% { r: 5; opacity: .9; } 70% { r: 16; opacity: 0; } 100% { r: 16; opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .anc .pulse { animation: none; } }
@@ -251,7 +253,7 @@
 <details class="more">
 <summary><span class="def">Show the timeline</span><span class="alt">Hide the timeline</span></summary>
 <h3>The longer history</h3>
-<div class="tlwrap"><div class="tl"><svg class="tlsvg" viewBox="0 88 1040 234" role="img" aria-label="Logarithmic timeline of five dated ancestry events from 55,000 years ago to the present">
+<div class="tlwrap"><div class="tl"><svg class="tlsvg" viewBox="-90 88 1140 234" role="img" aria-label="Logarithmic timeline of five dated ancestry events from 55,000 years ago to the present">
 <line class="ax" x1="40" y1="252" x2="880" y2="252"/>
 <line class="tick" x1="40.0" y1="252" x2="40.0" y2="258"/>
 <text class="tk" x="40.0" y="272" text-anchor="middle">100k</text>
@@ -292,8 +294,8 @@
 <line class="stem" x1="112.7" y1="222" x2="112.7" y2="249" stroke="#8a8880"/>
 <circle class="dot" cx="112.7" cy="252" r="4" fill="#8a8880"/>
 <circle class="halo" cx="112.7" cy="252" r="9" stroke="#8a8880"/>
-<text class="eb" x="117.7" y="196" text-anchor="start" fill="#8a8880">NEANDERTHAL ADMIXTURE</text>
-<text class="vl" x="117.7" y="215" text-anchor="start">~55,000 y</text>
+<text class="eb" x="107.7" y="196" text-anchor="end" fill="#8a8880">NEANDERTHAL ADMIXTURE</text>
+<text class="vl" x="107.7" y="215" text-anchor="end">~55,000 y</text>
 </g>
 <g class="node" id="n2" tabindex="0" role="button" aria-label="Maternal H3 coalesces, 11,000 ± 1,400 y">
 <rect class="hit" x="244.4" y="156" width="128.0" height="100"/>
@@ -314,22 +316,22 @@
 <text class="vl" x="490.9" y="147" text-anchor="end">2,354 &plusmn; 832 y</text>
 </g>
 <g class="node" id="n4" tabindex="0" role="button" aria-label="Ashkenazi lineages in Italy, ~2,000 y">
-<rect class="hit" x="451.7" y="156" width="128.0" height="100"/>
-<g class="ci" stroke="#c98500"><line x1="515.7" y1="170" x2="515.7" y2="170"/><line x1="515.7" y1="165" x2="515.7" y2="175"/><line x1="515.7" y1="165" x2="515.7" y2="175"/></g>
-<line class="stem" x1="515.7" y1="222" x2="515.7" y2="249" stroke="#c98500"/>
+<rect class="hit" x="451.7" y="88" width="128.0" height="168"/>
+<g class="ci" stroke="#c98500"><line x1="515.7" y1="102" x2="515.7" y2="102"/><line x1="515.7" y1="97" x2="515.7" y2="107"/><line x1="515.7" y1="97" x2="515.7" y2="107"/></g>
+<line class="stem" x1="515.7" y1="154" x2="515.7" y2="249" stroke="#c98500"/>
 <circle class="dot" cx="515.7" cy="252" r="4" fill="#c98500"/>
 <circle class="halo" cx="515.7" cy="252" r="9" stroke="#c98500"/>
-<text class="eb" x="520.7" y="196" text-anchor="start" fill="#c98500">MATERNAL LINEAGES AND ASHKENAZI HISTORY</text>
-<text class="vl" x="520.7" y="215" text-anchor="start">~2,000 y</text>
+<text class="eb" x="520.7" y="128" text-anchor="start" fill="#c98500">MATERNAL LINEAGES AND ASHKENAZI HISTORY</text>
+<text class="vl" x="520.7" y="147" text-anchor="start">~2,000 y</text>
 </g>
 <g class="node" id="n5" tabindex="0" role="button" aria-label="Ashkenazi founder bottleneck, 25–32 generations">
-<rect class="hit" x="555.0" y="88" width="128.0" height="168"/>
-<g class="ci" stroke="#c98500"><line x1="605.0" y1="102" x2="635.0" y2="102"/><line x1="605.0" y1="97" x2="605.0" y2="107"/><line x1="635.0" y1="97" x2="635.0" y2="107"/></g>
-<line class="stem" x1="619.0" y1="154" x2="619.0" y2="249" stroke="#c98500"/>
+<rect class="hit" x="555.0" y="156" width="128.0" height="100"/>
+<g class="ci" stroke="#c98500"><line x1="605.0" y1="170" x2="635.0" y2="170"/><line x1="605.0" y1="165" x2="605.0" y2="175"/><line x1="635.0" y1="165" x2="635.0" y2="175"/></g>
+<line class="stem" x1="619.0" y1="222" x2="619.0" y2="249" stroke="#c98500"/>
 <circle class="dot" cx="619.0" cy="252" r="4" fill="#c98500"/>
 <circle class="halo" cx="619.0" cy="252" r="9" stroke="#c98500"/>
-<text class="eb" x="624.0" y="128" text-anchor="start" fill="#c98500">THE ASHKENAZI FOUNDER EVENT</text>
-<text class="vl" x="624.0" y="147" text-anchor="start">25&ndash;32 generations</text>
+<text class="eb" x="624.0" y="196" text-anchor="start" fill="#c98500">THE ASHKENAZI FOUNDER EVENT</text>
+<text class="vl" x="624.0" y="215" text-anchor="start">25&ndash;32 generations</text>
 </g>
 </svg><div class="cards"><div class="card card-def">Five population-history estimates, admixture and founder events, followed by the composition estimate. Select an event marker for details and sources.</div>
 <div class="card card-n1"><span class="ck" style="color:#8a8880">NEANDERTHAL ADMIXTURE &middot; ~55,000 years ago</span><span class="when">c. 53,000 BCE · study estimate: 47,000–65,000 years ago</span>The oldest layer here comes from encounters with Neanderthals. Sankararaman et al. estimated the most likely timing of Neanderthal gene flow into ancestors of present-day Europeans at 47,000–65,000 years ago. My report places me above <b>79% of 23andMe customers</b> for the Neanderthal variants it counts. That is a customer ranking, not the percentage of my DNA inherited from Neanderthals.</div>
