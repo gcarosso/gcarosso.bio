@@ -361,3 +361,21 @@ a.saros { border-bottom-color: color-mix(in srgb, var(--brand) 45%, transparent)
 a.saros:hover { border-bottom-color: var(--brand); }
 /* page-level H1 on the home page (the header brand is a link, not a heading) */
 h1.home { font-size: 13px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--mute); margin: 0 0 8px; }
+/* CV: download button and the print / PDF layout (assets/make_cv_pdf.sh renders cv.html with Chrome's print media) */
+.cvtools { margin: 4px 0 8px; }
+.btn-dl { display: inline-block; font-size: 13px; font-weight: 500; color: var(--head); border: 1px solid var(--rule); border-radius: 4px; padding: 6px 11px; text-decoration: none; }
+.btn-dl:hover { border-color: var(--accent); color: var(--accent); }
+@media print {
+  :root { --bg: #fff; --panel: #f4f3ef; --head: #000; --ink: #222; --mute: #555; --faint: #666; --rule: #cfcdc6; --accent: #8a3416; --brand: #8a3416; --blue: #1a4f96; }
+  html, body { background: #fff !important; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { padding: 0; font-size: 11.5pt; line-height: 1.45; }
+  header, nav, footer, .cvtools, .back { display: none !important; }
+  .wrap { max-width: none; }
+  h1 { font-size: 20pt; margin-bottom: 6pt; }
+  h2 { margin: 16pt 0 8pt; }
+  h1 { display: none; }
+  h2, .role-head { break-after: avoid; page-break-after: avoid; }
+  .pubs li, .patents p, .role li { break-inside: avoid; page-break-inside: avoid; }
+  a, main p a, .small a, .pubs a, a.ref { color: inherit !important; border-bottom: 0 !important; }
+  @page { margin: 16mm 16mm 18mm; }
+}
