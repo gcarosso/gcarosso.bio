@@ -366,26 +366,49 @@ h1.home { font-size: 13px; font-weight: 500; letter-spacing: .08em; text-transfo
 .btn-dl { display: inline-block; font-size: 13px; font-weight: 500; color: var(--head); border: 1px solid var(--rule); border-radius: 4px; padding: 6px 11px; text-decoration: none; }
 .btn-dl:hover { border-color: var(--accent); color: var(--accent); }
 @media print {
-  :root { --bg: #fff; --panel: #f4f3ef; --head: #000; --ink: #222; --mute: #555; --faint: #666; --rule: #cfcdc6; --accent: #8a3416; --brand: #8a3416; --blue: #1a4f96; }
+  :root { --bg: #fff; --panel: #f4f3ef; --head: #000; --ink: #1a1a1a; --mute: #444; --faint: #555; --rule: #9a9891; --accent: #1a4f96; --brand: #1a4f96; --blue: #1a4f96; }
   html, body { background: #fff !important; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  body { padding: 0; font-size: 10.5pt; line-height: 1.55; }
-  header, nav, footer, .cvtools, .back { display: none !important; }
+  body { padding: 0; font-size: 9pt; line-height: 1.25; }
+  header, nav, footer, .cvtools, .back, h1 { display: none !important; }
   .wrap { max-width: none; }
-  h1 { font-size: 20pt; margin-bottom: 6pt; }
-  h2 { margin: 22pt 0 10pt; padding-bottom: 6pt; letter-spacing: 0; word-spacing: normal; }   /* tracked capitals extract as "S U M M A R Y" in ATS parsers */
-  p { margin: 0 0 10pt; }
-  .role { margin-bottom: 16pt; }
-  .role .sub { margin-bottom: 6pt; }
-  .role li, .pubs li { margin: 0 0 6pt; line-height: 1.5; }
-  .patents p { margin: 0 0 7pt; line-height: 1.5; }
-  .patents .assignee { margin: 8pt 0 4pt; }
-  h1 { display: none; }
-  h2, .role-head { break-after: avoid; page-break-after: avoid; }
+  /* name block: name, descriptor, one contact line */
+  main > .role:first-of-type .org { font-size: 15pt; letter-spacing: .04em; }
+  main > .role:first-of-type .sub { font-size: 9pt; margin: 0 0 2pt; }
+  main > .role:first-of-type p.small { display: inline; font-size: 8.6pt; }
+  main > .role:first-of-type p.small + p.small::before { content: "\00a0 | \00a0"; color: var(--mute); }
+  h2 { font-size: 8.2pt; font-weight: 600; margin: 7pt 0 2.5pt; padding-bottom: 2pt; border-bottom: 1px solid var(--rule); letter-spacing: 0; word-spacing: normal; }   /* tracked capitals extract as "S U M M A R Y" in ATS parsers */
+  p { margin: 0 0 3pt; }
+  /* one-line role heads: Org — Title ............ dates */
+  .role { display: grid; grid-template-columns: auto 1fr auto; column-gap: 5pt; align-items: baseline; margin: 0 0 3pt; break-inside: avoid; page-break-inside: avoid; }
+  main > .role:first-of-type { display: block; margin-bottom: 6pt; }
+  .role .role-head { display: contents; }
+  .role .sr { display: none; }
+  .role .org { grid-row: 1; grid-column: 1; font-size: 9.2pt; }
+  .role .sub { grid-row: 1; grid-column: 2; font-size: 8.7pt; color: var(--ink); margin: 0; }
+  .role .sub::before { content: "— "; color: var(--mute); }
+  main > .role:first-of-type .sub::before { content: none; }
+  .role .when { grid-row: 1; grid-column: 3; font-size: 8.4pt; color: var(--mute); white-space: nowrap; }
+  .role ul { grid-row: 2; grid-column: 1 / -1; margin: 1pt 0 0; padding-left: 9pt; list-style: none; }
+  .role li { margin: 0 0 1pt; line-height: 1.26; text-indent: -9pt; font-size: 9pt; }
+  .role li::before { content: "– "; color: var(--mute); }
+  main > ul { list-style: none; padding-left: 9pt; margin: 0; }
+  main > ul li { text-indent: -9pt; margin: 0 0 1pt; font-size: 9pt; }
+  main > ul li::before { content: "– "; color: var(--mute); }
+  /* citations and patents: hanging indents, full text */
+  .pubs { list-style: none; padding: 0; margin: 0; }
+  .pubs li, .patents p { font-size: 8.4pt; line-height: 1.24; margin: 0 0 1pt; padding-left: 11pt; text-indent: -11pt; }
+  .pubs .au { display: none !important; } .pubs .aus { display: inline !important; }   /* first author + et al. in the PDF; the page keeps the full lists */
+  .patents .assignee { margin: 4pt 0 1pt !important; padding-left: 0; text-indent: 0; }
+  h2:not(.list), .patents .assignee { break-after: avoid; page-break-after: avoid; }   /* not before the long lists: Chrome would carry the whole list with the heading */
   .pubs li, .patents p, .role li { break-inside: avoid; page-break-inside: avoid; }
   a, main p a, .small a, .pubs a, a.ref { color: inherit !important; border-bottom: 0 !important; }
-  @page { margin: 20mm 19mm 22mm; }
+  body.cv main a:not(.btn-dl) { color: inherit !important; border-bottom-color: transparent !important; }
+  @page { margin: 10mm 11mm 10mm; }
+}
 }
 /* CV: every link in the page body is the reference blue, as the publication links were */
 body.cv main a:not(.btn-dl) { color: var(--blue) !important; border-bottom-color: color-mix(in srgb, var(--blue) 40%, transparent) !important; }
 body.cv main a:not(.btn-dl):hover { border-bottom-color: var(--blue) !important; }
 .patents .assignee { margin: 14px 0 4px; }
+/* CV citations: full author lists on screen; "et al." in print so the PDF fits two pages */
+.pubs .aus { display: none; }
