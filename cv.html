@@ -22,7 +22,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://gcarosso.bio/assets/img/og-card.png?v=3">
 <link rel="preload" href="/assets/fonts/IBMPlexSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=53">
+<link rel="stylesheet" href="style.css?v=54">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -96,66 +96,79 @@
 
   <h1>CV</h1>
 
-  <div class="role"><div class="role-head"><span class="org">GIOVANNI A. CAROSSO, PhD</span></div><div class="sub">Bioengineer | Biotech Operator | Platform Strategy</div>
-  <p class="small">San Francisco, CA &nbsp;·&nbsp; <a href="https://gcarosso.bio/">gcarosso.bio</a> &nbsp;·&nbsp; <!--email_off--><a href="mailto:gacarosso@gmail.com">gacarosso@gmail.com</a><!--/email_off--> &nbsp;·&nbsp; <a href="https://linkedin.com/in/giovannicarosso" target="_blank" rel="noopener">linkedin.com/in/giovannicarosso</a> &nbsp;·&nbsp; USA &amp; Italian citizen</p>
+  <div class="role"><div class="role-head"><span class="org">GIOVANNI A. CAROSSO, PhD</span></div><div class="sub">Bioengineer | Founding Head of Research | Therapeutics Platforms</div>
+  <p class="small">San Francisco, CA &nbsp;·&nbsp; <!--email_off--><a href="mailto:gacarosso@gmail.com">gacarosso@gmail.com</a><!--/email_off--> &nbsp;·&nbsp; USA &amp; Italian citizen</p>
+  <p class="small"><a href="https://gcarosso.bio/">gcarosso.bio</a> &nbsp;·&nbsp; <a href="https://linkedin.com/in/giovannicarosso" target="_blank" rel="noopener">linkedin.com/in/giovannicarosso</a> &nbsp;·&nbsp; <a href="https://github.com/gcarosso" target="_blank" rel="noopener">github.com/gcarosso</a></p>
   <p class="cvtools"><a class="btn-dl" href="/assets/Giovanni-Carosso-CV.pdf" download="Giovanni-Carosso-CV.pdf">Download PDF</a></p></div>
 
-  <h2>Professional summary</h2>
-  <p>Bioengineer and biotech operator building ML-enabled modality platforms for epigenetic medicine. Led R&amp;D from inception to multiple positive proofs-of-concept <i>in vivo</i>, enabling two financing rounds and a Novo Nordisk strategic partnership. Architected platforms behind EPI-321 (clinical-stage FSHD), EPI-331 (DMD), and a benchmark-beating pre-clinical pipeline of single-dose editors across diverse genetic targets (cardiometabolic, muscular, longevity). Deep domain expertise in epigenetic editing, protein LMs/engineering, predictive modeling, functional genomics, mRNA-LNP programs, target selection, technical strategy, and investor/pharma-partner diligence.</p>
+  <h2>Summary</h2>
+  <p>Bioengineer and startup operator specializing in discovery and translation of novel therapeutic modalities. Scientific lead, first hire, and lead inventor at <a class="ref" href="https://generalcontrol.bio/" target="_blank" rel="noopener">General Control</a>; set R&amp;D strategy and built technology platform advancing from concept to <i>in vivo</i> validation within first year; owned protein and peptide engineering campaigns behind a multi-program pipeline of epigenetic editors, enabling seed financing and pharma-partner milestone. Previously founding scientist at <a class="ref" href="https://epicrispr.com/" target="_blank" rel="noopener">Epicrispr Biotechnologies</a>; co-developed GEMS modality platform behind EPI-321 (clinical-stage FSHD) and EPI-331 (DMD); lead inventor on engineered epigenetic activation technologies. Deep domain expertise in genetic engineering, epigenetic editing, CRISPR activation/inhibition, functional genomics, large protein language models, mRNA-LNP delivery, preclinical diligence, competitive target diligence (cardiometabolic, muscular, longevity), and investor/pharma diligence.</p>
 
   <h2>Technical Skills</h2>
-  <p><b>Machine learning</b>: self-supervised<b> </b>protein LMs (ESM-2 fine-tuning; pLM-guided MCMC over sequence space), deep generative design (Boltzgen, structure-conditioned), structure prediction (AlphaFold2-Multimer, Boltz-2, ESMFold), supervised sequence–function models, few-shot active learning, chromatin state classifiers (ChromHMM), Python, R.</p>
-  <p><b>Platform architecture/discovery</b>: high-throughput CRISPR activation/inhibition, gene editing, genome-scale perturbation, proteomics &amp; transcriptomics, multi-axis hit scoring, offline metrics &amp; evals, NGS (RNA-seq, Hi-C, Perturb-seq), tech/IP strategy.</p>
-  <p><b>Payload/drug development</b>: protein/mRNA engineering, <i>in vivo</i> mRNA-LNP delivery, <i>in vivo</i> pharmacology, pre-clinical trial design.</p>
+  <p><b>Platform architecture &amp; operations</b>: high-throughput CRISPRa/CRISPRi screens, proteome-scale library assembly, scalable plasmid topology, mRNA engineering, transcriptomics, NGS, Python (CLI tooling: NumPy, pandas, Biopython), R (tidyverse, ggplot2, Quarto), Git/GitHub, agentic toolchains.</p>
+  <p><b>ML-guided protein engineering</b>: LPLM-based sequence–function modeling (ESM-2 embeddings, CNNs/XGBoost), evolutionary sequence optimization (EMCS), generative binder design (BoltzGen), and structure-based candidate evaluation (Boltz-2).</p>
+  <p><b>Preclinical strategy</b>: modality selection, <i>in vivo</i> efficacy/safety, dose-response modeling, IND-enabling program design.</p>
 
   <h2>Experience</h2>
   <div class="role">
     <div class="role-head"><span class="org">General Control</span><span class="sr"> · </span><span class="when">Jul 2024 – Jul 2026</span></div>
-    <div class="sub">Founding Head of Research</div>
-    <ul><li>Built R&amp;D platform delivering a best-in-class, novel epigenetic editor IP portfolio; achieved <i>in</i> <i>vivo</i> proof-of-concept in 12 months and advanced 6/7 pipeline programs to positive pre-clinical readouts in under 24 months, by resolving a hierarchical mechanism of epigenetic memory that unlocked novel targets for one-shot mRNA-LNP dosing.</li><li>Defined scientific strategy from pre-seed/concept and executed technical de-risk behind two capital raises and Novo Nordisk partnership; lead inventor on platform PCTs.</li><li>Architected ML stack (protein LMs, chromatin-state classifiers) and deployed it to generate novel editors and <i>de</i> <i>novo</i> binders; screened 10,000-element libraries; recovered novel hits <i>in</i> <i>vitro</i> and <i>in</i> <i>vivo</i>.</li><li>Scaled discovery throughput ~100× with a combinatorial peptide platform, isolating editors that outperform benchmarks across diverse genetic targets; advanced top trial candidates by predictive modeling.</li><li>Delivered &gt;90% simultaneous knockdown of up to three targets with a novel mRNA-LNP liver-targeted payload <i>in vivo</i>, establishing multiplexed one-shot gene control as a platform differentiator.</li></ul>
+    <div class="sub">Founding Head of Research (first hire)</div>
+    <ul><li>Delivered <i>in vivo</i> target engagement within 12 months from program ideation and positive <i>in vivo</i> readouts across six of seven programs inside 18 months, by designing and deploying rapid engineering campaigns of novel epi-editors against industry benchmarks; established single-dose, multiplexed targeting as a modality differentiator, delivering &gt;90% knockdown of three targets in parallel.</li><li>Accelerated preclinical hit-translation cycles from 16 to 3 weeks by devising an IVT-compatible mammalian expression vector that allows high-throughput screening elements to proceed directly into the mRNA synthesis pipeline for animal dosing.</li><li>Optimized editor compactness, potency, and novelty profiles with a model-guided search strategy over peptide sequence space that generates diverse candidates, ranks by predicted function and structural confidence, and concentrates experimental resources on high-probability sequences. 155 novel editors outperformed benchmarks across diverse genetic targets.</li><li>Supported company financing and strategic partnership with Novo Nordisk, connecting GC’s proprietary platform development with pharma-partner objectives; shaped scientific IP and FTO strategy as lead inventor with counsel through PCT filings and evaluation of competitive patent landscapes.</li><li>Co-recruited the team as GC grew to five FTEs and coordinated execution across internal scientists, computational contractors, CROs, and advisers, with responsibility for scientific priorities, lab instrumentation, preclinical milestones, and resource-allocation decisions.</li></ul>
   </div>
   <div class="role">
     <div class="role-head"><span class="org">Epicrispr Biotechnologies</span><span class="sr"> · </span><span class="when">Jan 2021 – Jul 2024</span></div>
-    <div class="sub">Senior Scientist (prev. Scientist II, Scientist)</div>
-    <ul><li>Co-developed Epic’s GEMS modality platform; engineered proprietary epigenetic editors including EPI-321, which has reported statistically significant gains in lean muscle volume, DUX4-suppression biomarkers, no serious adverse events in its first-in-human FSHD trial (<a href="https://clinicaltrials.gov/study/NCT06907875" target="_blank" rel="noopener">NCT06907875</a>). EPI-321 gained FDA IND clearance, Fast Track, Rare Pediatric Disease, and Orphan Drug designations, and drove $68M Series B followed by $90M Series C with crossover syndicate.</li><li>Lead author on hypercompact activator discovery (64–98 residues; five-week efficacy via single-dose mRNA-LNP), cited in <i>Nature Reviews Drug Discovery</i> (2025). Led protein-engineering campaigns producing the first-described mitotically durable gene activators; ~10× benchmark duration <i>in vitro</i> and <i>in vivo</i> via LNP delivery.</li><li>Established Applied Technologies team; raised pooled-screen hit rates by ~8×; generated the platform’s structured ML training corpus behind few-shot learning-based protein engineering with evolutionary sampling. <i>NeurIPS</i> (2023).</li></ul>
+    <div class="sub">Senior Scientist, Technology Development (previously Scientist II, Scientist)</div>
+    <ul><li>Co-developed GEMS modality platform by introducing a compact Cas chassis and engineering proprietary epi-editor domains behind EPI-321, now in first-in-human FSHD trial (<a href="https://clinicaltrials.gov/study/NCT06907875" target="_blank" rel="noopener">NCT06907875</a>), and EPI-331 for durable activation.</li><li>Led discovery and engineering of hypercompact activator, sized 64–98 residues, that sustained five-week <i>LDLR</i> activation via single-dose mRNA-LNP <i>in vivo</i>; first author on external <a href="https://doi.org/10.1101/2023.06.02.543492" target="_blank" rel="noopener">preprint article</a>.</li><li>Increased pooled-screen editor hit rates from &lt;1% to 8%; generated sequence-function data and training set for collaborative ML-guided protein engineering. <i>NeurIPS</i> (2023).</li></ul>
   </div>
   <div class="role">
-    <div class="role-head"><span class="org">UCSF Dept. of Neurological Surgery</span><span class="sr"> · </span><span class="when">Jan 2020 – Dec 2020</span></div>
-    <div class="sub">Postdoctoral Scholar</div>
-    <ul><li>Integrated Perturb-seq, PLAC-seq, ChIP-seq and Hi-C into a machine-learning classifier over genome-scale dual CRISPRi screens spanning 18,905 coding and 10,678 lncRNA loci, with the Weissman and Lim labs. <i>Cell Genomics</i> (2022).</li></ul>
+    <div class="role-head"><span class="org">University of California, San Francisco (UCSF)</span><span class="sr"> · </span><span class="when">Jan 2020 – Dec 2020</span></div>
+    <div class="sub">Postdoctoral Scholar, Neurological Surgery; Lab of Daniel Lim, MD, PhD</div>
+    <ul><li>Integrated Perturb-seq, PLAC-seq, ChIP-seq and Hi-C into a machine-learning classifier over genome-scale dual CRISPRi screens spanning 18,905 coding and 10,678 lncRNA loci, with the Weissman and Lim Labs. <i>Cell Genomics</i> (2022).</li></ul>
+  </div>
+
+  <h2>Open-Source Portfolio</h2>
+  <div class="role">
+    <div class="role-head"><span class="org">SAROS</span><span class="sr"> · </span><span class="when"><a href="https://saros.gcarosso.bio/" target="_blank" rel="noopener">saros.gcarosso.bio</a> &nbsp;·&nbsp; <a href="https://github.com/gcarosso/saros" target="_blank" rel="noopener">GitHub</a></span></div>
+    <div class="sub">Clinical &amp; biopharma research dashboard</div>
+    <ul><li>Interactive dashboard integrating clinical-trial, regulatory, and securities data through API ingestion and entity resolution (JavaScript, Python); automated data refreshes, testing, and deployment (Make, launchd, Cloudflare Pages).</li></ul>
+  </div>
+  <div class="role">
+    <div class="role-head"><span class="org">Pileup</span><span class="sr"> · </span><span class="when"><a href="https://github.com/gcarosso/pileup" target="_blank" rel="noopener">GitHub</a></span></div>
+    <div class="sub">Agent execution visualizer</div>
+    <ul><li>Live visualization of tool calls, subagents, errors, and context usage through incremental JSONL parsing and server-sent events (Python, JavaScript/Canvas); dependency-free local execution with optional content redaction.</li></ul>
   </div>
 
   <h2>Education</h2>
   <div class="role">
-    <div class="role-head"><span class="org">PhD, Human Genetics</span><span class="sr"> · </span><span class="when">2019</span></div>
-    <div class="sub">Johns Hopkins University School of Medicine</div>
-    <ul><li>Discovered molecular drivers in pediatric disorders of chromatin machinery (Hans Bjornsson Lab), novel roles for KMT2D in oxygen sensing during neurodevelopment. <a href="http://jhir.library.jhu.edu/handle/1774.2/62433" target="_blank" rel="noopener">Dissertation</a>, <i>JCI Insight</i> (2019).</li><li>Secured NASA funding award for astronaut epigenetics in the ISS Twins Study Consortium (Andy Feinberg Lab); co-developed first protocols for in-flight epigenomic sampling aboard ISS and experiments for astronauts Scott and Mark Kelly.</li><li>Led a US Dept. of Defense-funded neuroscience program in Bolivia (Clubes de Ciencia Bolivia); published on roles for scientists as non-state actors of international diplomacy. <i>Nature Human Behaviour </i>(2019), <i>Nature Communications</i> (2020).</li></ul>
+    <div class="role-head"><span class="org">Johns Hopkins University School of Medicine</span><span class="sr"> · </span><span class="when">2019</span></div>
+    <div class="sub">PhD, Human Genetics; Lab of Hans T. Bjornsson, MD, PhD</div>
+    <ul><li>Discovered molecular drivers in pediatric disorders of chromatin machinery, novel roles for KMT2D in oxygen sensing during neurodevelopment. <a href="http://jhir.library.jhu.edu/handle/1774.2/62433" target="_blank" rel="noopener">Dissertation</a>, <i>JCI Insight</i> (2019).</li><li>Secured NASA funding award for astronaut epigenetics in the ISS Twins Study Consortium (Andy Feinberg Lab); co-developed first protocols for in-flight epigenomic sampling aboard ISS and experiments for astronauts Scott and Mark Kelly.</li></ul>
   </div>
   <div class="role">
-    <div class="role-head"><span class="org">BS, Biopsychology</span><span class="sr"> · </span><span class="when">2010</span></div>
-    <div class="sub">UC Santa Barbara</div>
-    <ul><li>Behavioral neurobiology; published on mechanisms of dopaminergic dysfunction in drug abuse. <i>Addiction Biology</i> (2012). </li><li>Discovery of <i>POLR3A</i> mutations causing pediatric leukodystrophy (Children’s National Medical Center). <i>AJHG</i> (2011).</li></ul>
+    <div class="role-head"><span class="org">University of California, Santa Barbara</span><span class="sr"> · </span><span class="when">2010</span></div>
+    <div class="sub">BS, Biopsychology</div>
+    <ul><li>Discovery of <i>POLR3A</i> mutations causing pediatric leukodystrophy. <i>AJHG</i> (2011).</li><li>Elucidated mechanisms of medial prefrontal cortex dysfunction in cocaine abuse. <i>Addiction Biology</i> (2012).</li></ul>
   </div>
 
-  <h2>Communication</h2>
-  <ul><li>Languages: Italian, French, Spanish, English.</li></ul>
+  <h2>Advisory, Public Engagement</h2>
+  <ul><li><b>STEM diplomacy</b>: Led a U.S. Department of Defense-funded neuroscience workshop with <i>Clubes de Ciencia Bolivia</i>; taught in Spanish and published on science diplomacy.</li><li><b>Mindfire Global</b> — Neurobiology consultancy; advised on neurodevelopment and human-centric AI collaboration.</li><li><b>Languages</b>: Italian, French, Spanish, English.</li></ul>
 
-  <h2>Patents</h2>
+  <h2>Patent Applications</h2>
   <div class="patents">
-  <p><b>US 2024/0216482 A1</b> — Systems and methods for regulating aberrant gene expressions. Epicrispr Biotechnologies, Inc. App. 18/542,396; priority 2021-06-17; published 2024-07-04; pending.</p>
-  <p><b>US 2024/0254659 A1</b> — Systems and methods for regulating target genes. Epicrispr Biotechnologies, Inc. App. 18/417,827; priority 2021-07-20; published 2024-08-01; pending.</p>
-  <p><b>WO 2023/172995 A1</b> — Systems and methods for genetic modulation to treat ocular diseases. Epicrispr Biotechnologies, Inc. App. PCT/US2023/064004; priority 2022-03-11; published 2023-09-14; pending.</p>
-  <p><b>US 2025/0388634 A1</b> — Engineered gene effectors, compositions, and methods of use thereof. Epicrispr Biotechnologies, Inc. App. 18/842,718; priority 2022-03-24; published 2025-12-25; pending.</p>
-  <p><b>US 2026/0085300 A1</b> — Systems and compositions for fusion polypeptides and methods of use thereof. Epicrispr Biotechnologies, Inc. App. 19/123,019; priority 2022-10-27; published 2026-03-26; pending.</p>
-  <p><b>WO 2024/238661 A2</b> — Systems and methods for regulating target genes. Epicrispr Biotechnologies, Inc. Priority 2023-05-17; published 2024-11-21; pending.</p>
-  <p><b>PCT/US26/24038</b> — Compositions and Methods for Epigenome Editing. Epi Labs, Inc. Filed 2026-04-16.</p>
-  <p><b>PCT/US26/24051</b> — Systems and Methods for Upregulation of Exerkines. Epi Labs, Inc. Filed 2026-04-16.</p>
-  <p><i>Additional US provisional and PCT filings pending publication.</i></p>
-
+  <p class="assignee"><b>Epicrispr Biotechnologies</b></p>
+  <p><b>US 2024/0216482 A1</b> — Systems and methods for regulating aberrant gene expressions. App. 18/542,396; priority 2021-06-17; published 2024-07-04; pending.</p>
+  <p><b>US 2024/0254659 A1</b> — Systems and methods for regulating target genes. App. 18/417,827; priority 2021-07-20; published 2024-08-01; pending.</p>
+  <p><b>WO 2023/172995 A1</b> — Systems and methods for genetic modulation to treat ocular diseases. App. PCT/US2023/064004; priority 2022-03-11; published 2023-09-14; pending.</p>
+  <p><b>US 2025/0388634 A1</b> — Engineered gene effectors, compositions, and methods of use thereof. App. 18/842,718; priority 2022-03-24; published 2025-12-25; pending.</p>
+  <p><b>US 2026/0085300 A1</b> — Systems and compositions for fusion polypeptides and methods of use thereof. App. 19/123,019; priority 2022-10-27; published 2026-03-26; pending.</p>
+  <p><b>WO 2024/238661 A2</b> — Systems and methods for regulating target genes. Priority 2023-05-17; published 2024-11-21; pending.</p>
+  <p class="assignee"><b>General Control (formerly Epi Labs, Inc.)</b></p>
+  <p><b>PCT/US26/24038</b> — Compositions and Methods for Epigenome Editing. Filed 2026-04-16.</p>
+  <p><b>PCT/US26/24051</b> — Systems and Methods for Upregulation of Exerkines. Filed 2026-04-16.</p>
   </div>
+
   <h2>Publications</h2>
   <ol class="pubs"><li><b>Carosso, G.A.</b>, Yeo, R.W., Gainous, T.B., Jawaid, Z., Yang, X., Cutillas, V., Qi, L.S., Daley, T.P., Hart, D. (2024). Discovery of hypercompact epigenetic modulators for persistent CRISPR-mediated gene activation. <a href="https://doi.org/10.1101/2023.06.02.543492" target="_blank" rel="noopener"><i>bioRxiv</i></a>.</li><li>Wu, D., Poddar, A., Ninou, E., Hwang, E., Cole, M.A., Liu, S.J., Horlbeck, M.A., Chen, J., Replogle, J.M., <b>Carosso, G.A.</b>, Eng, N.W.L., Chang, J., Shen, Y., Weissman, J.S., Lim, D.A. (2022). Dual genome-wide coding and lncRNA screens in neural induction of induced pluripotent stem cells. <a href="https://doi.org/10.1016/j.xgen.2022.100177" target="_blank" rel="noopener"><i>Cell Genomics</i></a>, 2(11), 100177.</li><li>Zheng, S.C., Stein-O’Brien, G., Augustin, J.J., Slosberg, J., <b>Carosso, G.A.</b>, Winer, B., Shin, G., Bjornsson, H.T., Goff, L.A., Hansen, K.D. (2022). Universal prediction of cell-cycle position using transfer learning. <a href="https://doi.org/10.1186/s13059-021-02581-y" target="_blank" rel="noopener"><i>Genome Biology</i></a>, 23(1), 41.</li><li>Breevoort, A., <b>Carosso, G.A.</b>, Mostajo-Radji, M.A. (2020). High-altitude populations need special considerations for COVID-19. <a href="https://doi.org/10.1038/s41467-020-17131-6" target="_blank" rel="noopener"><i>Nature Communications</i></a>, 11, 3280.</li><li><b>Carosso, G.A.</b>, Boukas, L., Augustin, J.J., Nguyen, H.N., Winer, B.L., Cannon, G.H., Robertson, J.D., Zhang, L., Hansen, K.D., Goff, L.A., Bjornsson, H.T. (2019). Precocious neuronal differentiation and disrupted oxygen responses in Kabuki syndrome. <a href="https://doi.org/10.1172/jci.insight.129375" target="_blank" rel="noopener"><i>JCI Insight</i></a>, 4(20), e129375.</li><li><b>Carosso, G.A.</b>, Ferreira, L.M.R., Mostajo-Radji, M.A. (2019). Scientists as non-state actors of public diplomacy. <a href="https://doi.org/10.1038/s41562-019-0716-1" target="_blank" rel="noopener"><i>Nature Human Behaviour</i></a>, 3(11), 1129–1130.</li><li><b>Carosso, G.A.</b>, Ferreira, L.M.R., Mostajo-Radji, M.A. (2019). Developing brains, developing nations: can scientists be effective non-state diplomats? <a href="https://doi.org/10.3389/feduc.2019.00095" target="_blank" rel="noopener"><i>Frontiers in Education</i></a>, 4, 95.</li><li>Ferreira, L.M.R., <b>Carosso, G.A.</b>, Lopez-Videla, B., Diez, G.V., Rivera-Betancourt, L.I., et al. (2019). Effective participatory science education in a diverse Latin American population. <a href="https://doi.org/10.1057/s41599-019-0275-0" target="_blank" rel="noopener"><i>Palgrave Communications</i></a>, 5(1), 11.</li><li>Benjamin, J.S., Pilarowski, G.O., <b>Carosso, G.A.</b>, Zhang, L., Huso, D.L., Goff, L.A., Vernon, H.J., Hansen, K.D., Bjornsson, H.T. (2016). A ketogenic diet rescues hippocampal memory defects in a mouse model of Kabuki syndrome. <a href="https://doi.org/10.1073/pnas.1611431114" target="_blank" rel="noopener"><i>PNAS</i></a>, 114(1), 125–130.</li><li>Vanderver, A., Tonduti, D., Bernard, G., Lai, J., Rossi, C., <b>Carosso, G.</b>, Quezado, M., Wong, K., Schiffmann, R. (2013). More than hypomyelination in Pol-III disorder. <a href="https://doi.org/10.1097/NEN.0b013e31827c99d2" target="_blank" rel="noopener"><i>Journal of Neuropathology &amp; Experimental Neurology</i></a>, 72(1), 67–75.</li><li>Ben-Shahar, O.M., Szumlinski, K.K., Lominac, K.D., Cohen, A., Gordon, E., Ploense, K.L., DeMartini, J., Bernstein, N., Rudy, N.M., Nabhan, A.N., Sacramento, A., Pagano, K., <b>Carosso, G.A.</b>, Woodward, N. (2012). Extended access to cocaine self-administration results in reduced glutamate function within the medial prefrontal cortex. <a href="https://doi.org/10.1111/j.1369-1600.2011.00428.x" target="_blank" rel="noopener"><i>Addiction Biology</i></a>, 17(4), 746–757.</li><li>Bernard, G., Chouery, E., Putorti, M.L., Tétreault, M., Takanohashi, A., <b>Carosso, G.</b>, Clément, I., Boespflug-Tanguy, O., Rodriguez, D., Delague, V., et al. (2011). Mutations of POLR3A encoding a catalytic subunit of RNA polymerase Pol III cause a recessive hypomyelinating leukodystrophy. <a href="https://doi.org/10.1016/j.ajhg.2011.07.014" target="_blank" rel="noopener"><i>American Journal of Human Genetics</i></a>, 89(3), 415–423.</li></ol>
-
 
 </main>
 
