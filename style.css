@@ -405,7 +405,6 @@ h1.home { font-size: 13px; font-weight: 500; letter-spacing: .08em; text-transfo
   body.cv main a:not(.btn-dl) { color: inherit !important; border-bottom-color: transparent !important; }
   @page { margin: 10mm 11mm 10mm; }
 }
-}
 /* CV: every link in the page body is the reference blue, as the publication links were */
 body.cv main a:not(.btn-dl) { color: var(--blue) !important; border-bottom-color: color-mix(in srgb, var(--blue) 40%, transparent) !important; }
 body.cv main a:not(.btn-dl):hover { border-bottom-color: var(--blue) !important; }
