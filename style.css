@@ -363,8 +363,8 @@ a.saros:hover { border-bottom-color: var(--brand); }
 h1.home { font-size: 13px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--mute); margin: 0 0 8px; }
 /* CV: download button and the print / PDF layout (assets/make_cv_pdf.sh renders cv.html with Chrome's print media) */
 .cvtools { margin: 4px 0 8px; }
-.btn-dl { display: inline-block; font-size: 13px; font-weight: 500; color: var(--head); border: 1px solid var(--rule); border-radius: 4px; padding: 6px 11px; text-decoration: none; }
-.btn-dl:hover { border-color: var(--accent); color: var(--accent); }
+.btn-dl { display: inline-block; font-size: 13px; font-weight: 500; color: var(--blue) !important; border: 1px solid color-mix(in srgb, var(--blue) 50%, transparent) !important; border-radius: 4px; padding: 6px 11px; text-decoration: none; }   /* !important: the generic main-paragraph link rule (line 92) outranks a lone class */
+.btn-dl:hover { border-color: var(--blue) !important; }
 @media print {
   :root { --bg: #fff; --panel: #f4f3ef; --head: #000; --ink: #1a1a1a; --mute: #444; --faint: #555; --rule: #9a9891; --accent: #1a4f96; --brand: #1a4f96; --blue: #1a4f96; }
   html, body { background: #fff !important; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -398,8 +398,7 @@ h1.home { font-size: 13px; font-weight: 500; letter-spacing: .08em; text-transfo
   .pubs { list-style: none; padding: 0; margin: 0; }
   .pubs li, .patents p { font-size: 8.4pt; line-height: 1.24; margin: 0 0 1pt; padding-left: 11pt; text-indent: -11pt; }
   .pubs .au { display: none !important; } .pubs .aus { display: inline !important; }   /* first author + et al. in the PDF; the page keeps the full lists */
-  .patents .assignee { margin: 4pt 0 1pt !important; padding-left: 0; text-indent: 0; }
-  h2:not(.list), .patents .assignee { break-after: avoid; page-break-after: avoid; }   /* not before the long lists: Chrome would carry the whole list with the heading */
+  h2:not(.list) { break-after: avoid; page-break-after: avoid; }   /* not before the long lists: Chrome would carry the whole list with the heading */
   .pubs li, .patents p, .role li { break-inside: avoid; page-break-inside: avoid; }
   a, main p a, .small a, .pubs a, a.ref { color: inherit !important; border-bottom: 0 !important; }
   body.cv main a:not(.btn-dl) { color: inherit !important; border-bottom-color: transparent !important; }
@@ -408,6 +407,5 @@ h1.home { font-size: 13px; font-weight: 500; letter-spacing: .08em; text-transfo
 /* CV: every link in the page body is the reference blue, as the publication links were */
 body.cv main a:not(.btn-dl) { color: var(--blue) !important; border-bottom-color: color-mix(in srgb, var(--blue) 40%, transparent) !important; }
 body.cv main a:not(.btn-dl):hover { border-bottom-color: var(--blue) !important; }
-.patents .assignee { margin: 14px 0 4px; }
 /* CV citations: full author lists on screen; "et al." in print so the PDF fits two pages */
 .pubs .aus { display: none; }
