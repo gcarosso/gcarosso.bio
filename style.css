@@ -243,7 +243,9 @@ code, kbd, pre, samp { font-family: "IBM Plex Sans", -apple-system, BlinkMacSyst
 .pubs li { margin: 0 0 8px; font-size: 13.5px; line-height: 1.5; }
 .role ul { margin: 0; padding-left: 1.2em; }
 .role li { margin: 0 0 5px; font-size: 14px; line-height: 1.5; }
-.patents p { font-size: 13.5px; line-height: 1.5; margin: 0 0 8px; }
+.patents p { font-size: 13.5px; line-height: 1.5; margin: 0 0 6px; display: grid; grid-template-columns: 9.6em 1fr; column-gap: 10px; }   /* id column | dash + title, as in the PDF */
+.patents .pid { white-space: nowrap; }
+@media (max-width: 480px) { .patents p { grid-template-columns: 1fr; } .patents .pid { display: block; } }
 .cards.one { grid-template-columns: 1fr; }
 
 /* SAROS: the mark's orange wherever the name appears, and on its Open / Source links */
@@ -396,7 +398,8 @@ h1.home { font-size: 13px; font-weight: 500; letter-spacing: .08em; text-transfo
   main > ul li::before { content: "– "; color: var(--mute); }
   /* citations and patents: hanging indents, full text */
   .pubs { list-style: none; padding: 0; margin: 0; }
-  .pubs li, .patents p { font-size: 8.4pt; line-height: 1.24; margin: 0 0 1pt; padding-left: 11pt; text-indent: -11pt; }
+  .pubs li { font-size: 8.4pt; line-height: 1.24; margin: 0 0 1pt; padding-left: 11pt; text-indent: -11pt; }
+  .patents p { font-size: 8.4pt; line-height: 1.24; margin: 0 0 1pt; grid-template-columns: 9em 1fr; }
   .pubs .au { display: none !important; } .pubs .aus { display: inline !important; }   /* first author + et al. in the PDF; the page keeps the full lists */
   h2:not(.list) { break-after: avoid; page-break-after: avoid; }   /* not before the long lists: Chrome would carry the whole list with the heading */
   .pubs li, .patents p, .role li { break-inside: avoid; page-break-inside: avoid; }
