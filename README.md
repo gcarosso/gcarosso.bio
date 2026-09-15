@@ -46,7 +46,9 @@ site/                     the public repository = exactly what is served at gcar
   about.html              About — ends with the ancestry module (self-contained; source and rebuild notes in ../site-sources/about/ancestry/)
   cv.html                 CV — generated from the 2026 CV in ../site-sources/cv/ (phone number omitted)
   notes/                  Notes — index.html, _template.html (copy to start a piece), example-post.html (layout demo)
-  tools/index.html        Tools — one .item row per tool, Open + Source links (SAROS first)
+  tools/index.html        Tools — one .item row per tool: title, bold lead, "Built by Giovanni Carosso",
+                          links Open ↗ · (Method) · Source · License. Pinned rows (SAROS, Conclave)
+                          add the pin svg and a 128px mark from assets/img/<tool>-mark.png
   travels/index.html      Travels — generated: edit travels/captions.txt, run `python3 travels/build.py`
   travels/captions.txt    your caption per photo ("bali 3: …"); photos.json lists the trips
   travels/order.txt       display order of photos and clips per trip, and the card cover
