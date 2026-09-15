@@ -1,0 +1,18 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+/* 1200×630 share card for gcarosso.bio/conclave. Same geometry as assets/og-card.html and make_og_cards.py's tools card:
+   96px left margin, 300px mark on the right narrowing the measure, block sits 90px above the URL line.
+   Render: "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --window-size=1200,630 --screenshot=assets/img/og-conclave.png assets/og-conclave.html */
+html,body{margin:0;background:#000}
+.card{position:relative;width:1200px;height:630px;background:#000;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;overflow:hidden}
+.block{position:absolute;left:96px;bottom:204px;width:690px}
+.eye{font-size:24px;line-height:40px;color:#FF6A1A;letter-spacing:.06em}
+.name{font-size:76px;font-weight:700;line-height:80px;color:#fff;letter-spacing:.01em}
+.rule{height:1px;background:#2e2e2e;margin:30px 0 34px}
+.sub{font-size:30px;line-height:42px;color:#b3b3b3}
+.url{position:absolute;left:96px;top:516px;font-size:24px;line-height:1;color:#FF6A1A}
+.mark{position:absolute;right:90px;top:165px;width:300px;height:300px;-webkit-mask-image:radial-gradient(circle at center,#000 62%,transparent 74%);mask-image:radial-gradient(circle at center,#000 62%,transparent 74%)}
+</style></head><body><div class="card">
+<div class="block"><div class="eye">CONCLAVE</div><div class="name">Multi-agent orchestrator</div><div class="rule"></div><div class="sub">Coordinate Claude, Codex, Gemini, and Grok from one working session: task routing, cross-model review, council, recorded checks.</div></div>
+<img class="mark" src="img/conclave-mark-512.png" alt="">
+<div class="url">gcarosso.bio/conclave</div>
+</div></body></html>
