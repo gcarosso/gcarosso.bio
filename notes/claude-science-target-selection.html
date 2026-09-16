@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png?v=2">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png?v=2">
+<title>Missed connections — Giovanni Carosso</title>
+<meta name="description" content="A test of Claude Science on epigenome-editing target selection: retrieval and ranking held up, but allele identity and the direction of gene regulation were lost between steps.">
+<link rel="canonical" href="https://gcarosso.bio/notes/claude-science-target-selection">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Giovanni Carosso">
+<meta property="og:title" content="Missed connections">
+<meta property="og:description" content="A test of Claude Science on epigenome-editing target selection: retrieval and ranking held up, but allele identity and the direction of gene regulation were lost between steps.">
+<meta property="og:url" content="https://gcarosso.bio/notes/claude-science-target-selection">
+<meta property="og:image" content="https://gcarosso.bio/assets/img/og-card.png?v=3">
+<meta property="og:image:secure_url" content="https://gcarosso.bio/assets/img/og-card.png?v=3">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gcarosso.bio/assets/img/og-card.png?v=3">
+<link rel="preload" href="/assets/fonts/IBMPlexSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../style.css?v=62">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://gcarosso.bio/#person",
+  "name": "Giovanni Carosso",
+  "alternateName": [
+    "Giovanni A. Carosso",
+    "Carosso GA",
+    "Gio Carosso"
+  ],
+  "honorificSuffix": "PhD",
+  "url": "https://gcarosso.bio/",
+  "email": "mailto:gacarosso@gmail.com",
+  "jobTitle": "Bioengineer",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "San Francisco",
+    "addressRegion": "CA",
+    "addressCountry": "US"
+  },
+  "alumniOf": [
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Johns Hopkins University School of Medicine"
+    }
+  ],
+  "knowsAbout": [
+    "Epigenetics",
+    "Chromatin biology",
+    "Gene regulation",
+    "High-throughput screening",
+    "Protein engineering",
+    "Machine learning for biology"
+  ],
+  "identifier": [
+    {
+      "@type": "PropertyValue",
+      "propertyID": "ORCID",
+      "value": "0000-0002-9142-8525"
+    }
+  ],
+  "sameAs": [
+    "https://orcid.org/0000-0002-9142-8525",
+    "https://scholar.google.com/citations?user=bf1VuecAAAAJ",
+    "https://www.linkedin.com/in/giovannicarosso",
+    "https://github.com/gcarosso",
+    "https://x.com/gcarosso"
+  ]
+}
+</script>
+</head>
+
+<body>
+<div class="wrap">
+
+<header>
+  <a class="sitename" href="../">Giovanni Carosso, PhD</a>
+  <nav>
+    <a href=".././">Home</a>
+    <a href="/about">About</a>
+    <a href="../tools/">Tools</a>
+    <a href="./" aria-current="page">Notes</a>
+    <a href="../travels/">Travels</a>
+    <a href="../library/">Library</a>
+    <a href="/cv">CV</a>
+  </nav>
+</header>
+
+<main>
+<article>
+
+  <h1>Missed connections</h1>
+  <p class="small muted">September 2026 · AI for drug discovery</p>
+
+  <p>Target selection is a tricky problem for drug developers, placing it squarely among the greatest opportunities for LLMs to accelerate therapeutic discovery programs. Deciding which biological changes are worth building a medicine around requires first choosing a target&mdash;a protein, RNA, or regulatory element&mdash;together with the disease indication, patient population, and intervention modality most likely to produce meaningful benefit with acceptable health and capital risk profiles. Anthropic's newly-released Claude Science presents in part as a tool for nominating therapeutic targets and ranking them against biological and safety criteria. (<a href="https://www.anthropic.com/news/claude-science-ai-workbench" target="_blank" rel="noopener" title="Anthropic, Claude Science launch announcement, June 30, 2026">1</a>,<a href="https://www.anthropic.com/news/rare-disease-research-grants" target="_blank" rel="noopener" title="Anthropic, AI for Science rare disease research grants, July 20, 2026">2</a>)</p>
+
+  <p>As a test of its nomination methods (using default Opus 5), I asked it to identify genetic targets suitable for the emerging therapeutic modality of epigenome editing. We prioritized high genetic evidence targets, especially those where standard-of-care interventions are inadequate or lacking entirely. Quickly, it produced a literature survey spanning 492 records and devised a ten-axis framework to rank 56 target-indication pairs, then broadened the search to 357 additional genes and examined regulatory features at 195 loci to test whether the proposed editing mechanisms fit the underlying biology.</p>
+
+  <div class="swipe">
+    <div class="swipe-track" tabindex="0" aria-label="Survey panels a to c, swipe or use the arrows">
+
+      <figure class="swipe-item">
+        <img src="../assets/plots/epi-a-effectors.png" alt="Line chart of the share of surveyed papers mentioning each epigenetic effector class from 2023 to 2026. DNMT3A/3L is highest and rises to about 42 percent. KRAB and TET1 follow near 31 percent. p300/HAT, VP64/VPR/SAM, HDAC/SIRT and EZH2/PRC sit between 11 and 20 percent.">
+        <figcaption><b>a.</b> Share of surveyed papers mentioning each effector class. Writers and erasers of DNA methylation lead throughout. 2026 is a partial year.</figcaption>
+        <p class="swipe-cred">Opus 5</p>
+      </figure>
+
+      <figure class="swipe-item">
+        <img src="../assets/plots/epi-b-models.png" alt="Line chart of the share of published studies using each disease model from 2023 to 2026. Mouse in vivo rises to about 42 percent, primary human cells fall to 18 percent, iPSC or organoid work stays near 11 percent, and human subjects remain under 4 percent.">
+        <figcaption><b>b.</b> Share of published studies using each disease model. Testing has moved into whole animals while human-subject work stays under 4%. 2026 is a partial year.</figcaption>
+        <p class="swipe-cred">Opus 5</p>
+      </figure>
+
+      <figure class="swipe-item">
+        <img src="../assets/plots/epi-c-trials.png" alt="Timeline of four first-in-human epigenome-editor trials by study start date: Tune-401 for chronic hepatitis B in late 2024, EPI-321 for FSHD type 1 in early 2025, CRMA-1001 for chronic hepatitis B in late 2025, and STX-1150 for elevated LDL cholesterol in mid 2026.">
+        <figcaption><b>c.</b> Four first-in-human epigenome-editor programs by study start date, all dosing since late 2024.</figcaption>
+        <p class="swipe-cred">Opus 5</p>
+      </figure>
+
+    </div>
+    <div class="swipe-nav">
+      <button class="swipe-arrow" type="button" data-swipe="prev" aria-label="Previous panel">&#8592;</button>
+      <button class="swipe-dot" type="button" aria-label="Panel a"></button>
+      <button class="swipe-dot" type="button" aria-label="Panel b"></button>
+      <button class="swipe-dot" type="button" aria-label="Panel c"></button>
+      <button class="swipe-arrow" type="button" data-swipe="next" aria-label="Next panel">&#8594;</button>
+    </div>
+  </div>
+
+  <p>Initial steps of analysis were well-executed: information retrieval, relevance classification, and eligibility filtering which together produced a sensible set of candidates from literature. A sophisticated reasoning process to rank the targets followed. Finally, the rubric produced a list with surprisingly low scores for high-evidence targets like <i>PCSK9</i>, <i>SERPINA1</i>, and <i>ANGPTL3</i>, many with long-established causality and some with already FDA-approved drugs or late-stage clinical programs.</p>
+
+  <p>So what happened? For present purposes we won't overinterpret those ten-axis score aggregates; they combine hard biological evidence with judgment calls about competitive whitespace, differentiation from existing therapies, and development feasibility. Instead we'll focus on just the first criterion of established genetic evidence (GE). GE was principally a database-classification lookup of published ClinGen annotations, and might have succeeded if it remained that way, but then adjustments were applied that summed gene-disease validity values with conflicting metrics that assigned negative penalties. Dosage-sensitivity annotations were shown to the scorer, but no explicit rule was in place to integrate haploinsufficiency (too-low expression) and triplosensitivity (too-high expression) values into a biologically coherent evidence score. Ideally such actions should trigger a relevance review rather than automatically become a hardcoded numerical input to the reasoning.</p>
+
+  <p>Two more decision-changing errors revealed a separate class of failure, again attributable to a collapse in biological interpretation. Literature survey had accurately surfaced <i>IGF2</i> and <i>MECP2</i> as actionable targets for epigenome editing, citing active R&amp;D efforts, yet ultimately the agent's final proposal either (a) asserted a strategy that acts opposite to the therapeutically desired effect or (b) dismissed the program on a mistaken biological premise. Here, the genes in question are examples of a disease mechanism that acts in an allele-specific manner, i.e. distinction of the gene's maternal versus paternal copy (<i>IGF2</i>), or active-versus-inactive X chromosome (<i>MECP2</i>), is critical to its interventional rationale, and the agent failed to maintain account of allele specificity after data ingestion. Both failures are computationally the same mechanism: reasoning over a <i>gene-level</i> token, dropping the <i>allele</i> index and the sign (+/-) of gene-regulatory relation. Relevant scientific knowledge and an allele-integrity gate were present from the start, indeed triggering the targets' very insertion into analysis, but the workflow failed to apply these features consistently across sequential artifacts.</p>
+
+  <p>None of the surfaced failures trace to an arithmetic error or broken knowledge-base. Root causes occurred in reasoning or architecture layers: ClinGen values became abstracted into faulty, hardcoded evidence proxies with invalid fallback rules, ground-truth biology (allele identity, integrity, expression state) was carried as free-text, while direction stayed in numeric axes. Nothing required these fields to agree and primary literature was never back-checked, so the scoring system kept them separate. After entering the rankings, errors survived automated review and propagated across otherwise detailed, numerically consistent outputs to ultimately deliver unsound rationales as strategic plans. Collectively these are translational bottlenecks with definable roots, and solutions will come through mindful iteration.</p>
+
+  <p>With great reasoning comes great opportunity. There is no denying the LLM engine's formidable horsepower, but we must manage the means to <b>connect it faithfully to biology</b> before we truly move forward.</p>
+
+  <hr>
+  <p class="small muted">Figure data: the Claude Science literature survey described above, 492 records spanning 2023 to 2026, run on default Opus 5. Trial metadata is as reported in that session; dates are study starts and 2026 is a partial year. This is a single session, not a model-wide accuracy estimate.</p>
+
+  <a class="back" href="./">← All essays</a>
+
+</article>
+</main>
+
+<footer>
+  <span>© 2026 Giovanni Carosso</span>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  document.querySelectorAll('.swipe').forEach(function (sw) {
+    var track = sw.querySelector('.swipe-track');
+    var items = track.querySelectorAll('.swipe-item');
+    var dots = sw.querySelectorAll('.swipe-dot');
+    function at() { return Math.round(track.scrollLeft / track.clientWidth); }
+    function go(i) {
+      i = Math.max(0, Math.min(items.length - 1, i));
+      track.scrollTo({ left: i * track.clientWidth, behavior: 'smooth' });
+    }
+    function sync() {
+      var i = at();
+      dots.forEach(function (d, n) { d.setAttribute('aria-current', n === i ? 'true' : 'false'); });
+    }
+    dots.forEach(function (d, n) { d.addEventListener('click', function () { go(n); }); });
+    sw.querySelectorAll('[data-swipe]').forEach(function (b) {
+      b.addEventListener('click', function () { go(at() + (b.getAttribute('data-swipe') === 'next' ? 1 : -1)); });
+    });
+    var t;
+    track.addEventListener('scroll', function () { clearTimeout(t); t = setTimeout(sync, 60); });
+    window.addEventListener('resize', sync);
+    sync();
+  });
+})();
+</script>
+
+</body>
+</html>
