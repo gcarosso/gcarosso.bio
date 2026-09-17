@@ -1,0 +1,19 @@
+
+body.note-page{font-synthesis:none}
+.note-page .subtitle{font-size:17px;line-height:1.5;color:var(--mute);margin:0 0 14px}
+.note-page .byline{font-size:13px;line-height:1.5;color:var(--mute);margin:0 0 32px}
+.note-page .byline span{margin:0 6px}
+.note-page h2{scroll-margin-top:24px}
+.note-page figure{width:min(1040px,calc(100vw - 48px));max-width:none;position:relative;left:50%;transform:translateX(-50%);margin:32px 0}
+.note-page .figure-link{border:0;display:block;background:white;border-radius:4px;overflow:hidden}
+.note-page figure img{display:block;width:100%;height:auto}
+.note-page figcaption,.note-page .table-caption{font-size:13px;line-height:1.5;color:var(--mute);margin:12px 0 0}
+.note-page .table-block{margin:24px 0 32px;overflow-x:auto}
+.note-page table{border-collapse:collapse;width:100%;font-size:15px}
+.note-page th,.note-page td{padding:11px 14px;border-bottom:1px solid var(--rule);text-align:center}
+.note-page th{font-weight:600;background:var(--panel);color:var(--head)}
+.note-page th:first-child,.note-page td:first-child{text-align:left}
+.note-page article p{overflow-wrap:anywhere}
+.note-page .back{margin-top:48px}
+@media(max-width:480px){.note-page th,.note-page td{padding:10px 8px;font-size:14px}.note-page h1{font-size:27px}}
+@media print{.note-page h1{display:block!important}.note-page header,.note-page footer,.note-page .back,.note-page .pdf-download{display:none!important}.note-page figure{width:100%;left:auto;transform:none;break-inside:avoid}.note-page .byline{margin-bottom:18px}.note-page h2{break-after:avoid}.note-page .table-block{break-inside:avoid}}
