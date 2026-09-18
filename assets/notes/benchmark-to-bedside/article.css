@@ -17,3 +17,15 @@ body.note-page{font-synthesis:none}
 .note-page .back{margin-top:48px}
 @media(max-width:480px){.note-page th,.note-page td{padding:10px 8px;font-size:14px}.note-page h1{font-size:27px}}
 @media print{.note-page h1{display:block!important}.note-page header,.note-page footer,.note-page .back,.note-page .pdf-download{display:none!important}.note-page figure{width:100%;left:auto;transform:none;break-inside:avoid}.note-page .byline{margin-bottom:18px}.note-page h2{break-after:avoid}.note-page .table-block{break-inside:avoid}}
+
+/* Conclave information preview, scoped to this Note. */
+.note-page .conclave-preview-trigger:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.note-page .conclave-preview{position:fixed;z-index:40;box-sizing:border-box;width:min(410px,calc(100vw - 32px));max-height:calc(100vh - 32px);overflow-y:auto;overscroll-behavior:contain;padding:18px;background:var(--bg);color:var(--ink);border:1px solid var(--rule);border-radius:6px;box-shadow:0 8px 28px rgba(0,0,0,.2);font-size:14px;line-height:1.5}
+.note-page .conclave-preview[hidden]{display:none}
+.note-page .conclave-preview p{margin:0}
+.note-page .conclave-preview .preview-heading{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.note-page .conclave-preview .preview-heading img{width:48px;height:48px;object-fit:contain;flex:none}
+.note-page .conclave-preview .preview-title{font-size:18px;font-weight:600;color:var(--brand);line-height:1.25}
+.note-page .conclave-preview .preview-credit{margin-top:12px;font-size:12.5px;font-weight:500;color:var(--head)}
+.note-page .conclave-preview .preview-license{margin-top:3px;font-size:12px;color:var(--mute)}
+@media print{.note-page .conclave-preview{display:none!important}}

@@ -561,10 +561,10 @@ L 773.407075 298.746966
    </g>
   </g>
   <g id="text_43">
-   <text style="fill: #087e82; font: 700 10px 'IBM Plex Sans'; text-anchor: start" x="31.5" y="24.144625" transform="rotate(-0 31.5 24.144625)">FIGURE 1 | QUALITY BY BIOLOGICAL TASK</text>
+
   </g>
   <g id="text_44">
-   <text style="fill: #243238; font: 700 21px 'IBM Plex Sans'; text-anchor: start" x="31.5" y="51.036" transform="rotate(-0 31.5 51.036)">C2 led on BET and CD47, but not on IDH</text>
+   <text style="fill: #243238; font: 700 21px 'IBM Plex Sans'; text-anchor: start" x="31.5" y="51.036" transform="rotate(-0 31.5 51.036)">Task-specific performance</text>
   </g>
   <g id="text_45">
    <text style="fill: #5f6d73; font: 12px 'IBM Plex Sans'; text-anchor: start" x="31.5" y="73.608" transform="rotate(-0 31.5 73.608)">Each dot is one output, averaged across two blinded model graders; the short vertical mark is the task mean.</text>
