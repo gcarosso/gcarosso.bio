@@ -299,7 +299,7 @@ code, kbd, pre, samp { font-family: "IBM Plex Sans", -apple-system, BlinkMacSyst
 .pubs a:hover { border-bottom-color: var(--blue); }
 
 /* photo credit under the home slideshow: same size and colour as the footer */
-.credit { font-size: 13px; color: var(--mute); margin: 0 0 30px; }
+.credit { font-size: 13px; color: var(--mute); margin: 0 0 30px; text-align: center; }
 .credit a { color: var(--mute); }
 
 /* ---------- bookshelf hover cards: pure CSS, cover + info, shown on hover / keyboard focus ---------- */
