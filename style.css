@@ -254,6 +254,8 @@ footer a { color: var(--mute); }
 
 /* ---------- home slideshow: one box, frames in sequence, each fading to black before the next; no JavaScript ---------- */
 .slideshow { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #000; margin: 22px 0 6px; }
+.slideshow.home-photo { width: 60%; margin-left: auto; margin-right: auto; }
+@media (max-width: 640px) { .slideshow.home-photo { width: 100%; } }
 .slideshow img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0;
   animation: slidefade 18s infinite; }
 .slideshow img:nth-child(1) { animation-delay: 0s; }
