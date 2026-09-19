@@ -9,5 +9,6 @@
     var L = s.loaders || {}, t = document.getElementById('saros-trials'), f = document.getElementById('saros-feeds');
     if (t && L.trials && L.trials.rows > 0) t.textContent = L.trials.rows.toLocaleString('en-US');
     if (f && Object.keys(L).length) f.textContent = Object.keys(L).length;
+    [['saros-fda', 'fda'], ['saros-sec', 'sec']].forEach(function (x) { var e = document.getElementById(x[0]), r = L[x[1]] && L[x[1]].rows; if (e && r > 0) e.textContent = r.toLocaleString('en-US'); });
   }).catch(function () {});
 })();

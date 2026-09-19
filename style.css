@@ -519,10 +519,11 @@ body.cv main a:not(.btn-dl):hover { border-bottom-color: var(--blue) !important;
   .photo.on img { filter: brightness(.92) saturate(1); transform: scale(1); }
 
   /* numerals: one group per pinned tool, two figures each, linking to the tool's card; between the tagline and the photographs */
-  .numerals { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0 0 40px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .numerals { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); margin: 0 0 40px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
   .numerals a { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; align-content: start;
     padding: 20px 16px 22px 28px; border: 0; border-left: 1px solid var(--rule); }
   .numerals a:first-child { padding-left: 0; border-left: 0; }
+  .numerals a:last-child { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .numerals .nk { grid-column: 1 / -1; display: flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 500; letter-spacing: .13em;
     text-transform: uppercase; color: var(--mute); transition: color .2s; }
   .numerals .nk img { width: 14px; height: auto; }
@@ -594,8 +595,10 @@ body.cv main a:not(.btn-dl):hover { border-bottom-color: var(--blue) !important;
     .lede { margin-bottom: 28px; } .lede br { display: none; }
     .photos { grid-template-columns: minmax(0, 1fr); }
     .photo { grid-area: 1 / 1; opacity: 0; transition: opacity 2.4s cubic-bezier(.4,0,.2,1); } .photo.on { opacity: 1; }
-    .numerals { margin-bottom: 28px; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); }
-    .numerals a { grid-template-columns: max-content minmax(0, 1fr); column-gap: 16px; padding: 16px 0 18px 14px; } .numerals .nv { font-size: 19px; } .numerals .nd { font-size: 11px; margin-top: 6px; }
+    .numerals { margin-bottom: 28px; grid-template-columns: minmax(0, 1fr); }
+    .numerals a, .numerals a:last-child { grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: 12px; padding: 16px 0 18px; border-left: 0; }
+    .numerals a + a { border-top: 1px solid var(--rule); }
+    .numerals .nv { font-size: 19px; } .numerals .nd { font-size: 11px; line-height: 1.35; margin-top: 6px; }
     .item, .item.pinned, .entry, body.cv .role { grid-template-columns: minmax(0, 1fr); }
     .item, .item.pinned { padding-right: 0; }
     .item .t, .item .n, .item .a, .entry .title, .entry .dek, body.cv .role .org, body.cv .role .sub, body.cv .role ul, body.cv .role .when { grid-column: 1; grid-row: auto; }
