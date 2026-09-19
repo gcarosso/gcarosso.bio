@@ -5,6 +5,14 @@
    Edit the tokens below to retune the whole site at once.
    ========================================================================== */
 
+@font-face { font-family: "Geist"; font-style: normal; font-weight: 400; font-display: swap; src: url("assets/fonts/Geist-Regular.woff2") format("woff2"); }
+@font-face { font-family: "Geist"; font-style: normal; font-weight: 500; font-display: swap; src: url("assets/fonts/Geist-Medium.woff2") format("woff2"); }
+@font-face { font-family: "Geist"; font-style: normal; font-weight: 600; font-display: swap; src: url("assets/fonts/Geist-SemiBold.woff2") format("woff2"); }
+@font-face { font-family: "Geist Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("assets/fonts/GeistMono-Regular.woff2") format("woff2"); }
+@font-face { font-family: "Newsreader"; font-style: normal; font-weight: 400; font-display: swap; src: url("assets/fonts/Newsreader-Regular.woff2") format("woff2"); }
+@font-face { font-family: "Newsreader"; font-style: italic; font-weight: 400; font-display: swap; src: url("assets/fonts/Newsreader-Italic.woff2") format("woff2"); }
+@font-face { font-family: "Newsreader"; font-style: normal; font-weight: 600; font-display: swap; src: url("assets/fonts/Newsreader-SemiBold.woff2") format("woff2"); }
+/* IBM Plex Sans: the previous text face, kept so reverting is a token change */
 @font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("assets/fonts/IBMPlexSans-Regular.woff2") format("woff2"); }
 @font-face { font-family: "IBM Plex Sans"; font-style: italic; font-weight: 400; font-display: swap; src: url("assets/fonts/IBMPlexSans-Italic.woff2") format("woff2"); }
 @font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 500; font-display: swap; src: url("assets/fonts/IBMPlexSans-Medium.woff2") format("woff2"); }
@@ -26,9 +34,9 @@
   --max:   700px;       /* text measure                                 */
   --wide:  1040px;      /* page container, galleries, wide media        */
   --col:   200px;       /* label column on index rows                   */
-  --sans:  "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  --mono:  "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  --read:  var(--sans); /* long-form body text on Note articles        */
+  --sans:  "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --mono:  "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --read:  "Newsreader", Georgia, "Times New Roman", serif;   /* long-form body text on Note articles */
   color-scheme: dark;
 }
 :root[data-theme="light"] {
@@ -569,8 +577,9 @@ body.cv main a:not(.btn-dl):hover { border-bottom-color: var(--blue) !important;
 
   /* Note articles: a reading measure, generous leading, labels for section heads */
   main article > h1, .note-page h1 { font-size: clamp(34px, 5vw, 56px); letter-spacing: -.028em; line-height: 1.04; }
-  main article p, main article li { font-family: var(--read); font-size: 17px; line-height: 1.75; }
-  main article p { margin: 0 0 1.35em; }
+  main article p, main article li { font-family: var(--read); font-size: 18.5px; line-height: 1.65; }
+  main article p { margin: 0 0 1.25em; }
+  main article b, main article strong { font-weight: 600; }
   main article .subtitle, main article .byline, main article figcaption, main article .table-caption, main article .back { font-family: var(--sans); }
   .note-page .subtitle { font-size: 19px; color: var(--ink); margin: 18px 0 0; }
   .note-page .byline { margin: 28px 0 56px; padding-top: 18px; border-top: 1px solid var(--rule); font-size: 12px; letter-spacing: .04em; }
