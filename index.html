@@ -22,7 +22,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://gcarosso.bio/assets/img/og-card.png?v=3">
 <link rel="preload" href="/assets/fonts/Geist-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=71">
+<link rel="stylesheet" href="style.css?v=72">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -102,6 +102,11 @@
   <h1 class="home">Bioengineer | Biotech Operator | Therapeutic Platforms</h1>
   <p class="lede">Building platforms for epigenetic medicine and decision-grade tooling <br>for better bets on biology.</p>
 
+  <div class="numerals" aria-label="Pinned tools at a glance">
+    <a href="#conclave"><span class="nk"><img src="assets/img/conclave-mark.png" alt="">Conclave</span><span class="nm"><span class="nv">4</span><span class="nd">LLM vendors</span></span><span class="nm"><span class="nv">12</span><span class="nd">routing roles</span></span></a>
+    <a href="#saros"><span class="nk"><img src="assets/img/saros-mark.png" alt="">SAROS</span><span class="nm"><span class="nv" id="saros-trials">10,193</span><span class="nd">trials tracked</span></span><span class="nm"><span class="nv" id="saros-feeds">14</span><span class="nd">public data feeds</span></span></a>
+  </div>
+
   <div class="photos" aria-label="Photographs">
     <div class="photo on"><img src="assets/img/home-strip-1.jpg?v=1" width="480" height="600" alt=""></div>
     <div class="photo"><img src="assets/img/home-strip-2.jpg?v=1" width="480" height="600" alt=""></div>
@@ -110,11 +115,6 @@
   <p class="credit">photo credit: <a href="https://elenakulikova.com/" target="_blank" rel="noopener">@elenakulikovastudio</a></p>
 
   <h2>Pinned</h2>
-  <div class="numerals" aria-label="Pinned tools at a glance">
-    <a href="#conclave"><img src="assets/img/conclave-mark.png" alt=""><span class="nk">Conclave</span><span class="nv">4</span><span class="nd">LLMs under one coordinator</span></a>
-    <a href="#saros"><img src="assets/img/saros-mark.png" alt=""><span class="nk">SAROS</span><span class="nv" id="saros-trials">10,193</span><span class="nd">trials tracked</span></a>
-    <a href="#benchmark-to-bedside"><span class="nk">Benchmark-to-Bedside</span><span class="nv">n=24</span><span class="nd">informal test of agentic architectures</span></a>
-  </div>
 
 
   <div class="item pinned" id="conclave">
@@ -161,15 +161,6 @@
 
 </div>
 <script>
-/* status pill: shown only when the SAROS status feed answers; any failure leaves it hidden */
-(function(){var p=document.getElementById('saros-pill');if(!p||!window.fetch)return;
- fetch('https://saros.gcarosso.bio/status.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(s){
-  var d=new Date(s.built);if(isNaN(d))return;
-  var m=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][d.getUTCMonth()];
-  document.getElementById('saros-pill-text').textContent='SAROS updated '+d.getUTCDate()+' '+m;p.hidden=false;
-  var n=document.getElementById('saros-trials'),r=s.loaders&&s.loaders.trials&&s.loaders.trials.rows;if(n&&r>0)n.textContent=r.toLocaleString('en-US')}).catch(function(){})})();
-</script>
-<script>
 /* home photographs: light one frame at a time; hover picks a frame; still under reduced motion */
 (function(){var p=[].slice.call(document.querySelectorAll('.photos .photo')),i=0,t;
  if(!p.length||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
@@ -178,5 +169,6 @@
  p.forEach(function(e,k){e.addEventListener('mouseenter',function(){clearInterval(t);show(k)});e.addEventListener('mouseleave',run)});
  document.addEventListener('visibilitychange',function(){clearInterval(t);if(!document.hidden)run()});run()})();
 </script>
+<script src="/assets/pill.js?v=1" defer></script>
 </body>
 </html>

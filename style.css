@@ -39,6 +39,11 @@
   --read:  "Newsreader", Georgia, "Times New Roman", serif;   /* long-form body text on Note articles */
   color-scheme: dark;
 }
+/* only the page body goes light (opened Notes); the bar and contacts row keep the dark tokens everywhere */
+.bar, .wrap > header {
+  --bg:#0b0a09; --panel:#141312; --head:#efede7; --ink:#b9b6ae; --mute:#8d8a82; --faint:#807d76;
+  --rule:rgba(239,237,231,.09); --accent:#f59a62; --brand:#FF6A1A; --blue:#6da7ec; --glass:rgba(11,10,9,.72);
+}
 :root[data-theme="light"] {
   --bg:#f6f3ec; --panel:#ece8df; --head:#1b1a17; --ink:#3a3935; --mute:#6b6963; --faint:#6e6c65;
   --rule:rgba(27,26,23,.13); --accent:#a8401b; --brand:#b9450a; --blue:#1f63b8; --glass:rgba(246,243,236,.78);
@@ -71,6 +76,8 @@ body {
   .bar { position: sticky; top: 0; z-index: 30; height: 60px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
   .bar::before, header::before { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 100vw; transform: translateX(-50%);
     border-bottom: 1px solid var(--rule); z-index: -1; pointer-events: none; }
+  header::before { background: var(--bg); }
+  :root[data-theme="light"] .bar::before { background: var(--bg); }   /* glass over a light page would read grey; keep the top identical */
   .bar::before { background: var(--glass); -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px); }
   @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) { .bar::before { background: var(--bg); } }
 
@@ -86,14 +93,15 @@ body {
 
   /* status pill: Home and Tools only; filled in by script from the SAROS status feed, hidden until that succeeds */
   .pill { display: flex; align-items: center; gap: 8px; font-size: 11px; letter-spacing: .04em; color: var(--mute); white-space: nowrap; border: 0; }
-  .pill[hidden] { display: none; }
+  .pill { min-width: 148px; justify-content: flex-end; }
+  .pill[hidden] { display: flex; visibility: hidden; }   /* holds its place, so the menu does not move when the feed answers */
   .pill:hover { color: var(--head); }
   .pill .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--brand); animation: breathe 3s ease-in-out infinite; }
   @keyframes breathe { 50% { opacity: .4; } }
 
   /* ---- social bar: directly under the menu, on every page ---- */
   header { position: relative; padding: 0; }
-  header .contacts { display: flex; flex-wrap: nowrap; align-items: center; gap: 24px; height: 40px; margin: 0; overflow-x: auto; scrollbar-width: none;
+  header .contacts { display: flex; flex-wrap: nowrap; align-items: center; justify-content: safe center; gap: 24px; height: 40px; margin: 0; overflow-x: auto; scrollbar-width: none;
     font-size: 12px; letter-spacing: .03em; }
   header .contacts::-webkit-scrollbar { display: none; }
   header .contacts a { margin-right: 0; flex: none; color: var(--mute); transition: color .2s; }
@@ -105,7 +113,7 @@ body {
     .sitename { min-height: 40px; }
     .bar nav { width: 100%; gap: clamp(7px, 2.6vw, 16px); }
     .bar nav a { letter-spacing: .06em; }
-    .pill { display: none; }
+    .pill, .pill[hidden] { display: none; }
     header .contacts { gap: clamp(8px, 2.4vw, 24px); font-size: 11.5px; letter-spacing: 0; height: 44px; }
     header .contacts a { min-height: 44px; }
     header .contacts a { gap: 4px; } header .contacts svg { width: 12px; height: 12px; }
@@ -498,8 +506,9 @@ body.cv main a:not(.btn-dl):hover { border-bottom-color: var(--blue) !important;
   /* Home hero: a one-row label, then the tagline */
   h1.home { font-size: 12px; font-weight: 500; line-height: 1.4; letter-spacing: .13em; text-transform: uppercase; color: var(--mute);
     margin: 0 0 14px; white-space: nowrap; }
-  .lede { font-size: clamp(19px, 2.5vw, 30px); line-height: 1.25; letter-spacing: -.015em; margin: 0 0 40px; }
+  .lede { font-size: clamp(19px, 2.5vw, 30px); line-height: 1.25; letter-spacing: -.015em; margin: 0 0 32px; }
   .credit { text-align: left; font-size: 11px; letter-spacing: .04em; color: var(--faint); margin: 10px 0 0; }
+  .credit + h2 { margin-top: 56px; }
 
   /* Home photographs: three leveled frames, one lit at a time (script toggles .on; without it the first stays lit) */
   .photos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
@@ -509,18 +518,18 @@ body.cv main a:not(.btn-dl):hover { border-bottom-color: var(--blue) !important;
     transition: filter 2.4s cubic-bezier(.4,0,.2,1), transform 7s cubic-bezier(.2,0,.2,1); will-change: filter, transform; }
   .photo.on img { filter: brightness(.92) saturate(1); transform: scale(1); }
 
-  /* numerals: one tile per pinned tool, in pinned order, each linking to its card */
-  .numerals { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-bottom: 1px solid var(--rule); margin-top: -24px; }
-  .numerals a { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 10px; align-items: center; align-content: start;
-    padding: 22px 16px 24px 24px; border: 0; border-left: 1px solid var(--rule); }
+  /* numerals: one group per pinned tool, two figures each, linking to the tool's card; between the tagline and the photographs */
+  .numerals { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0 0 40px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .numerals a { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; align-content: start;
+    padding: 20px 16px 22px 28px; border: 0; border-left: 1px solid var(--rule); }
   .numerals a:first-child { padding-left: 0; border-left: 0; }
-  .numerals img { width: 14px; height: auto; grid-row: 1; }
-  .numerals .nk { grid-row: 1; font-size: 11px; font-weight: 500; letter-spacing: .13em; text-transform: uppercase; color: var(--mute); transition: color .2s; }
-  .numerals a > .nk:first-child { grid-column: 1 / -1; }
+  .numerals .nk { grid-column: 1 / -1; display: flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 500; letter-spacing: .13em;
+    text-transform: uppercase; color: var(--mute); transition: color .2s; }
+  .numerals .nk img { width: 14px; height: auto; }
   .numerals a:hover .nk { color: var(--head); }
-  .numerals .nv, .numerals .nd { grid-column: 1 / -1; }
-  .numerals .nv { margin-top: 10px; font: 400 32px/1.1 var(--mono); letter-spacing: -.03em; color: var(--head); font-variant-numeric: tabular-nums; }
-  .numerals .nd { margin-top: 8px; font-size: 12px; color: var(--faint); }
+  .numerals .nm { display: block; margin-top: 12px; }
+  .numerals .nv { display: block; font: 400 32px/1.1 var(--mono); letter-spacing: -.03em; color: var(--head); font-variant-numeric: tabular-nums; }
+  .numerals .nd { display: block; margin-top: 8px; font-size: 12px; color: var(--faint); }
 
   /* tool cards: title column | copy | Open at the right edge */
   .item, .item.pinned { position: relative; display: grid; grid-template-columns: var(--col) minmax(0, 1fr); gap: 0 32px;
@@ -585,8 +594,8 @@ body.cv main a:not(.btn-dl):hover { border-bottom-color: var(--blue) !important;
     .lede { margin-bottom: 28px; } .lede br { display: none; }
     .photos { grid-template-columns: minmax(0, 1fr); }
     .photo { grid-area: 1 / 1; opacity: 0; transition: opacity 2.4s cubic-bezier(.4,0,.2,1); } .photo.on { opacity: 1; }
-    .numerals a { padding: 16px 8px 18px 12px; } .numerals .nd { display: none; } .numerals .nv { font-size: 20px; }
-    .numerals .nk { font-size: 10px; letter-spacing: .06em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .numerals { margin-bottom: 28px; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); }
+    .numerals a { grid-template-columns: max-content minmax(0, 1fr); column-gap: 16px; padding: 16px 0 18px 14px; } .numerals .nv { font-size: 19px; } .numerals .nd { font-size: 11px; margin-top: 6px; }
     .item, .item.pinned, .entry, body.cv .role { grid-template-columns: minmax(0, 1fr); }
     .item, .item.pinned { padding-right: 0; }
     .item .t, .item .n, .item .a, .entry .title, .entry .dek, body.cv .role .org, body.cv .role .sub, body.cv .role ul, body.cv .role .when { grid-column: 1; grid-row: auto; }
