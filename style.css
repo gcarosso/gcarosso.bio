@@ -96,6 +96,7 @@ body {
   .pill { min-width: 148px; justify-content: flex-end; }
   .pill[hidden] { display: flex; visibility: hidden; }   /* holds its place, so the menu does not move when the feed answers */
   .pill:hover { color: var(--head); }
+  .sitename .degree { text-transform: none; }
   .pill .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--brand); animation: breathe 3s ease-in-out infinite; }
   @keyframes breathe { 50% { opacity: .4; } }
 
@@ -110,7 +111,7 @@ body {
   @media (max-width: 760px) {
     .bar { height: auto; flex-direction: column; align-items: flex-start; gap: 0; padding: 4px 0 0; }
     .sitename, .bar nav a { display: inline-flex; align-items: center; min-height: 44px; }   /* 44px tap targets; the type stays small */
-    .sitename { min-height: 40px; }
+    .sitename { min-height: 40px; gap: .35em; }
     .bar nav { width: 100%; gap: clamp(7px, 2.6vw, 16px); }
     .bar nav a { letter-spacing: .06em; }
     .pill, .pill[hidden] { display: none; }
