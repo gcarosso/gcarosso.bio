@@ -608,7 +608,8 @@ body.cv main a:not(.btn-dl):hover { border-bottom-color: var(--blue) !important;
     .item, .item.pinned { padding-right: 0; }
     .item .t, .item .n, .item .a, .entry .title, .entry .dek, body.cv .role .org, body.cv .role .sub, body.cv .role ul, body.cv .role .when { grid-column: 1; grid-row: auto; }
     .item .t { margin-bottom: 10px; } .item .cover { position: absolute; left: 0; top: 0; margin-top: 3px; }
-    .item.categorized .cover { top: 32px; }
+    .item.categorized .cover { position: static; grid-column: 1; grid-row: 1; align-self: start; margin-top: 36px; }
+    .item.categorized .t { grid-row: 1; }
     .links a.open { position: static; } .links a.open + .sep { display: inline; }
     .entry .date, body.cv .role .when { padding: 0 0 6px; }
   }
