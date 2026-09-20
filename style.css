@@ -533,6 +533,8 @@ body.cv main a:not(.btn-dl):hover { border-bottom-color: var(--blue) !important;
   .numerals .nv { display: block; font: 400 32px/1.1 var(--mono); letter-spacing: -.03em; color: var(--head); font-variant-numeric: tabular-nums; }
   .numerals .nd { display: block; margin-top: 8px; font-size: 12px; color: var(--faint); }
 
+  .metrics-note { margin: -20px 0 32px; max-width: 78ch; font-size: 12px; line-height: 1.5; color: var(--mute); }
+
   /* tool cards: title column | copy | Open at the right edge */
   .item, .item.pinned { position: relative; display: grid; grid-template-columns: var(--col) minmax(0, 1fr); gap: 0 32px;
     padding: 32px 110px 32px 0; margin: 0; background: none; border: 0; border-bottom: 1px solid var(--rule); border-radius: 0; scroll-margin-top: 80px; }

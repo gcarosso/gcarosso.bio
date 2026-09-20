@@ -1,5 +1,5 @@
 /* Status pill, on every page: shown only when the SAROS status feed answers; any failure leaves it hidden.
-   On Home the same feed refreshes the SAROS figures in the numerals strip. */
+   On Home the same feed refreshes trials, FDA actions, and feed counts. SEC-linked issuers and Phase-3 dates remain explicitly dated snapshot figures. */
 (function () {
   var p = document.getElementById('saros-pill'); if (!p || !window.fetch) return;
   fetch('https://saros.gcarosso.bio/status.json', { cache: 'no-store' }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (s) {
@@ -9,6 +9,6 @@
     var L = s.loaders || {}, t = document.getElementById('saros-trials'), f = document.getElementById('saros-feeds');
     if (t && L.trials && L.trials.rows > 0) t.textContent = L.trials.rows.toLocaleString('en-US');
     if (f && Object.keys(L).length) f.textContent = Object.keys(L).length;
-    [['saros-fda', 'fda'], ['saros-sec', 'sec']].forEach(function (x) { var e = document.getElementById(x[0]), r = L[x[1]] && L[x[1]].rows; if (e && r > 0) e.textContent = r.toLocaleString('en-US'); });
+    [['saros-fda', 'fda']].forEach(function (x) { var e = document.getElementById(x[0]), r = L[x[1]] && L[x[1]].rows; if (e && r > 0) e.textContent = r.toLocaleString('en-US'); });
   }).catch(function () {});
 })();
