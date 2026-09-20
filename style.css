@@ -544,8 +544,9 @@ body.cv main a:not(.btn-dl):hover { border-bottom-color: var(--blue) !important;
   .item .t { grid-column: 1; grid-row: 1 / span 4; font-size: 22px; font-weight: 500; letter-spacing: -.01em; line-height: 1.35; }
   .item .cover:not(.blank) ~ .body .t { padding-left: 36px; }
   .item .t .saros { font-weight: 500; color: var(--head); }
-  .card-kind { display: block; margin-bottom: 7px; font-size: 11px; font-weight: 400; line-height: 1.4; letter-spacing: .04em; color: var(--faint); }
-  .item.categorized .cover { margin-top: 26px; }
+  .card-kind { display: block; margin-bottom: 7px; font-size: 17px; font-weight: 400; line-height: 1.45; letter-spacing: normal; color: var(--head); }
+  .item.categorized .cover { margin-top: 36px; }
+  #benchmark-to-bedside .t { padding-left: 36px; }
   .item .n, .item .a { grid-column: 2; }
   .item .n { font-size: 14.5px; line-height: 1.65; color: var(--mute); max-width: 62ch; margin-top: 0; }
   .item .n b { display: block; margin: 0 0 8px; font-weight: 400; font-size: 17px; line-height: 1.45; color: var(--head); }
