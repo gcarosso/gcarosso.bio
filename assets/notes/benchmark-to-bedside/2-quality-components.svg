@@ -494,7 +494,7 @@ L 815.200018 273.805714
 
   </g>
   <g id="text_50">
-   <text style="fill: #243238; font: 700 21px 'IBM Plex Sans'; text-anchor: start" x="31.5" y="49.41" transform="rotate(-0 31.5 49.41)">Dimension-specific performance</text>
+   <text style="fill: #243238; font: 700 21px 'IBM Plex Sans'; text-anchor: start" x="31.5" y="49.41" transform="rotate(-0 31.5 49.41)">Domain-specific performance</text>
   </g>
   <g id="text_51">
    <text style="fill: #5f6d73; font: 12px 'IBM Plex Sans'; text-anchor: start" x="31.5" y="70.26" transform="rotate(-0 31.5 70.26)">Component means across six outputs. Experimental-design quality did not follow the overall ranking.</text>
