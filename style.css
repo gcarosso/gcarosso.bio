@@ -592,7 +592,7 @@ body.cv main a:not(.btn-dl):hover { border-bottom-color: var(--blue) !important;
   body.cv .pubs, body.cv .patents { max-width: 84ch; }
   /* workplace marks on /cv: a white tile keeps every mark legible on the dark ground; the tile sits in its own column so text stays aligned */
   body.cv .role.rl { grid-template-columns: var(--col) 44px minmax(0, 1fr); column-gap: 0 32px; }
-  body.cv .role.rl .rlogo { grid-column: 2; grid-row: 1 / span 3; align-self: start; width: 44px; height: 44px; box-sizing: border-box; padding: 6px; margin: 1px 0 0; border-radius: 10px; background: #fff; border: 1px solid color-mix(in srgb, var(--rule) 70%, transparent); object-fit: contain; }
+  body.cv .role.rl .rlogo { grid-column: 2; grid-row: 1 / span 3; align-self: start; justify-self: start; width: 44px; height: 44px; max-width: none; aspect-ratio: 1 / 1; margin: 1px 0 0; border-radius: 10px; background: #fff; box-shadow: 0 0 0 1px color-mix(in srgb, var(--rule) 70%, transparent); object-fit: contain; }   /* inset is baked into the PNGs: Safari distorts object-fit when the img carries padding */
   body.cv .role.rl .org, body.cv .role.rl .sub, body.cv .role.rl ul { grid-column: 3; margin-left: -16px; }
 
   /* Note articles: a reading measure, generous leading, labels for section heads */
