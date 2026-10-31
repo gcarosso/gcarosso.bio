@@ -245,6 +245,7 @@ figcaption b { color: var(--head); font-weight: 600; }
   .role-head { display: block; }
   .role-head .when { display: block; }
 }
+@media print { .role .rlogo { display: none; } }
 
 /* ---------------------------------------------------------------- footer */
 footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--rule);
@@ -589,6 +590,10 @@ body.cv main a:not(.btn-dl):hover { border-bottom-color: var(--blue) !important;
   body.cv .role ul { grid-column: 2; list-style: none; padding: 0; }
   body.cv .role li { margin: 0 0 10px; font-size: 14.5px; line-height: 1.65; color: var(--mute); max-width: 64ch; }
   body.cv .pubs, body.cv .patents { max-width: 84ch; }
+  /* workplace marks on /cv: a white tile keeps every mark legible on the dark ground; the tile sits in its own column so text stays aligned */
+  body.cv .role.rl { grid-template-columns: var(--col) 44px minmax(0, 1fr); column-gap: 0 32px; }
+  body.cv .role.rl .rlogo { grid-column: 2; grid-row: 1 / span 3; align-self: start; width: 44px; height: 44px; box-sizing: border-box; padding: 6px; margin: 1px 0 0; border-radius: 10px; background: #fff; border: 1px solid color-mix(in srgb, var(--rule) 70%, transparent); object-fit: contain; }
+  body.cv .role.rl .org, body.cv .role.rl .sub, body.cv .role.rl ul { grid-column: 3; margin-left: -16px; }
 
   /* Note articles: a reading measure, generous leading, labels for section heads */
   main article > h1, .note-page h1 { font-size: clamp(34px, 5vw, 56px); letter-spacing: -.028em; line-height: 1.04; }
@@ -604,7 +609,7 @@ body.cv main a:not(.btn-dl):hover { border-bottom-color: var(--blue) !important;
   @media (max-width: 760px) {
     main { padding-top: 44px; }
     h1.home { font-size: min(11.5px, 3.05vw); letter-spacing: .01em; text-transform: none; }
-    .lede { margin-bottom: 28px; } .lede br { display: initial; }
+    .lede { margin-bottom: 28px; } .lede br { display: none; }   /* the two lines no longer fit a phone; let the sentence flow */
     .photos { grid-template-columns: minmax(0, 1fr); }
     .photo { grid-area: 1 / 1; opacity: 0; transition: opacity 2.4s cubic-bezier(.4,0,.2,1); } .photo.on { opacity: 1; }
     .numerals { margin-bottom: 28px; grid-template-columns: minmax(0, 1fr); }
@@ -620,6 +625,11 @@ body.cv main a:not(.btn-dl):hover { border-bottom-color: var(--blue) !important;
     .item.categorized .t { grid-row: 1; }
     .links a.open { position: static; } .links a.open + .sep { display: inline; }
     .entry .date, body.cv .role .when { padding: 0 0 6px; }
+    body.cv .role.rl { grid-template-columns: 40px minmax(0, 1fr); column-gap: 12px; }
+    body.cv .role.rl .when { grid-column: 1 / -1; grid-row: 1; }
+    body.cv .role.rl .rlogo { grid-column: 1; grid-row: 2 / span 2; width: 40px; height: 40px; }
+    body.cv .role.rl .org, body.cv .role.rl .sub { grid-column: 2; margin-left: 0; }
+    body.cv .role.rl ul { grid-column: 1 / -1; margin-left: 0; }
   }
   @media (prefers-reduced-motion: reduce) {
     .photo, .photo img { transition: none; } .photo img { transform: none; filter: brightness(.9); }
