@@ -592,7 +592,13 @@ body.cv main a:not(.btn-dl):hover { border-bottom-color: var(--blue) !important;
   body.cv .pubs, body.cv .patents { max-width: 84ch; }
   /* workplace marks on /cv: a white tile keeps every mark legible on the dark ground; the tile sits in its own column so text stays aligned */
   body.cv .role.rl { grid-template-columns: var(--col) 44px minmax(0, 1fr); column-gap: 0 32px; }
-  body.cv .role.rl .rlogo { grid-column: 2; grid-row: 1 / span 3; align-self: start; justify-self: start; width: 44px; height: 44px; max-width: none; aspect-ratio: 1 / 1; margin: 1px 0 0; border-radius: 10px; background: #fff; box-shadow: 0 0 0 1px color-mix(in srgb, var(--rule) 70%, transparent); object-fit: contain; }   /* inset is baked into the PNGs: Safari distorts object-fit when the img carries padding */
+  body.cv .role.rl .rlogo { grid-column: 2; grid-row: 1 / span 3; align-self: start; justify-self: start; display: block; width: 44px; height: 44px; min-width: 44px; flex: none; margin: 1px 0 0; border-radius: 10px; background-color: #fff; background-repeat: no-repeat; background-position: center; background-size: contain; box-shadow: 0 0 0 1px color-mix(in srgb, var(--rule) 70%, transparent); }   /* background-image, not <img>: fixed box no engine can distort; inset is baked into the PNGs */
+  .rlogo-capable { background-image: url(/assets/img/logos/capable.png); }
+  .rlogo-general-control { background-image: url(/assets/img/logos/general-control.png); }
+  .rlogo-epicrispr { background-image: url(/assets/img/logos/epicrispr.png); }
+  .rlogo-ucsf { background-image: url(/assets/img/logos/ucsf.png); }
+  .rlogo-jhu { background-image: url(/assets/img/logos/jhu.png); }
+  .rlogo-ucsb { background-image: url(/assets/img/logos/ucsb.png); }
   body.cv .role.rl .org, body.cv .role.rl .sub, body.cv .role.rl ul { grid-column: 3; margin-left: -16px; }
 
   /* Note articles: a reading measure, generous leading, labels for section heads */
@@ -627,7 +633,7 @@ body.cv main a:not(.btn-dl):hover { border-bottom-color: var(--blue) !important;
     .entry .date, body.cv .role .when { padding: 0 0 6px; }
     body.cv .role.rl { grid-template-columns: 40px minmax(0, 1fr); column-gap: 12px; }
     body.cv .role.rl .when { grid-column: 1 / -1; grid-row: 1; }
-    body.cv .role.rl .rlogo { grid-column: 1; grid-row: 2 / span 2; width: 40px; height: 40px; }
+    body.cv .role.rl .rlogo { grid-column: 1; grid-row: 2 / span 2; width: 40px; height: 40px; min-width: 40px; }
     body.cv .role.rl .org, body.cv .role.rl .sub { grid-column: 2; margin-left: 0; }
     body.cv .role.rl ul { grid-column: 1 / -1; margin-left: 0; }
   }
